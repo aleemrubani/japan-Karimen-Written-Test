@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Japan License Prep — Written Test Practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=M+PLUS+Rounded+1c:wght@500;700;800&family=Noto+Sans+Arabic:wght@500;700&family=Noto+Sans+Devanagari:wght@500;700&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15233b;--road:#16356b;--road-deep:#0f244a;--sun:#ffce3a;
+    --stop:#d72638;--go:#1f9d55;--paper:#f4f1ea;--card:#fff;--line:#e3ddd0;
+    --muted:#6c7589;--soft:#eef1f7;--shadow:0 10px 30px -12px rgba(15,36,74,.28);
+    --display:"M PLUS Rounded 1c",sans-serif;--body:"DM Sans",system-ui,sans-serif;
+  }
+  [data-theme="dark"]{
+    --ink:#e9eef7;--road:#3a6fc4;--road-deep:#24477f;--paper:#0f141c;--card:#1a212e;
+    --line:#2a3142;--muted:#8a93a6;--soft:#212a39;--shadow:0 10px 30px -12px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{font-family:var(--body);color:var(--ink);line-height:1.55;display:flex;justify-content:center;background:var(--paper);transition:background .3s,color .3s;}
+  .app{width:100%;max-width:460px;min-height:100vh;background:var(--paper);position:relative;display:flex;flex-direction:column;box-shadow:0 0 60px -20px rgba(15,36,74,.25);overflow:hidden;transition:background .3s;}
+  [lang-script="ar"]{font-family:"Noto Sans Arabic",var(--body);}
+  [lang-script="dev"]{font-family:"Noto Sans Devanagari",var(--body);}
+  [lang-script="sc"]{font-family:"Noto Sans SC",var(--body);}
+  header{background:var(--road);color:#fff;padding:calc(16px + env(safe-area-inset-top,0px)) 20px 16px;display:flex;align-items:center;gap:12px;border-bottom:4px solid var(--sun);transition:background .3s;}
+  header .mark{width:40px;height:40px;border-radius:10px;background:#fff;display:grid;place-items:center;flex:none;box-shadow:inset 0 0 0 3px var(--road);}
+  header .mark span{font-family:var(--display);font-weight:800;color:var(--stop);font-size:22px;line-height:1;}
+  header h1{font-family:var(--display);font-weight:800;font-size:18px;}
+  header h1 small{display:block;font-family:var(--body);font-weight:500;font-size:11px;opacity:.8;letter-spacing:2px;text-transform:uppercase;}
+  .back{background:rgba(255,255,255,.16);border:0;color:#fff;font-family:var(--body);font-weight:700;font-size:14px;padding:8px 12px;border-radius:9px;cursor:pointer;}
+  .back:active{transform:scale(.96)}
+  main{flex:1;padding:20px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .screen{display:none}
+  .screen.on{display:block;animation:slide .34s cubic-bezier(.22,.61,.36,1) both}
+  @keyframes slide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .stagger>*{animation:slide .4s cubic-bezier(.22,.61,.36,1) both}
+  .stagger>*:nth-child(1){animation-delay:.02s}.stagger>*:nth-child(2){animation-delay:.07s}
+  .stagger>*:nth-child(3){animation-delay:.12s}.stagger>*:nth-child(4){animation-delay:.17s}
+  .stagger>*:nth-child(5){animation-delay:.22s}.stagger>*:nth-child(6){animation-delay:.27s}
+  .hero{background:linear-gradient(150deg,var(--road) 0%,var(--road-deep) 100%);color:#fff;border-radius:22px;padding:24px 22px 26px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero:after{content:"";position:absolute;right:-30px;bottom:-30px;width:150px;height:150px;border-radius:50%;background:repeating-linear-gradient(45deg,rgba(255,255,255,.07) 0 10px,transparent 10px 20px);}
+  .hero h2{font-family:var(--display);font-weight:800;font-size:23px;line-height:1.3;position:relative}
+  .hero p{font-size:14px;opacity:.85;margin-top:8px;position:relative;max-width:34ch}
+  .pill{display:inline-block;background:var(--sun);color:#0f244a;font-weight:700;font-size:12px;padding:5px 11px;border-radius:30px;margin-bottom:14px;letter-spacing:.4px}
+  .menu{display:grid;gap:13px;margin-top:18px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:17px;display:flex;align-items:center;gap:15px;cursor:pointer;text-align:left;width:100%;font-family:var(--body);transition:transform .12s,box-shadow .12s,background .3s;box-shadow:0 3px 0 rgba(15,36,74,.04);color:var(--ink);}
+  .tile:active{transform:translateY(2px);box-shadow:none}
+  .tile .ic{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;font-size:22px}
+  .tile .ic.blue{background:#e7eefb;color:#16356b}.tile .ic.yellow{background:#fff3cd;color:#9a7400}
+  .tile .ic.green{background:#e3f5ea;color:#1f9d55}.tile .ic.red{background:#fbe4e7;color:#d72638}
+  .tile h3{font-family:var(--display);font-weight:700;font-size:16px}
+  .tile small{color:var(--muted);font-size:12.5px}
+  .tile .arrow{margin-left:auto;color:var(--muted);font-size:20px}
+  [dir="rtl"] .tile{text-align:right}[dir="rtl"] .tile .arrow{margin-left:0;margin-right:auto;transform:scaleX(-1)}
+  .stat-row{display:flex;gap:11px;margin-top:18px}
+  .stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:14px 10px;text-align:center;transition:background .3s}
+  .stat b{font-family:var(--display);font-size:22px;color:var(--road);display:block}
+  .stat span{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .sect-title{font-family:var(--display);font-weight:800;font-size:18px;margin:26px 4px 14px}
+  .sect-title:first-child{margin-top:6px}
+  .btn{display:block;width:100%;border:0;border-radius:14px;cursor:pointer;font-family:var(--display);font-weight:700;font-size:16px;padding:16px;background:var(--road);color:#fff;transition:transform .12s,background .3s;}
+  .btn:active{transform:translateY(2px)}
+  .btn.sun{background:var(--sun);color:#0f244a}
+  .btn.ghost{background:transparent;color:var(--road);box-shadow:inset 0 0 0 2px var(--road)}
+  .cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .chip{border:1px solid var(--line);background:var(--card);border-radius:30px;padding:7px 13px;font-size:13px;font-weight:500;cursor:pointer;color:var(--ink);transition:.15s}
+  .chip.sel{background:var(--road);color:#fff;border-color:var(--road)}
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:16px;margin-bottom:12px;cursor:pointer;transition:background .3s}
+  .qcard .cat{font-size:11px;color:var(--road);font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+  .qimg{width:94px;height:94px;margin:8px 0 4px}.qimg svg{width:100%;height:100%;display:block}
+  .qcard p{margin-top:6px;font-size:15px}
+  .reveal{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:none}
+  .qcard.open .reveal{display:block;animation:slide .25s ease both}
+  .ans-tag{display:inline-block;font-family:var(--display);font-weight:700;font-size:13px;padding:4px 12px;border-radius:8px}
+  .ans-tag.t{background:#e3f5ea;color:#1f9d55}.ans-tag.f{background:#fbe4e7;color:#d72638}
+  .reveal .ex{font-size:13.5px;color:var(--muted);margin-top:9px}
+  [dir="rtl"] .qcard{text-align:right}
+  .progress{height:8px;background:var(--soft);border-radius:10px;overflow:hidden;margin-bottom:6px}
+  .progress i{display:block;height:100%;background:var(--sun);transition:width .35s cubic-bezier(.22,.61,.36,1)}
+  .meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);margin-bottom:18px}
+  .meta b{color:var(--ink)}
+  #timer{font-family:var(--display);font-weight:700;background:var(--soft);padding:4px 10px;border-radius:20px;color:var(--ink)}
+  .qbig{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);margin-bottom:20px;min-height:150px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transition:background .3s}
+  .qbig .cat{font-size:11px;color:var(--road);font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px;align-self:flex-start}
+  [dir="rtl"] .qbig .cat{align-self:flex-end}
+  .qimg-big{width:118px;height:118px;margin:0 auto 16px;display:none}.qimg-big svg{width:100%;height:100%}
+  .qbig p{font-size:18px;font-weight:500;line-height:1.55}
+  .tf{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .tf button{border:0;border-radius:16px;padding:20px 0;font-family:var(--display);font-weight:800;font-size:17px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:transform .12s,filter .12s;color:#fff;}
+  .tf button .sym{font-size:30px;line-height:1}
+  .tf .true{background:var(--go)}.tf .false{background:var(--stop)}
+  .tf button:active{transform:translateY(2px)}
+  .tf button.dim{filter:grayscale(.6) opacity(.45)}
+  .feedback{border-radius:16px;padding:16px;margin-bottom:18px;display:none}
+  .feedback.show{display:block;animation:slide .22s ease both}
+  .feedback.right{background:#e3f5ea;border:1px solid #b6e3c6}
+  .feedback.wrong{background:#fbe4e7;border:1px solid #f3c1c8}
+  .feedback h4{font-family:var(--display);font-size:15px;margin-bottom:5px}
+  .feedback.right h4{color:#1f9d55}.feedback.wrong h4{color:#d72638}
+  .feedback p{font-size:13.5px;color:#46506a}
+  [data-theme="dark"] .feedback.right{background:#13301f;border-color:#1f5135}
+  [data-theme="dark"] .feedback.wrong{background:#341318;border-color:#5e2129}
+  [data-theme="dark"] .feedback p{color:#c7cedb}
+  [dir="rtl"] .feedback{text-align:right}
+  .score-ring{width:160px;height:160px;margin:8px auto 18px;position:relative}
+  .score-ring svg{transform:rotate(-90deg)}
+  .score-ring circle.track{stroke:var(--soft)}
+  .score-ring .pct{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .score-ring .pct b{font-family:var(--display);font-size:38px;line-height:1}
+  .score-ring .pct span{font-size:12px;color:var(--muted)}
+  .verdict{text-align:center;font-family:var(--display);font-weight:800;font-size:24px;margin-bottom:4px}
+  .verdict.pass{color:var(--go)}.verdict.fail{color:var(--stop)}
+  .verdict-sub{text-align:center;color:var(--muted);font-size:13px;margin-bottom:20px}
+  .review h3{font-family:var(--display);font-size:15px;margin:24px 0 10px}
+  .bigstats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px}
+  .bigstat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;transition:background .3s}
+  .bigstat b{font-family:var(--display);font-size:30px;display:block;line-height:1}
+  .bigstat span{font-size:12px;color:var(--muted)}
+  .catbar{margin-bottom:13px}
+  .catbar .row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}
+  .catbar .row b{font-family:var(--display)}
+  .track2{height:9px;background:var(--soft);border-radius:8px;overflow:hidden}
+  .track2 i{display:block;height:100%;border-radius:8px;transition:width .5s cubic-bezier(.22,.61,.36,1)}
+  .hrow{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 15px;margin-bottom:10px;transition:background .3s}
+  .hrow .d{flex:1}.hrow .d b{font-family:var(--display);font-size:14px;display:block}
+  .hrow .d span{font-size:11.5px;color:var(--muted)}
+  .hrow .sc{font-family:var(--display);font-weight:800;font-size:17px}
+  .tag{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;font-family:var(--body)}
+  .tag.p{background:#e3f5ea;color:#1f9d55}.tag.f{background:#fbe4e7;color:#d72638}
+  .empty{text-align:center;color:var(--muted);padding:40px 20px;font-size:14px}
+  .empty .em{font-size:40px;display:block;margin-bottom:10px}
+  .setrow{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;transition:background .3s}
+  .setrow .d{flex:1}.setrow .d b{font-family:var(--display);font-size:15px;display:block}
+  .setrow .d span{font-size:12px;color:var(--muted)}
+  .switch{width:50px;height:30px;border-radius:30px;background:var(--soft);position:relative;cursor:pointer;flex:none;transition:background .25s;border:1px solid var(--line)}
+  .switch.on{background:var(--go);border-color:var(--go)}
+  .switch i{position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:left .25s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+  .switch.on i{left:23px}
+  .langgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
+  .langopt{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:10px;transition:.15s;color:var(--ink)}
+  .langopt.sel{border-color:var(--road);background:var(--soft)}
+  .langopt .fl{font-size:24px}.langopt b{font-family:var(--display);font-size:14px;display:block}
+  .langopt span{font-size:11px;color:var(--muted)}
+  .langbar{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:7px 8px 7px 14px;cursor:pointer;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:16px;width:fit-content}
+  .langbar .fl{font-size:17px}
+  .nav{display:flex;background:var(--card);border-top:1px solid var(--line);transition:background .3s;padding-bottom:env(safe-area-inset-bottom,0px)}
+  .navbtn{flex:1;border:0;background:none;padding:11px 0 13px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;color:var(--muted);font-family:var(--body);font-size:11px;font-weight:600;transition:color .2s}
+  .navbtn .ni{font-size:21px;line-height:1}
+  .navbtn.act{color:var(--road)}
+  footer.note{padding:14px 20px;font-size:11px;color:var(--muted);text-align:center}
+  .emptyhint{margin-top:18px;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--muted);text-align:center}
+  .studyhead{display:flex;justify-content:flex-end;margin-bottom:12px}
+  .readtoggle{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:7px 8px 7px 14px;cursor:pointer;font-size:13px;font-weight:600;color:var(--ink)}
+  .readtoggle .sw{width:40px;height:24px;border-radius:30px;background:var(--soft);position:relative;transition:background .2s;border:1px solid var(--line)}
+  .readtoggle .sw i{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .2s;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+  .readtoggle.on .sw{background:var(--go);border-color:var(--go)}.readtoggle.on .sw i{left:19px}
+  [dir="rtl"] .studyhead{justify-content:flex-start}
+  .tf button.picked{outline:4px solid rgba(255,255,255,.5);outline-offset:-6px}
+  .studymock{margin-top:8px;margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="mark"><span>仮</span></div>
+    <h1 id="hTitle">Japan License Prep<small id="hSub">Karimen · Written Test</small></h1>
+    <button class="back" id="backBtn" style="display:none;margin-left:auto">‹</button>
+  </header>
+  <main>
+    <section class="screen on" id="home">
+      <div class="langbar" id="langBar"><span class="fl">🌐</span><span id="langBarTxt">English</span><span style="color:var(--muted)">▾</span></div>
+      <div class="hero">
+        <span class="pill" id="heroPill">ENGLISH PRACTICE</span>
+        <h2 id="heroH">Pass the Japanese written driving test.</h2>
+        <p id="heroP">Practice true/false questions on traffic rules, signs and safety — same format as the real exam.</p>
+      </div>
+      <div class="stat-row" id="homeStats"></div>
+      <div class="menu stagger" id="homeMenu"></div>
+    </section>
+    <section class="screen" id="study"><div class="studyhead" id="studyControls"></div><div class="cats" id="cats"></div><div id="studyList"></div><button class="btn studymock" id="studyToMock">Take a mock test ›</button></section>
+    <section class="screen" id="testSetup">
+      <div class="hero" style="margin-bottom:20px"><h2 id="setupH">Mock Test</h2><p id="setupP">The real karimen test is 50 questions and you must score 90% (45/50) to pass.</p></div>
+      <div class="menu" id="setupMenu"></div>
+    </section>
+    <section class="screen" id="test">
+      <div class="progress"><i id="bar"></i></div>
+      <div class="meta"><span><span id="lblQ">Q</span> <b id="qNow">1</b> / <b id="qTot">10</b> <span id="qScoreWrap"> · <span id="lblScore">Score</span> <b id="qScore">0</b></span></span><span id="timer" style="display:none">⏱ 0:00</span></div>
+      <div class="qbig"><div class="cat" id="tCat"></div><div class="qimg-big" id="tImg"></div><p id="tQ"></p></div>
+      <div class="feedback" id="fb"><h4 id="fbH"></h4><p id="fbP"></p></div>
+      <div class="tf" id="tfBtns">
+        <button class="true" data-v="true"><span class="sym">○</span><span id="btnTrue">True</span></button>
+        <button class="false" data-v="false"><span class="sym">✕</span><span id="btnFalse">False</span></button>
+      </div>
+      <button class="btn sun" id="nextBtn" style="display:none;margin-top:18px">Next ›</button>
+    </section>
+    <section class="screen" id="results">
+      <div class="score-ring"><svg width="160" height="160" viewBox="0 0 160 160"><circle class="track" cx="80" cy="80" r="70" fill="none" stroke-width="14"/><circle id="ring" cx="80" cy="80" r="70" fill="none" stroke="var(--go)" stroke-width="14" stroke-linecap="round" stroke-dasharray="440" stroke-dashoffset="440"/></svg><div class="pct"><b id="rPct">0%</b><span id="rFrac">0 / 0</span></div></div>
+      <div class="verdict" id="verdict">—</div>
+      <div class="verdict-sub" id="verdictSub"></div>
+      <button class="btn" id="retryBtn">Try another test</button>
+      <button class="btn ghost" id="missBtn" style="margin-top:11px;display:none">Practice missed</button>
+      <div class="review"><h3 id="reviewTitle"></h3><div id="reviewList"></div></div>
+    </section>
+    <section class="screen" id="stats"><div id="statsBody"></div></section>
+    <section class="screen" id="settings">
+      <div class="sect-title" id="setLang">Language</div>
+      <div class="langgrid" id="langGrid"></div>
+      <div class="sect-title" id="setPrefs">Preferences</div>
+      <div class="setrow"><div class="d"><b id="setDarkT">Dark mode</b><span id="setDarkS">Easier on the eyes at night</span></div><div class="switch" id="swDark"><i></i></div></div>
+      <div class="setrow"><div class="d"><b id="setTimerT">Exam timer</b><span id="setTimerS">Countdown during mock tests</span></div><div class="switch" id="swTimer"><i></i></div></div>
+      <div class="setrow"><div class="d"><b id="setExamT">Exam mode</b><span id="setExamS">Hide right/wrong until the end</span></div><div class="switch" id="swExam"><i></i></div></div>
+      <div class="sect-title" id="setData">Data</div>
+      <div class="setrow"><div class="d"><b id="setResetT">Reset progress</b><span id="setResetS">Clear all saved test history</span></div><button class="back" id="resetBtn" style="background:var(--stop)">Reset</button></div>
+      <footer class="note" id="footNote">Practice app · original study questions, not official exam material.</footer>
+    </section>
+  </main>
+  <nav class="nav" id="nav">
+    <button class="navbtn act" data-tab="home"><span class="ni">🏠</span><span id="navHome">Practice</span></button>
+    <button class="navbtn" data-tab="stats"><span class="ni">📊</span><span id="navStats">Progress</span></button>
+    <button class="navbtn" data-tab="settings"><span class="ni">⚙️</span><span id="navSet">Settings</span></button>
+  </nav>
+</div>
+<script>
+const SIGNS={
+ stop:`<svg viewBox="0 0 120 120"><polygon points="60,108 12,26 108,26" fill="#d72638" stroke="#fff" stroke-width="5"/><text x="60" y="56" font-family="'M PLUS Rounded 1c',sans-serif" font-weight="800" font-size="19" text-anchor="middle" fill="#fff">止まれ</text></svg>`,
+ noentry:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#d72638"/><rect x="26" y="51" width="68" height="18" rx="3" fill="#fff"/></svg>`,
+ noparking:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="11"/><line x1="92" y1="28" x2="28" y2="92" stroke="#d72638" stroke-width="11"/></svg>`,
+ nostopping:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="11"/><line x1="92" y1="28" x2="28" y2="92" stroke="#d72638" stroke-width="11"/><line x1="28" y1="28" x2="92" y2="92" stroke="#d72638" stroke-width="11"/></svg>`,
+ speed40:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="11"/><text x="60" y="77" font-family="Arial,sans-serif" font-weight="bold" font-size="44" text-anchor="middle" fill="#15233b">40</text></svg>`,
+ oneway:`<svg viewBox="0 0 120 120"><rect x="6" y="40" width="108" height="40" rx="5" fill="#1b4fa0"/><polygon points="24,55 78,55 78,46 104,60 78,74 78,65 24,65" fill="#fff"/></svg>`,
+ crossing:`<svg viewBox="0 0 120 120"><polygon points="60,8 110,44 110,114 10,114 10,44" fill="#1b4fa0"/><circle cx="62" cy="42" r="7" fill="#fff"/><path d="M62 50 L62 74 M62 58 L50 68 M62 58 L74 66 M62 74 L52 92 M62 74 L72 92" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="26" y="100" width="9" height="10" fill="#fff"/><rect x="46" y="100" width="9" height="10" fill="#fff"/><rect x="66" y="100" width="9" height="10" fill="#fff"/><rect x="86" y="100" width="9" height="10" fill="#fff"/></svg>`,
+ noovertake:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="9"/><rect x="26" y="54" width="28" height="26" rx="5" fill="#d72638"/><rect x="31" y="46" width="18" height="12" rx="3" fill="#d72638"/><rect x="66" y="54" width="28" height="26" rx="5" fill="#15233b"/><rect x="71" y="46" width="18" height="12" rx="3" fill="#15233b"/></svg>`,
+ slow:`<svg viewBox="0 0 120 120"><polygon points="60,108 12,26 108,26" fill="#fff" stroke="#d72638" stroke-width="8"/><text x="60" y="52" font-family="'M PLUS Rounded 1c',sans-serif" font-weight="800" font-size="17" text-anchor="middle" fill="#15233b">徐行</text><text x="60" y="70" font-family="Arial,sans-serif" font-weight="bold" font-size="11" text-anchor="middle" fill="#15233b">SLOW</text></svg>`,
+ warnped:`<svg viewBox="0 0 120 120"><polygon points="60,8 112,60 60,112 8,60" fill="#ffd400" stroke="#15233b" stroke-width="4"/><circle cx="58" cy="44" r="6" fill="#15233b"/><path d="M58 51 L58 73 M58 58 L48 67 M58 58 L70 65 M58 73 L50 90 M58 73 L68 90" stroke="#15233b" stroke-width="5" fill="none" stroke-linecap="round"/></svg>`,
+ noveh:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="11"/><line x1="88" y1="32" x2="32" y2="88" stroke="#d72638" stroke-width="11"/></svg>`,
+ roadclosed:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="9"/><line x1="86" y1="34" x2="34" y2="86" stroke="#d72638" stroke-width="9"/><line x1="34" y1="34" x2="86" y2="86" stroke="#d72638" stroke-width="9"/></svg>`,
+ nouturn:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="9"/><path d="M44 80 L44 54 A16 16 0 0 1 76 54 L76 70" fill="none" stroke="#15233b" stroke-width="7" stroke-linecap="round"/><polygon points="67,68 85,68 76,86" fill="#15233b"/><line x1="86" y1="34" x2="34" y2="86" stroke="#d72638" stroke-width="9"/></svg>`,
+ minspeed:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><text x="60" y="72" font-family="Arial,sans-serif" font-weight="bold" font-size="40" text-anchor="middle" fill="#fff">30</text><line x1="40" y1="82" x2="80" y2="82" stroke="#fff" stroke-width="5"/></svg>`,
+ schoolzone:`<svg viewBox="0 0 120 120"><polygon points="60,8 112,60 60,112 8,60" fill="#ffd400" stroke="#15233b" stroke-width="4"/><circle cx="48" cy="42" r="6" fill="#15233b"/><path d="M48 49 L48 72 M48 56 L40 66 M48 56 L56 64 M48 72 L42 90 M48 72 L54 90" stroke="#15233b" stroke-width="4.5" fill="none" stroke-linecap="round"/><circle cx="73" cy="46" r="5.5" fill="#15233b"/><path d="M73 53 L73 74 M73 59 L66 68 M73 59 L80 66 M73 74 L68 90 M73 74 L78 90" stroke="#15233b" stroke-width="4.5" fill="none" stroke-linecap="round"/></svg>`,
+ slippery:`<svg viewBox="0 0 120 120"><polygon points="60,8 112,60 60,112 8,60" fill="#ffd400" stroke="#15233b" stroke-width="4"/><rect x="40" y="50" width="40" height="17" rx="5" fill="#15233b"/><rect x="48" y="42" width="24" height="11" rx="4" fill="#15233b"/><circle cx="48" cy="69" r="6" fill="#15233b"/><circle cx="72" cy="69" r="6" fill="#15233b"/><path d="M32 88 q6 -8 12 0 q6 8 12 0" fill="none" stroke="#15233b" stroke-width="4" stroke-linecap="round"/><path d="M62 88 q6 -8 12 0 q6 8 12 0" fill="none" stroke="#15233b" stroke-width="4" stroke-linecap="round"/></svg>`,
+ noright:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="9"/><path d="M48 86 L48 60 L72 60" fill="none" stroke="#15233b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><polygon points="66,50 84,60 66,70" fill="#15233b"/><line x1="86" y1="34" x2="34" y2="86" stroke="#d72638" stroke-width="9"/></svg>`,
+ nopassing:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="9"/><rect x="26" y="54" width="26" height="24" rx="4" fill="#d72638"/><rect x="30" y="47" width="16" height="11" rx="3" fill="#d72638"/><rect x="68" y="54" width="26" height="24" rx="4" fill="#15233b"/><rect x="72" y="47" width="16" height="11" rx="3" fill="#15233b"/></svg>`,
+ maxweight:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="9"/><text x="60" y="68" font-family="Arial,sans-serif" font-weight="bold" font-size="30" text-anchor="middle" fill="#15233b">5.5</text><text x="60" y="88" font-family="Arial,sans-serif" font-weight="bold" font-size="15" text-anchor="middle" fill="#15233b">t</text></svg>`,
+ maxheight:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="60" cy="60" r="50" fill="none" stroke="#d72638" stroke-width="9"/><path d="M30 40 L40 40 M30 80 L40 80 M35 40 L35 80" stroke="#15233b" stroke-width="4"/><text x="68" y="68" font-family="Arial,sans-serif" font-weight="bold" font-size="24" text-anchor="middle" fill="#15233b">3.3</text><text x="68" y="86" font-family="Arial,sans-serif" font-weight="bold" font-size="13" text-anchor="middle" fill="#15233b">m</text></svg>`,
+ pedonly:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><circle cx="58" cy="40" r="7" fill="#fff"/><path d="M58 47 L58 74 M58 55 L46 64 M58 55 L70 62 M58 74 L48 94 M58 74 L68 94" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/></svg>`,
+ bicycleonly:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><circle cx="40" cy="74" r="13" fill="none" stroke="#fff" stroke-width="4"/><circle cx="82" cy="74" r="13" fill="none" stroke="#fff" stroke-width="4"/><path d="M40 74 L54 50 L70 50 M54 50 L82 74 M61 74 L70 50" stroke="#fff" stroke-width="4" fill="none" stroke-linejoin="round"/><rect x="66" y="44" width="12" height="5" fill="#fff"/></svg>`,
+ soundhorn:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><path d="M40 50 L52 50 L66 38 L66 82 L52 70 L40 70 Z" fill="#fff"/><path d="M74 48 q10 12 0 24 M80 42 q16 18 0 36" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>`,
+ twostep:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><path d="M40 80 L40 58 L62 58" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><polygon points="56,48 76,58 56,68" fill="#fff"/><path d="M40 80 L78 80" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg>`,
+ safetyzone:`<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#1b4fa0"/><polygon points="60,30 86,80 34,80" fill="none" stroke="#fff" stroke-width="5"/><circle cx="60" cy="50" r="5" fill="#fff"/><path d="M60 55 L60 70 M60 60 L52 66 M60 60 L68 66" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>`,
+ crosswalkahead:`<svg viewBox="0 0 120 120"><polygon points="60,8 112,60 60,112 8,60" fill="#ffd400" stroke="#15233b" stroke-width="4"/><circle cx="56" cy="40" r="6" fill="#15233b"/><path d="M56 47 L56 70 M56 54 L46 63 M56 54 L66 61 M56 70 L48 88 M56 70 L64 88" stroke="#15233b" stroke-width="4.5" fill="none" stroke-linecap="round"/><rect x="40" y="94" width="7" height="8" fill="#15233b"/><rect x="54" y="94" width="7" height="8" fill="#15233b"/><rect x="68" y="94" width="7" height="8" fill="#15233b"/></svg>`
+};
+/* base = English. cat is a key into CATS. */
+const QUESTIONS=[
+ {cat:"Signals",a:false},{cat:"Signals",a:true},{cat:"Signals",a:false},{cat:"Signals",a:true},{cat:"Signals",a:true},
+ {cat:"Signs",img:"stop",a:true},{cat:"Signs",img:"noentry",a:true},{cat:"Signs",img:"noparking",a:false},{cat:"Signs",img:"nostopping",a:true},{cat:"Signs",img:"speed40",a:true},
+ {cat:"Signs",img:"oneway",a:true},{cat:"Signs",img:"crossing",a:false},{cat:"Signs",img:"noovertake",a:true},{cat:"Signs",img:"slow",a:false},{cat:"Signs",img:"warnped",a:true},
+ {cat:"Intersections",a:false},{cat:"Intersections",a:true},{cat:"Intersections",a:false},{cat:"Intersections",a:true},
+ {cat:"Pedestrians",a:true},{cat:"Pedestrians",a:false},{cat:"Pedestrians",a:false},{cat:"Pedestrians",a:true},
+ {cat:"Speed",a:true},{cat:"Speed",a:false},{cat:"Speed",a:true},{cat:"Speed",a:true},{cat:"Speed",a:true},
+ {cat:"Overtaking",a:false},{cat:"Overtaking",a:true},{cat:"Overtaking",a:false},{cat:"Overtaking",a:false},
+ {cat:"Parking",a:false},{cat:"Parking",a:true},{cat:"Parking",a:false},{cat:"Parking",a:true},
+ {cat:"Railroad",a:true},{cat:"Railroad",a:false},
+ {cat:"Safety",a:true},{cat:"Safety",a:false},{cat:"Safety",a:false},{cat:"Safety",a:true},{cat:"Safety",a:false},{cat:"Safety",a:true},
+ {cat:"Vehicles",a:true},{cat:"Vehicles",a:true},{cat:"Vehicles",a:false},{cat:"Vehicles",a:true},{cat:"Vehicles",a:true},
+ {cat:"Expressway",a:true},{cat:"Expressway",a:true},{cat:"Expressway",a:false},{cat:"Expressway",a:true},
+ {cat:"NightWeather",a:true},{cat:"NightWeather",a:true},{cat:"NightWeather",a:false},
+ {cat:"Signs",img:"noveh",a:true},{cat:"Signs",img:"roadclosed",a:false},{cat:"Signs",img:"nouturn",a:true},{cat:"Signs",img:"minspeed",a:true},{cat:"Signs",a:true},
+ {cat:"Signs",img:"schoolzone",a:false},{cat:"Signs",img:"slippery",a:true},{cat:"Signs",a:true},
+ {cat:"Intersections",a:true},{cat:"Pedestrians",a:true},{cat:"Parking",a:true},{cat:"Intersections",a:true},{cat:"Intersections",a:false},{cat:"Intersections",a:true},
+ {cat:"Pedestrians",a:false},{cat:"Pedestrians",a:true},{cat:"Safety",a:true},{cat:"Speed",a:true},{cat:"Overtaking",a:true},{cat:"Railroad",a:true},
+ {cat:"License",a:true},{cat:"Parking",a:true},{cat:"License",a:true},{cat:"License",a:true},
+ {cat:"Signs",img:"noright",a:false},{cat:"Signs",img:"nopassing",a:true},{cat:"Signs",img:"maxweight",a:true},{cat:"Signs",img:"maxheight",a:true},{cat:"Signs",img:"pedonly",a:false},{cat:"Signs",img:"soundhorn",a:true},{cat:"Signs",img:"bicycleonly",a:true},{cat:"Intersections",img:"twostep",a:true},{cat:"Parking",img:"safetyzone",a:true},{cat:"Pedestrians",img:"crosswalkahead",a:true},{cat:"Signals",a:false},{cat:"Signals",a:true},{cat:"Signals",a:true},{cat:"Signals",a:false},{cat:"Speed",a:true},{cat:"Speed",a:false},{cat:"Speed",a:true},{cat:"Intersections",a:true},{cat:"Intersections",a:true},{cat:"Intersections",a:false},{cat:"Pedestrians",a:true},{cat:"Pedestrians",a:true},{cat:"Pedestrians",a:false},{cat:"Pedestrians",a:true},{cat:"Overtaking",a:true},{cat:"Overtaking",a:false},{cat:"Parking",a:true},{cat:"Parking",a:true},{cat:"Railroad",a:true},{cat:"Railroad",a:false},{cat:"License",a:true},{cat:"License",a:true},{cat:"Safety",a:true},{cat:"Safety",a:false},{cat:"Safety",a:true},{cat:"Vehicles",a:true},{cat:"Vehicles",a:false},{cat:"Expressway",a:true},{cat:"Expressway",a:false},{cat:"NightWeather",a:true},{cat:"NightWeather",a:true},
+ {cat:"Vehicles",a:true},{cat:"Signals",a:false},{cat:"Signals",a:true},{cat:"Signals",a:true},{cat:"Signals",a:true},{cat:"Speed",a:false},{cat:"Speed",a:true},{cat:"Speed",a:true},{cat:"Speed",a:false},{cat:"Speed",a:false},{cat:"Intersections",a:false},{cat:"Intersections",a:false},{cat:"Intersections",a:false},{cat:"Intersections",a:true},{cat:"Pedestrians",a:false},{cat:"Pedestrians",a:false},{cat:"Signs",img:"noright",a:false},{cat:"Signs",img:"minspeed",a:true},{cat:"Signs",img:"noveh",a:true},{cat:"Signs",img:"roadclosed",a:false},{cat:"Signs",img:"schoolzone",a:false},{cat:"Parking",img:"nostopping",a:false},{cat:"License",a:true},{cat:"License",a:true},{cat:"License",a:false},{cat:"Safety",a:true},{cat:"Safety",a:false},{cat:"Safety",a:false},{cat:"Overtaking",a:true},{cat:"Overtaking",a:true},{cat:"Railroad",a:false},{cat:"Vehicles",a:false},{cat:"Vehicles",a:true},{cat:"Pedestrians",img:"crossing",a:false}
+];
+/* ===== Category names ===== */
+const CATS={
+ en:{All:"All",Signals:"Signals",Signs:"Signs",Intersections:"Intersections",Pedestrians:"Pedestrians",Speed:"Speed",Overtaking:"Overtaking",Parking:"Parking",Railroad:"Railroad",Safety:"Safety",Vehicles:"Vehicles",Expressway:"Expressway",NightWeather:"Night & Weather",License:"License"},
+ ur:{All:"تمام",Signals:"اشارے",Signs:"نشانات",Intersections:"چوراہے",Pedestrians:"پیدل چلنے والے",Speed:"رفتار",Overtaking:"اوور ٹیکنگ",Parking:"پارکنگ",Railroad:"ریلوے کراسنگ",Safety:"حفاظت",Vehicles:"گاڑیاں",Expressway:"ایکسپریس وے",NightWeather:"رات اور موسم",License:"لائسنس"},
+ hi:{All:"सभी",Signals:"सिग्नल",Signs:"संकेत",Intersections:"चौराहे",Pedestrians:"पैदल यात्री",Speed:"गति",Overtaking:"ओवरटेक",Parking:"पार्किंग",Railroad:"रेलवे क्रॉसिंग",Safety:"सुरक्षा",Vehicles:"वाहन",Expressway:"एक्सप्रेसवे",NightWeather:"रात और मौसम",License:"लाइसेंस"},
+ es:{All:"Todas",Signals:"Semáforos",Signs:"Señales",Intersections:"Cruces",Pedestrians:"Peatones",Speed:"Velocidad",Overtaking:"Adelantamiento",Parking:"Estacionamiento",Railroad:"Paso a nivel",Safety:"Seguridad",Vehicles:"Vehículos",Expressway:"Autopista",NightWeather:"Noche y clima",License:"Permiso"},
+ zh:{All:"全部",Signals:"信号灯",Signs:"标志",Intersections:"路口",Pedestrians:"行人",Speed:"速度",Overtaking:"超车",Parking:"停车",Railroad:"铁路道口",Safety:"安全",Vehicles:"车辆",Expressway:"高速公路",NightWeather:"夜间与天气",License:"驾照"}
+};
+/* ===== UI strings ===== */
+const UI={
+ en:{sub:"Karimen · Written Test",pill:"ENGLISH PRACTICE",heroH:"Pass the Japanese written driving test.",heroP:"Practice true/false questions on traffic rules, signs and safety — same format as the real exam.",tests:"Tests",best:"Best",passRate:"Pass rate",mockT:"Mock Test",mockS:"Full 50-question exam · pass 90%",studyT:"Study Mode",studyS:"Questions, signs, answers & explanations",quickT:"Quick 10",quickS:"Fast 10-question warm-up",retryT:"Retry Missed",retryS:"Practice your last misses",setupH:"Mock Test",setupP:"The real karimen test is 50 questions and you must score 90% (45/50) to pass.",short:"Short — 10 questions",standard:"Standard — 25 questions",full:"Full mock — 50 questions",q:"Q",score:"Score",btnTrue:"True / 正しい",btnFalse:"False / 誤り",next:"Next ›",seeResults:"See results ›",correct:"Correct ✓",wrong:"Not quite ✕",answer:"Answer:",pass:"PASS 合格",keepStudy:"KEEP STUDYING",passSub:"You cleared the 90% mark — nice work.",failSub:"You need 90% to pass.",moreNeeded:"more correct would do it.",perfectRun:"Perfect run — no misses! 🎉",reviewMiss:"Review your misses",tryAnother:"Try another test",practiceMiss:"Practice missed",navHome:"Practice",navStats:"Progress",navSet:"Settings",statsTitle:"Your Progress",noTests:"No tests yet. Take your first mock test and your progress will appear here.",overview:"Overview",testsTaken:"Tests taken",avgScore:"Average score",bestScore:"Best score",byTopic:"Accuracy by topic",recent:"Recent tests",mock:"mock",setLang:"Language",setPrefs:"Preferences",darkT:"Dark mode",darkS:"Easier on the eyes at night",timerT:"Exam timer",timerS:"Countdown during mock tests",setData:"Data",resetT:"Reset progress",resetS:"Clear all saved test history",reset:"Reset",confirmReset:"Clear all saved test history? This cannot be undone.",cleared:"Progress cleared.",foot:"Practice app · original study questions, not official exam material.",answerTrue:"TRUE ○",answerFalse:"FALSE ✕",readAllT:"Read All Questions",readAllS:"Browse every question with answers, then test yourself",focusT:"Focus Weak Areas",focusS:"A test weighted toward your weakest topics",mistakesT:"Review Mistakes",mistakesS:"Practice questions you've missed before",takeMock:"Take a mock test ›",showAns:"Show answers",examT:"Exam mode",examS:"Hide right/wrong until the end, like the real test",exitConfirm:"Leave this test? Your progress on it won't be saved.",statsEmptyHome:"Take your first test to start tracking progress"},
+ ur:{sub:"کاریمین · تحریری ٹیسٹ",pill:"اردو میں مشق",heroH:"جاپانی تحریری ڈرائیونگ ٹیسٹ پاس کریں۔",heroP:"ٹریفک قوانین، نشانات اور حفاظت پر صحیح/غلط سوالات کی مشق کریں — اصل امتحان جیسا ہی فارمیٹ۔",tests:"ٹیسٹ",best:"بہترین",passRate:"کامیابی کی شرح",mockT:"ماک ٹیسٹ",mockS:"مکمل 50 سوالات کا امتحان · 90% پر کامیاب",studyT:"مطالعہ موڈ",studyS:"سوالات، نشانات، جوابات اور وضاحتیں",quickT:"فوری 10",quickS:"تیز 10 سوالات کی مشق",retryT:"غلط دوبارہ کریں",retryS:"اپنی پچھلی غلطیوں کی مشق کریں",setupH:"ماک ٹیسٹ",setupP:"اصل کاریمین ٹیسٹ میں 50 سوالات ہوتے ہیں اور کامیابی کے لیے 90% (45/50) درکار ہیں۔",short:"مختصر — 10 سوالات",standard:"درمیانہ — 25 سوالات",full:"مکمل ماک — 50 سوالات",q:"سوال",score:"اسکور",btnTrue:"صحیح / 正しい",btnFalse:"غلط / 誤り",next:"اگلا ›",seeResults:"نتائج دیکھیں ›",correct:"درست ✓",wrong:"غلط ✕",answer:"جواب:",pass:"کامیاب 合格",keepStudy:"مزید مطالعہ کریں",passSub:"آپ نے 90% کا ہدف عبور کر لیا — شاباش۔",failSub:"کامیابی کے لیے 90% درکار ہیں۔",moreNeeded:"مزید درست جواب کافی ہوں گے۔",perfectRun:"بہترین — کوئی غلطی نہیں! 🎉",reviewMiss:"اپنی غلطیوں کا جائزہ لیں",tryAnother:"دوبارہ ٹیسٹ کریں",practiceMiss:"غلط سوالات کی مشق",navHome:"مشق",navStats:"پیش رفت",navSet:"ترتیبات",statsTitle:"آپ کی پیش رفت",noTests:"ابھی کوئی ٹیسٹ نہیں۔ اپنا پہلا ماک ٹیسٹ دیں اور آپ کی پیش رفت یہاں نظر آئے گی۔",overview:"خلاصہ",testsTaken:"دیے گئے ٹیسٹ",avgScore:"اوسط اسکور",bestScore:"بہترین اسکور",byTopic:"موضوع کے لحاظ سے درستگی",recent:"حالیہ ٹیسٹ",mock:"ماک",setLang:"زبان",setPrefs:"ترجیحات",darkT:"ڈارک موڈ",darkS:"رات کو آنکھوں کے لیے آسان",timerT:"امتحانی ٹائمر",timerS:"ماک ٹیسٹ کے دوران گنتی",setData:"ڈیٹا",resetT:"پیش رفت ری سیٹ کریں",resetS:"تمام محفوظ ٹیسٹ ہسٹری صاف کریں",reset:"ری سیٹ",confirmReset:"تمام محفوظ ٹیسٹ ہسٹری صاف کریں؟ یہ واپس نہیں ہو سکتا۔",cleared:"پیش رفت صاف ہو گئی۔",foot:"مشقی ایپ · اصل مطالعاتی سوالات، سرکاری امتحانی مواد نہیں۔",answerTrue:"صحیح ○",answerFalse:"غلط ✕",readAllT:"تمام سوالات پڑھیں",readAllS:"ہر سوال کو جواب کے ساتھ پڑھیں، پھر خود کو آزمائیں",focusT:"کمزور موضوعات پر توجہ",focusS:"آپ کے کمزور ترین موضوعات پر مبنی ٹیسٹ",mistakesT:"غلطیوں کا جائزہ",mistakesS:"وہ سوالات جو پہلے غلط ہوئے ان کی مشق کریں",takeMock:"ماک ٹیسٹ دیں ›",showAns:"جوابات دکھائیں",examT:"امتحانی موڈ",examS:"اصل ٹیسٹ کی طرح آخر تک صحیح/غلط چھپائیں",exitConfirm:"یہ ٹیسٹ چھوڑیں؟ اس کی پیش رفت محفوظ نہیں ہوگی۔",statsEmptyHome:"پیش رفت ٹریک کرنے کے لیے اپنا پہلا ٹیسٹ دیں"},
+ hi:{sub:"कारिमेन · लिखित परीक्षा",pill:"हिंदी में अभ्यास",heroH:"जापानी लिखित ड्राइविंग परीक्षा पास करें।",heroP:"यातायात नियमों, संकेतों और सुरक्षा पर सही/गलत प्रश्नों का अभ्यास करें — असली परीक्षा जैसा ही प्रारूप।",tests:"परीक्षाएँ",best:"सर्वश्रेष्ठ",passRate:"पास दर",mockT:"मॉक टेस्ट",mockS:"पूरे 50 प्रश्नों की परीक्षा · 90% पर पास",studyT:"अध्ययन मोड",studyS:"प्रश्न, संकेत, उत्तर और व्याख्याएँ",quickT:"त्वरित 10",quickS:"तेज़ 10-प्रश्न अभ्यास",retryT:"गलत दोहराएँ",retryS:"अपनी पिछली गलतियों का अभ्यास करें",setupH:"मॉक टेस्ट",setupP:"असली कारिमेन परीक्षा में 50 प्रश्न होते हैं और पास होने के लिए 90% (45/50) चाहिए।",short:"छोटा — 10 प्रश्न",standard:"मानक — 25 प्रश्न",full:"पूरा मॉक — 50 प्रश्न",q:"प्र",score:"स्कोर",btnTrue:"सही / 正しい",btnFalse:"गलत / 誤り",next:"अगला ›",seeResults:"परिणाम देखें ›",correct:"सही ✓",wrong:"गलत ✕",answer:"उत्तर:",pass:"पास 合格",keepStudy:"अध्ययन जारी रखें",passSub:"आपने 90% का लक्ष्य पार किया — बढ़िया!",failSub:"पास होने के लिए 90% चाहिए।",moreNeeded:"और सही उत्तर पर्याप्त होंगे।",perfectRun:"शानदार — कोई गलती नहीं! 🎉",reviewMiss:"अपनी गलतियाँ देखें",tryAnother:"दूसरी परीक्षा दें",practiceMiss:"गलत प्रश्नों का अभ्यास",navHome:"अभ्यास",navStats:"प्रगति",navSet:"सेटिंग्स",statsTitle:"आपकी प्रगति",noTests:"अभी कोई परीक्षा नहीं। अपनी पहली मॉक टेस्ट दें और आपकी प्रगति यहाँ दिखेगी।",overview:"सारांश",testsTaken:"दी गई परीक्षाएँ",avgScore:"औसत स्कोर",bestScore:"सर्वश्रेष्ठ स्कोर",byTopic:"विषय अनुसार सटीकता",recent:"हाल की परीक्षाएँ",mock:"मॉक",setLang:"भाषा",setPrefs:"प्राथमिकताएँ",darkT:"डार्क मोड",darkS:"रात में आँखों के लिए आसान",timerT:"परीक्षा टाइमर",timerS:"मॉक टेस्ट के दौरान काउंटडाउन",setData:"डेटा",resetT:"प्रगति रीसेट करें",resetS:"सभी सहेजी गई परीक्षा हिस्ट्री मिटाएँ",reset:"रीसेट",confirmReset:"सभी सहेजी गई परीक्षा हिस्ट्री मिटाएँ? यह वापस नहीं हो सकता।",cleared:"प्रगति मिटा दी गई।",foot:"अभ्यास ऐप · मूल अध्ययन प्रश्न, आधिकारिक परीक्षा सामग्री नहीं।",answerTrue:"सही ○",answerFalse:"गलत ✕",readAllT:"सभी प्रश्न पढ़ें",readAllS:"हर प्रश्न को उत्तर सहित पढ़ें, फिर खुद को परखें",focusT:"कमज़ोर विषयों पर ध्यान",focusS:"आपके सबसे कमज़ोर विषयों पर आधारित परीक्षा",mistakesT:"गलतियाँ देखें",mistakesS:"पहले गलत हुए प्रश्नों का अभ्यास करें",takeMock:"मॉक टेस्ट दें ›",showAns:"उत्तर दिखाएँ",examT:"परीक्षा मोड",examS:"असली परीक्षा की तरह अंत तक सही/गलत छिपाएँ",exitConfirm:"यह परीक्षा छोड़ें? इसकी प्रगति सहेजी नहीं जाएगी।",statsEmptyHome:"प्रगति ट्रैक करने के लिए अपनी पहली परीक्षा दें"},
+ es:{sub:"Karimen · Examen escrito",pill:"PRÁCTICA EN ESPAÑOL",heroH:"Aprueba el examen escrito de conducir de Japón.",heroP:"Practica preguntas de verdadero/falso sobre normas de tráfico, señales y seguridad — el mismo formato del examen real.",tests:"Exámenes",best:"Mejor",passRate:"Tasa de aprobación",mockT:"Examen de prueba",mockS:"Examen completo de 50 preguntas · aprueba con 90%",studyT:"Modo estudio",studyS:"Preguntas, señales, respuestas y explicaciones",quickT:"Rápido 10",quickS:"Calentamiento rápido de 10 preguntas",retryT:"Repetir falladas",retryS:"Practica tus últimos fallos",setupH:"Examen de prueba",setupP:"El examen karimen real tiene 50 preguntas y debes acertar el 90% (45/50) para aprobar.",short:"Corto — 10 preguntas",standard:"Estándar — 25 preguntas",full:"Examen completo — 50 preguntas",q:"P",score:"Puntos",btnTrue:"Verdadero / 正しい",btnFalse:"Falso / 誤り",next:"Siguiente ›",seeResults:"Ver resultados ›",correct:"Correcto ✓",wrong:"Incorrecto ✕",answer:"Respuesta:",pass:"APROBADO 合格",keepStudy:"SIGUE ESTUDIANDO",passSub:"Superaste el 90% — ¡bien hecho!",failSub:"Necesitas el 90% para aprobar.",moreNeeded:"respuestas correctas más bastarían.",perfectRun:"¡Ronda perfecta, sin fallos! 🎉",reviewMiss:"Revisa tus fallos",tryAnother:"Hacer otro examen",practiceMiss:"Practicar falladas",navHome:"Práctica",navStats:"Progreso",navSet:"Ajustes",statsTitle:"Tu progreso",noTests:"Aún no hay exámenes. Haz tu primer examen de prueba y tu progreso aparecerá aquí.",overview:"Resumen",testsTaken:"Exámenes hechos",avgScore:"Puntuación media",bestScore:"Mejor puntuación",byTopic:"Precisión por tema",recent:"Exámenes recientes",mock:"prueba",setLang:"Idioma",setPrefs:"Preferencias",darkT:"Modo oscuro",darkS:"Más cómodo de noche",timerT:"Temporizador",timerS:"Cuenta atrás en los exámenes",setData:"Datos",resetT:"Borrar progreso",resetS:"Eliminar todo el historial guardado",reset:"Borrar",confirmReset:"¿Borrar todo el historial guardado? No se puede deshacer.",cleared:"Progreso borrado.",foot:"App de práctica · preguntas originales de estudio, no material oficial del examen.",answerTrue:"VERDADERO ○",answerFalse:"FALSO ✕",readAllT:"Leer todas las preguntas",readAllS:"Repasa cada pregunta con su respuesta y luego ponte a prueba",focusT:"Reforzar puntos débiles",focusS:"Un examen centrado en tus temas más flojos",mistakesT:"Repasar fallos",mistakesS:"Practica las preguntas que has fallado antes",takeMock:"Hacer un examen de prueba ›",showAns:"Mostrar respuestas",examT:"Modo examen",examS:"Oculta acierto/error hasta el final, como el examen real",exitConfirm:"¿Salir de este examen? No se guardará tu progreso.",statsEmptyHome:"Haz tu primer examen para empezar a ver tu progreso"},
+ zh:{sub:"临考 · 笔试",pill:"中文练习",heroH:"通过日本驾照笔试。",heroP:"练习关于交通规则、标志和安全的判断题——与真实考试格式相同。",tests:"测试",best:"最佳",passRate:"通过率",mockT:"模拟考试",mockS:"完整50题考试 · 90%通过",studyT:"学习模式",studyS:"题目、标志、答案与解析",quickT:"快速10题",quickS:"快速10题热身",retryT:"重做错题",retryS:"练习上次的错题",setupH:"模拟考试",setupP:"真实的临考考试有50道题，必须答对90%（45/50）才能通过。",short:"简短 — 10题",standard:"标准 — 25题",full:"完整模拟 — 50题",q:"第",score:"得分",btnTrue:"正确 / 正しい",btnFalse:"错误 / 誤り",next:"下一题 ›",seeResults:"查看结果 ›",correct:"正确 ✓",wrong:"错误 ✕",answer:"答案：",pass:"通过 合格",keepStudy:"继续学习",passSub:"你超过了90%——做得好！",failSub:"通过需要90%。",moreNeeded:"再答对几题即可。",perfectRun:"满分——全部答对！🎉",reviewMiss:"复习错题",tryAnother:"再考一次",practiceMiss:"练习错题",navHome:"练习",navStats:"进度",navSet:"设置",statsTitle:"你的进度",noTests:"还没有测试。完成第一次模拟考试后，进度会显示在这里。",overview:"概览",testsTaken:"已完成测试",avgScore:"平均分",bestScore:"最高分",byTopic:"各主题准确率",recent:"最近的测试",mock:"模拟",setLang:"语言",setPrefs:"偏好设置",darkT:"深色模式",darkS:"夜间护眼",timerT:"考试计时",timerS:"模拟考试中倒计时",setData:"数据",resetT:"重置进度",resetS:"清除所有已保存的测试记录",reset:"重置",confirmReset:"清除所有已保存的测试记录？此操作无法撤销。",cleared:"进度已清除。",foot:"练习应用 · 原创学习题目，非官方考试材料。",answerTrue:"正确 ○",answerFalse:"错误 ✕",readAllT:"阅读所有题目",readAllS:"逐题查看题目和答案，然后自我检测",focusT:"强化薄弱主题",focusS:"针对你最薄弱主题的测试",mistakesT:"复习错题",mistakesS:"练习以前做错的题目",takeMock:"进行模拟考试 ›",showAns:"显示答案",examT:"考试模式",examS:"像真实考试一样，到最后才显示对错",exitConfirm:"离开本次测试？进度将不会保存。",statsEmptyHome:"完成第一次测试即可开始记录进度"}
+};
+const LANGS=[
+ {id:"en",name:"English",native:"English",fl:"🇬🇧",dir:"ltr",script:""},
+ {id:"ur",name:"Urdu",native:"اردو",fl:"🇵🇰",dir:"rtl",script:"ar"},
+ {id:"hi",name:"Hindi",native:"हिन्दी",fl:"🇮🇳",dir:"ltr",script:"dev"},
+ {id:"es",name:"Spanish",native:"Español",fl:"🇪🇸",dir:"ltr",script:""},
+ {id:"zh",name:"Chinese",native:"中文",fl:"🇨🇳",dir:"ltr",script:"sc"}
+];
+/* ===== Question + explanation translations, aligned to QUESTIONS index ===== */
+const T={
+ en:[
+["When the light turns yellow, you should speed up to clear the intersection before it turns red.","Yellow means stop if you can do so safely. Continue only if stopping would be dangerous — never accelerate."],
+["A flashing red signal means you must stop, then proceed only when it is safe.","A flashing red is treated like a stop sign: stop completely, check, then go."],
+["A flashing yellow signal means you must come to a complete stop.","A flashing yellow means proceed with caution — you may continue without stopping, but stay alert."],
+["When your light turns green you may move off, but must still yield to pedestrians and vehicles still inside the intersection.","Green gives permission to proceed, not priority over those already lawfully in the intersection."],
+["A police officer's hand signal directing traffic takes priority over the traffic lights.","When an officer is directing traffic, follow their signals even if the lights say otherwise."],
+["This sign means you must come to a complete stop.","The red downward triangle marked 止まれ requires a full stop before proceeding."],
+["This sign means vehicles are prohibited from entering.","The red circle with a white bar marks no entry for vehicles."],
+["This sign permits parking for up to five minutes.","This is the no-parking sign — parking is prohibited."],
+["This sign prohibits both parking and stopping.","The blue circle with a red ring and an X means no parking and no stopping."],
+["This sign sets a maximum speed of 40 km/h.","A white circle with a red ring and a number gives the maximum speed limit."],
+["This sign indicates a one-way street; you may drive only in the arrow's direction.","The blue rectangle with a white arrow marks one-way traffic."],
+["This sign warns that there is no pedestrian crossing here.","On the contrary — it marks a pedestrian crossing; watch for people crossing."],
+["This sign prohibits overtaking.","The circle showing one vehicle passing another, with a red ring, prohibits overtaking."],
+["This sign means you may keep your speed through the area.","徐行 / SLOW means you must slow right down so you can stop immediately if needed."],
+["This yellow diamond warns of a pedestrian crossing ahead.","Yellow diamond signs are warnings; this warns of a pedestrian crossing ahead."],
+["If an emergency vehicle approaches while you are inside an intersection, you should stop immediately where you are.","Clear the intersection first, pull to the left, then stop to let it pass."],
+["At an unsignalled intersection, a vehicle on a narrow road must yield to a vehicle on the obviously wider road.","The vehicle on the clearly wider road has priority where no signals or signs apply."],
+["You may park within 5 metres of an intersection as long as you are not blocking traffic.","Parking and stopping are prohibited within 5 metres of an intersection or its corner."],
+["At an intersection of roads of equal width with no signals, you must give way to a vehicle approaching from your left.","Japan applies left-side priority (左方優先) at equal-width uncontrolled intersections."],
+["When a pedestrian is crossing at a pedestrian crossing, you must stop before the crossing and let them pass.","Pedestrians on a crossing always have priority — stop and yield."],
+["If a person is using a white cane or guide dog near the road, you may pass normally without slowing.","You must slow down or stop to ensure their safety; they may be visually impaired."],
+["You may drive through a puddle at normal speed even if it splashes pedestrians on the footpath.","You must slow to avoid splashing mud or water onto pedestrians — doing so is an offence."],
+["You must stop for a pedestrian waiting to cross at an unsignalled pedestrian crossing.","You must stop and let waiting pedestrians cross at a crossing without signals."],
+["On an ordinary road with no posted speed sign, the default limit for a standard car is 60 km/h.","Where no sign is posted, 60 km/h is the statutory limit for ordinary cars on general roads."],
+["Braking distance roughly doubles when your speed doubles.","Braking distance grows with the square of speed — double the speed is about four times the braking distance."],
+["On a wet or icy road, stopping distance becomes longer than on a dry road at the same speed.","Reduced grip lengthens braking distance, so leave a bigger gap in poor conditions."],
+["Total stopping distance is the free-running (reaction) distance plus the braking distance.","It combines the distance during your reaction time and the distance while braking."],
+["A heavily loaded vehicle going downhill needs a longer braking distance than when empty on the flat.","Greater weight and a downhill slope both increase the distance needed to stop."],
+["It is permitted to overtake another vehicle just before or inside a tunnel.","Overtaking is prohibited inside tunnels and other low-visibility spots."],
+["You must not overtake a vehicle that is itself overtaking another vehicle.","Double overtaking is prohibited because of the high collision risk."],
+["Overtaking is allowed on a pedestrian crossing if no pedestrians are present.","Overtaking is banned on and just before pedestrian crossings, whether or not pedestrians are there."],
+["As a rule, you overtake another vehicle by passing on its left side.","You normally overtake on the right; passing on the left is generally not permitted."],
+["You may stop your car in front of a fire hydrant as long as you stay in the vehicle.","Parking and stopping near fire hydrants is prohibited."],
+["Parking is prohibited within 3 metres of the entrance to a garage or parking facility.","You must not block such entrances; the prohibited zone extends about 3 metres."],
+['"Parking" and "stopping" mean exactly the same thing under the traffic law.',"Stopping is a brief halt; parking is longer or where you can't move off immediately."],
+["Parking is prohibited within 5 metres of a fire hydrant.","A 5-metre no-parking zone applies around fire hydrants to keep access clear."],
+["At a railroad crossing you must stop and check for safety even when the gate is open and visibility is good.","You must always stop before a railroad crossing and confirm it is safe."],
+["If your car stalls on a railroad crossing, you should first try to restart the engine before anything else.","Get everyone out and press the crossing's emergency button first — people before the vehicle."],
+["In Japan it is illegal to drive after consuming any amount of alcohol.","Japan applies a strict standard — driving under the influence of alcohol is prohibited."],
+["Only the driver is legally required to wear a seatbelt; passengers are exempt.","All occupants, including rear-seat passengers, must wear seatbelts."],
+["You may freely use your horn anywhere to alert other drivers.","Use the horn only where a sign requires it, or in an emergency to avoid danger."],
+["Operating a hand-held mobile phone while driving is prohibited.","Holding a phone or staring at a screen while driving is an offence."],
+["If you feel sleepy you should keep driving with the window open until you reach your destination.","Drowsy driving is dangerous — stop and rest rather than pushing on."],
+["A small child must be secured in an appropriate child seat.","Children under six must use a suitable child seat."],
+["In Japan, vehicles keep to the left side of the road.","Japan drives on the left; keep left except when overtaking where permitted."],
+["A bicycle is classed as a light vehicle and must, as a rule, travel on the left side of the road.","Bicycles are 軽車両 (light vehicles) and generally ride on the left."],
+["A motorcycle rider may choose whether or not to wear a helmet on ordinary roads.","Helmets are mandatory for motorcycle and moped riders."],
+["A driver in their first year with an ordinary licence must display the beginner (wakaba) mark.","New drivers must display the green-and-yellow beginner mark for one year."],
+["You should take extra care around a vehicle displaying the elderly driver mark.","The elderly driver mark signals an older driver; give them extra space."],
+["Pedestrians and bicycles are prohibited on expressways.","Expressways are for motor vehicles only — no pedestrians, bicycles, or mopeds."],
+["The minimum speed for an ordinary car on an expressway is generally 50 km/h.","Driving too slowly is dangerous; the usual minimum for ordinary cars is 50 km/h."],
+["You may stop on the expressway shoulder whenever you want to rest.","Stopping on the shoulder is only for emergencies — use a service area to rest."],
+["On most expressways the maximum speed for an ordinary car is 100 km/h.","100 km/h is the common maximum, though some sections are signed up to 120 km/h."],
+["At night you should dip your headlights when meeting an oncoming vehicle.","Switch to low beam to avoid dazzling the oncoming driver."],
+["You should turn on your headlights when driving through a tunnel, even in daytime.","Tunnels are dark — headlights help you see and be seen."],
+["In thick fog you should use high beams for maximum visibility.","High beams reflect off fog and worsen visibility — use low beams or fog lights."]
+,
+["This sign means all vehicles are prohibited from passing through.","A red ring with a diagonal bar marks a road closed to all vehicles."],
+["This sign closes the road to vehicles only; pedestrians may still pass.","'Road Closed' (通行止め) closes the road to vehicles AND pedestrians alike."],
+["This sign prohibits making a U-turn.","The U-turn arrow with a red slash means no U-turns are allowed here."],
+["This sign shows a minimum speed; you must not drive slower than the number shown.","A blue circle with an underlined number sets the minimum speed, not the maximum."],
+["This sign tells you to sound your horn.","Where this sign is posted, such as a blind bend, you must sound your horn."],
+["This warning sign means you must always come to a complete stop.","It warns that children may appear suddenly, so take care and be ready to slow or stop — but it does not by itself require a full stop."],
+["This yellow diamond warns the road ahead may be slippery.","Yellow diamonds are warnings; this one warns of a slippery surface ahead."],
+["This yellow diamond warns of an intersection ahead.","The cross shape warns that a crossroads is coming up."],
+["Where this sign is posted, you may turn left even at a red light after yielding to pedestrians and cross traffic.","The blue 'left turn permitted' sign lets you turn left on red once it is safe."],
+["Diamond marks painted on the road warn that a pedestrian crossing is ahead.","White diamonds on the road surface mean a crossing is coming up — be ready to stop."],
+["A solid yellow line along the curb means no parking and no stopping at any time.","A solid yellow curb line bans both parking and stopping; a dashed yellow line bans only parking."],
+["You must slow down whenever you turn at an intersection, even when the light is green.","Every left or right turn at an intersection requires you to slow down first."],
+["When turning right at an intersection you must always come to a complete stop first.","You must slow down, but a full stop isn't required if there are no oncoming vehicles or pedestrians to yield to."],
+["Even on a green light, you must not enter an intersection if you might end up stopped inside it and blocking cross traffic.","Don't enter unless you can clear the intersection; blocking the crossroad is prohibited."],
+["If a vehicle ahead has stopped at a pedestrian crossing, you may pass it slowly when no one is visible.","You must stop behind it — never pass a vehicle that has stopped at or before a crossing."],
+["Before crossing a footpath to enter a roadside facility such as a petrol station, you must stop even if no pedestrians are present.","You must stop before crossing the footpath, whether or not anyone is walking there."],
+["Signal about 30 metres before a turn, but about 3 seconds before a lane change.","The timing differs: 30 m ahead for a turn, 3 seconds ahead for changing lanes."],
+["On a general road with no sign, both large and ordinary motorcycles may do 60 km/h, while a moped's limit is 30 km/h.","Motorcycles share the 60 km/h general-road limit with cars; mopeds are capped at 30 km/h."],
+["On a road with two lanes in the same direction, you should drive in the left lane and leave the right lane for overtaking.","Keep to the first (left) lane; the right lane is reserved for overtaking, turning right or U-turns."],
+["Overtaking is prohibited within 30 metres before a railroad crossing.","No overtaking is allowed in the 30 m approach to a railroad crossing."],
+["When driving you must carry both your compulsory liability insurance certificate and your vehicle inspection certificate.","You must carry BOTH documents — not one or the other — and they must be the originals."],
+["When parking an automatic car facing downhill, you should leave it in 'P'.","Use 'P' (park); 'R' is not the correct setting for parking on a slope."],
+["New drivers must display the beginner mark on the front and rear for one year, including when driving an ordinary-sized truck.","The one-year beginner-mark rule covers ordinary vehicles, which include ordinary-sized trucks."],
+["Driving during a licence suspension counts as driving without a licence.","A suspension still bars you from driving; doing so is treated as unlicensed driving."]
+,["This sign prohibits going straight ahead through the intersection.","A red ring around a right-turn arrow with a diagonal bar prohibits right turns, not going straight."],
+["Where this sign is posted, you must not overtake another vehicle by moving into the oncoming lane.","This 'no passing' sign forbids overtaking that requires crossing into the lane of oncoming traffic."],
+["This sign means vehicles whose total weight exceeds the number shown may not pass.","A red ring around a weight in tons sets the maximum total vehicle weight allowed."],
+["This sign means vehicles taller than the height shown, including their load, may not pass.","The maximum-height sign applies to the vehicle together with whatever it is carrying."],
+["This blue sign means cars may use the road but must give way to pedestrians.","A pedestrian on a blue circle marks a pedestrian-only path; ordinary cars are not permitted there at all."],
+["Where this sign is posted, such as at a blind bend, you must sound your horn.","This blue 'sound horn' sign requires you to use the horn at the marked spot, like a sharp blind curve."],
+["This blue sign marks a path reserved for bicycles only.","A bicycle on a blue circle designates a bicycle-only path; other vehicles may not use it."],
+["Where this sign requires a two-step right turn, a moped must turn right in two stages like a pedestrian crossing.","The two-step turn sign makes mopeds cross straight first, then turn, instead of turning right in one move from the center."],
+["A marked safety zone is a no-stopping area; you must not stop or park your vehicle in it.","Safety zones protect waiting pedestrians, so stopping and parking in them is prohibited."],
+["This yellow diamond warns that a pedestrian crossing is ahead, so be ready to slow down or stop.","Diamond-shaped warning signs and road diamonds both signal a crosswalk ahead where pedestrians may cross."],
+["A flashing red signal means the same as a yield sign, so you may pass through slowly without stopping.","A flashing red signal means stop: you must come to a complete stop and may proceed only when it is safe."],
+["A flashing yellow signal means you may proceed with caution, watching for other traffic.","A flashing yellow signal lets you continue carefully; it does not require a stop but you must stay alert."],
+["A green arrow signal lets vehicles proceed in the direction of the arrow even while the main light is red.","When a green arrow lights up, you may move in the arrow's direction regardless of the round red signal."],
+["When a signal turns yellow, you should speed up to clear the intersection before it turns red.","Yellow means stop if you can do so safely; you should not accelerate to beat the red light."],
+["When the road surface is wet, you should slow down because your braking distance becomes longer.","Wet roads reduce tyre grip and lengthen stopping distance, so a lower speed is safer."],
+["The posted speed limit is a target speed that you should try to maintain at all times.","A speed limit is a maximum, not a target; you must often drive slower when conditions require it."],
+["The total stopping distance is the sum of the distance travelled during reaction time and the braking distance.","Stopping distance combines the free-running distance during your reaction time plus the actual braking distance."],
+["At an intersection without signals or signs, you must give way to traffic coming from a wider road.","When roads are otherwise equal, the vehicle on the narrower road yields to the one on the clearly wider road."],
+["When two vehicles reach an uncontrolled intersection at the same time, the one with another vehicle on its right should yield.","All else equal, you give way to the vehicle approaching from your right at an uncontrolled crossing."],
+["A vehicle turning right at an intersection has priority over an oncoming vehicle going straight.","Oncoming vehicles going straight or turning left have priority; the right-turning vehicle must wait for them."],
+["You must stop and let pedestrians cross when they are already on or clearly about to step onto a crosswalk.","Pedestrians on or entering a crosswalk have right of way, and you must stop for them."],
+["You must slow down or stop when passing a child walking alone or a person using a white cane.","Extra protection is required for children alone and visually impaired people with a white cane or guide dog; slow down or stop."],
+["If there are no pedestrians visible, you may drive through a crosswalk without slowing down.","You must always be ready to stop near a crosswalk because a pedestrian may appear suddenly; do not maintain full speed."],
+["When a vehicle ahead of you has stopped at a crosswalk, you must not overtake it.","Passing a vehicle stopped at or just before a crosswalk is prohibited, since a pedestrian it is yielding to may be hidden."],
+["You must not overtake another vehicle just before or on a pedestrian crossing.","Overtaking is prohibited at and immediately before a crosswalk, where a crossing pedestrian could be hidden by the vehicle ahead."],
+["It is always safe to overtake on the left side of the vehicle ahead.","As a rule you overtake on the right; passing on the left is only allowed in specific situations such as when the vehicle ahead is turning right."],
+["You must not park within 5 metres of an intersection or a corner.","Parking is banned within 5 m of an intersection, its corner, or a road bend to keep sightlines clear."],
+["You must not park within 5 metres of a fire hydrant or a fire-fighting water intake.","Spaces near fire hydrants and fire-water intakes must stay clear, so parking within 5 m is prohibited."],
+["You must stop before a railroad crossing and check that it is safe, even if no train is in sight.","A railroad crossing requires a stop and a check in both directions before you proceed across."],
+["If the crossing barrier is rising, you may start across before it has fully opened.","You must wait until the barrier is completely up and the warning has stopped before entering the crossing."],
+["A learner's permit holder must drive only while supervised by a qualified instructor as required by the rules.","Practice driving on a learner's permit must follow the supervision and marking requirements set for learners."],
+["You must carry your driver's licence with you whenever you drive.","Driving without your licence on you is an offence; the licence must be carried while operating the vehicle."],
+["The driver is responsible for making sure every passenger, including those in the rear seats, wears a seat belt.","Seat belts are required for all occupants where fitted, and the driver must ensure passengers buckle up."],
+["It is acceptable to use a hand-held mobile phone while driving as long as you drive slowly.","Using a hand-held phone while the vehicle is moving is prohibited regardless of your speed."],
+["Driving after drinking any amount of alcohol is prohibited.","Drink-driving is banned outright; even a small amount of alcohol makes it illegal to drive."],
+["Before starting a drive you should check tyres, brakes, lights and fluid levels.","A pre-drive inspection of tyres, brakes, lights and fluids helps catch faults before they cause a breakdown or crash."],
+["Loading cargo so that it sticks far out beyond the vehicle is fine as long as you drive carefully.","Loads must stay within legal length and weight limits; cargo that projects beyond the allowed limit is not permitted."],
+["Pedestrians, bicycles and mopeds are not allowed on an expressway.","Expressways are for motor vehicles only; pedestrians, bicycles and mopeds are prohibited from entering."],
+["It is permitted to stop on the main lanes of an expressway to take a short rest.","Stopping or parking on expressway through-lanes is prohibited except in an emergency; use a service or parking area to rest."],
+["When you meet an oncoming vehicle at night, you should dip your headlights from high to low beam.","Switching to low beam when meeting oncoming traffic prevents dazzling the other driver."],
+["In an earthquake while driving, you should slow down, pull to the left and stop, and avoid blocking the road.","During a strong earthquake, ease off, stop on the left, and leave the key so emergency vehicles can pass."]
+,["Wheelbase differential — the rear wheels tracking inside the front wheels — happens whenever you turn, regardless of speed.","Inner-wheel difference occurs every time you steer left or right, even at very low speed, so watch the rear wheels near obstacles."],
+["When you must begin signalling for a turn 3 seconds before the turn.","For a left or right turn you signal about 30 metres before; the 3-second rule applies to changing lanes, not turning."],
+["You should stop signalling immediately after completing a turn, and you should not signal when no manoeuvre requires it.","Cancel the indicator once the turn is done; leaving it on or signalling without a reason confuses other drivers."],
+["When a police officer raises both arms vertically at an intersection, it has the same meaning as a red light for traffic facing the officer's front or back.","An officer's vertical-arm signal works like amber then red for traffic approaching the front or back of the officer's body."],
+["If a police officer's hand signal conflicts with the traffic light, you must obey the police officer.","Hand signals from a police officer override the traffic lights, so follow the officer even when the light says otherwise."],
+["The stopping distance of an ordinary car at 60 km/h on a dry road is about 30 metres.","At 60 km/h the total stopping distance is closer to about 44 metres, not 30; it combines reaction distance and braking distance."],
+["The reaction distance is the distance the vehicle travels from when the driver notices danger until the brakes start to work.","Reaction distance is the free-running part before braking takes effect; it grows with speed and with a slower-reacting driver."],
+["Stopping distance becomes longer when the driver is tired, the road is wet, or the vehicle is heavily loaded.","Fatigue, wet surfaces and heavy loads all lengthen the distance needed to stop, so allow more space in those conditions."],
+["On a road with no posted speed limit you may drive at any speed as long as you feel safe.","Even without a posted limit you must obey the statutory legal speed for your vehicle type; you cannot choose any speed."],
+["The legal top speed for a large truck on a general road is 50 km/h.","On a general road the legal top speed for a large truck is 60 km/h, the same as for cars and motorcycles."],
+["A green light means you must always go forward, whatever the traffic ahead is doing.","Green means you may proceed, not that you must; if the way ahead is blocked you should wait so you don't get stuck in the intersection."],
+["The moment a green light turns amber you must brake hard and stop, even if you are already inside the intersection.","If you have already entered or cannot stop safely, you should clear the intersection promptly rather than stopping abruptly inside it."],
+["When approaching an uncontrolled intersection where the crossing road is the priority road, you must come to a full stop.","Approaching a priority road you must slow down and not obstruct its traffic, but a full stop is not always required unless a sign says so."],
+["A vehicle turning right from a one-way road should move close to the right edge, slow down, and turn inside the centre of the intersection.","From a one-way street a right-turning vehicle keeps to the right side and passes inside the centre point of the junction."],
+["When passing a child walking on the road, sound your horn to alert them and keep going at the same speed.","Near pedestrians you must slow down or stop to let them pass safely; you should not use the horn to push them along."],
+["At an intersection with no marked crosswalk you never need to give way to pedestrians crossing.","Even without a marked crosswalk you must not obstruct pedestrians crossing; give way to them."],
+["This circular sign with a right-turn arrow and a bar means you may not cross the road to the right to enter a roadside property.","This is a 'no crossing to the right' sign; it bars crossing into a roadside site, but you may still make an ordinary right turn at the intersection."],
+["Where this sign is posted, motor vehicles must not drive below the minimum speed shown.","A blue circle with an underlined number is a minimum-speed sign; driving slower than it, without good reason, is not allowed."],
+["This sign, a red ring with a diagonal bar, means the road is closed to all vehicles.","It is the 'closed to all vehicles' sign; no vehicle may enter, though it is different from 'closed to vehicles and pedestrians'."],
+["The 'Road Closed' sign closes the road only to vehicles, so pedestrians may still walk through.","The 'Road Closed' (通行止め) sign closes the road to vehicles AND pedestrians alike."],
+["This yellow diamond requires every vehicle to come to a complete stop.","It is a warning that children may appear suddenly, so slow down and be ready to stop, but it does not by itself require a full stop."],
+["Where the road marking shows a no-stopping zone, only parking is prohibited.","A no-stopping zone bans both stopping and parking; you must not even pause there for traffic or congestion."],
+["A learner-permit holder may use a public road only for practice driving or for the driving test.","Driving on a learner's permit is restricted to permitted practice and test purposes, with the required supervision and signs."],
+["Driving while your licence is suspended counts as driving without a licence.","A suspension still bars you from driving, so driving during the suspension period is treated as unlicensed driving."],
+["Once you have held an ordinary licence for over a year you must still display the beginner mark when driving an ordinary-sized truck.","The one-year beginner-mark rule applies to ordinary vehicles, which include ordinary trucks, but it ends after that first year."],
+["When you are tired or exhausted you must not drive, even if you intend to drive slowly.","Fatigue dulls reactions and judgement, so driving while exhausted is unsafe regardless of how slowly you go."],
+["A construction safety helmet is acceptable to wear when riding a moped.","Mopeds require a proper riding helmet meeting the safety standard; a construction helmet is not allowed."],
+["You may make a sudden, abrupt manoeuvre as long as you check your mirrors first.","Sharp, sudden moves that force drivers behind to brake or swerve are prohibited; manoeuvre smoothly and predictably."],
+["You must not overtake when the vehicle behind is already trying to overtake you.","If a following vehicle has begun to pass you, starting your own overtake at the same time is prohibited and dangerous."],
+["Overtaking is prohibited on a curve, near the crest of a hill, or on a steep downhill.","Limited sight lines on curves, hill crests and steep descents make overtaking there unsafe and not allowed."],
+["When following another vehicle over a railroad crossing, you may slow down and roll through if it looks clear.","Each vehicle must stop at the crossing and check for safety; you cannot simply follow the vehicle ahead through."],
+["You may keep a photocopy of your vehicle inspection certificate in the car instead of the original.","The vehicle inspection certificate carried in the car must be the original document, not a copy."],
+["With a regular motorcycle licence you may also operate a moped (special light equipment).","Holding a regular motorcycle licence covers operation of a moped as well."],
+["Diamond marks painted on the road mean an intersection is just ahead.","Diamond road markings warn that a pedestrian crossing is ahead, so be ready to slow or stop for people crossing."]
+],
+ ur:[
+["جب اشارہ پیلا ہو جائے تو آپ کو رفتار بڑھا کر سرخ ہونے سے پہلے چوراہا پار کر لینا چاہیے۔","پیلے کا مطلب ہے کہ اگر محفوظ طریقے سے رک سکتے ہیں تو رک جائیں۔ صرف اس وقت آگے بڑھیں جب رکنا خطرناک ہو — رفتار کبھی نہ بڑھائیں۔"],
+["جھپکتا ہوا سرخ اشارہ یہ بتاتا ہے کہ آپ کو رکنا ہے، پھر صرف محفوظ ہونے پر آگے بڑھیں۔","جھپکتے سرخ اشارے کو رکنے کے نشان کی طرح سمجھا جاتا ہے: مکمل رکیں، دیکھیں، پھر چلیں۔"],
+["جھپکتے ہوئے پیلے اشارے کا مطلب ہے کہ آپ کو مکمل طور پر رکنا ہے۔","جھپکتے پیلے کا مطلب ہے احتیاط سے آگے بڑھیں — آپ بغیر رکے جا سکتے ہیں مگر چوکنا رہیں۔"],
+["جب اشارہ سبز ہو تو آپ چل سکتے ہیں، مگر پھر بھی پیدل چلنے والوں اور چوراہے کے اندر موجود گاڑیوں کو راستہ دینا ہوگا۔","سبز اجازت دیتا ہے کہ آگے بڑھیں، مگر جو پہلے سے قانونی طور پر چوراہے میں ہیں ان پر برتری نہیں دیتا۔"],
+["ٹریفک کو ہدایت دینے والے پولیس افسر کا ہاتھ کا اشارہ ٹریفک لائٹس پر فوقیت رکھتا ہے۔","جب کوئی افسر ٹریفک کو ہدایت دے رہا ہو تو اس کے اشاروں پر عمل کریں چاہے لائٹس کچھ اور کہیں۔"],
+["اس نشان کا مطلب ہے کہ آپ کو مکمل طور پر رکنا ہے۔","止まれ لکھا سرخ الٹا مثلث آگے بڑھنے سے پہلے مکمل رکنے کا تقاضا کرتا ہے۔"],
+["اس نشان کا مطلب ہے کہ گاڑیوں کا داخلہ ممنوع ہے۔","سفید پٹی والا سرخ دائرہ گاڑیوں کے داخلے کی ممانعت ظاہر کرتا ہے۔"],
+["یہ نشان پانچ منٹ تک پارکنگ کی اجازت دیتا ہے۔","یہ نو پارکنگ کا نشان ہے — پارکنگ ممنوع ہے۔"],
+["یہ نشان پارکنگ اور رکنے دونوں کی ممانعت کرتا ہے۔","سرخ دائرے اور X والا نیلا دائرہ نو پارکنگ اور نو سٹاپنگ ظاہر کرتا ہے۔"],
+["یہ نشان زیادہ سے زیادہ رفتار 40 کلومیٹر فی گھنٹہ مقرر کرتا ہے۔","سرخ دائرے اور نمبر والا سفید دائرہ زیادہ سے زیادہ رفتار کی حد بتاتا ہے۔"],
+["یہ نشان ون وے سڑک ظاہر کرتا ہے؛ آپ صرف تیر کی سمت میں چل سکتے ہیں۔","سفید تیر والا نیلا مستطیل ون وے ٹریفک ظاہر کرتا ہے۔"],
+["یہ نشان خبردار کرتا ہے کہ یہاں کوئی پیدل کراسنگ نہیں ہے۔","اس کے برعکس — یہ پیدل کراسنگ ظاہر کرتا ہے؛ گزرنے والوں کا خیال رکھیں۔"],
+["یہ نشان اوور ٹیکنگ کی ممانعت کرتا ہے۔","ایک گاڑی کو دوسری سے آگے نکلتا دکھاتا سرخ دائرہ اوور ٹیکنگ کی ممانعت کرتا ہے۔"],
+["اس نشان کا مطلب ہے کہ آپ علاقے میں اپنی رفتار برقرار رکھ سکتے ہیں۔","徐行 / SLOW کا مطلب ہے رفتار اتنی کم کریں کہ ضرورت پر فوراً رک سکیں۔"],
+["یہ پیلا ہیرا آگے پیدل کراسنگ سے خبردار کرتا ہے۔","پیلے ہیرے کے نشان انتباہ ہوتے ہیں؛ یہ آگے پیدل کراسنگ سے خبردار کرتا ہے۔"],
+["اگر چوراہے کے اندر ہوتے ہوئے کوئی ایمرجنسی گاڑی قریب آئے تو آپ کو فوراً وہیں رک جانا چاہیے۔","پہلے چوراہا خالی کریں، بائیں جانب ہو جائیں، پھر رک کر اسے گزرنے دیں۔"],
+["بغیر اشارے والے چوراہے پر تنگ سڑک والی گاڑی کو واضح طور پر چوڑی سڑک والی گاڑی کو راستہ دینا ہوگا۔","جہاں اشارے یا نشان نہ ہوں، واضح طور پر چوڑی سڑک والی گاڑی کو فوقیت حاصل ہے۔"],
+["آپ چوراہے کے 5 میٹر کے اندر پارکنگ کر سکتے ہیں بشرطیکہ ٹریفک نہ رکے۔","چوراہے یا اس کے کونے کے 5 میٹر کے اندر پارکنگ اور رکنا ممنوع ہے۔"],
+["برابر چوڑائی کی سڑکوں کے بغیر اشارے والے چوراہے پر آپ کو اپنی بائیں جانب سے آنے والی گاڑی کو راستہ دینا ہوگا۔","جاپان میں برابر چوڑائی کے بے قابو چوراہوں پر بائیں جانب کو فوقیت (左方優先) دی جاتی ہے۔"],
+["جب کوئی پیدل شخص پیدل کراسنگ پر گزر رہا ہو تو آپ کو کراسنگ سے پہلے رک کر اسے گزرنے دینا ہوگا۔","کراسنگ پر پیدل چلنے والوں کو ہمیشہ فوقیت حاصل ہے — رکیں اور راستہ دیں۔"],
+["اگر کوئی شخص سڑک کے قریب سفید چھڑی یا گائیڈ ڈاگ استعمال کر رہا ہو تو آپ بغیر رفتار کم کیے معمول کے مطابق گزر سکتے ہیں۔","آپ کو رفتار کم کرنی یا رکنا چاہیے تاکہ ان کی حفاظت یقینی ہو؛ وہ بصارت سے محروم ہو سکتے ہیں۔"],
+["آپ پانی کے گڑھے سے معمول کی رفتار پر گزر سکتے ہیں چاہے اس سے فٹ پاتھ پر پیدل چلنے والوں پر چھینٹے پڑیں۔","آپ کو رفتار کم کرنی ہوگی تاکہ پیدل چلنے والوں پر کیچڑ یا پانی نہ اچھلے — ایسا کرنا جرم ہے۔"],
+["بغیر اشارے والی پیدل کراسنگ پر گزرنے کے منتظر پیدل شخص کے لیے آپ کو رکنا ہوگا۔","بغیر اشارے والی کراسنگ پر منتظر پیدل چلنے والوں کو رک کر گزرنے دینا ہوگا۔"],
+["جس عام سڑک پر رفتار کا نشان نہ ہو، وہاں عام کار کے لیے پہلے سے مقرر حد 60 کلومیٹر فی گھنٹہ ہے۔","جہاں کوئی نشان نہ ہو، عام سڑکوں پر عام کاروں کے لیے قانونی حد 60 کلومیٹر فی گھنٹہ ہے۔"],
+["جب رفتار دگنی ہو تو بریک لگانے کا فاصلہ تقریباً دگنا ہو جاتا ہے۔","بریک کا فاصلہ رفتار کے مربع کے ساتھ بڑھتا ہے — رفتار دگنی ہونے پر بریک کا فاصلہ تقریباً چار گنا ہو جاتا ہے۔"],
+["گیلی یا برفیلی سڑک پر اسی رفتار پر رکنے کا فاصلہ خشک سڑک کی نسبت زیادہ ہو جاتا ہے۔","کم گرفت بریک کا فاصلہ بڑھا دیتی ہے، اس لیے خراب حالات میں زیادہ فاصلہ رکھیں۔"],
+["کل رکنے کا فاصلہ آزاد چلنے (ردعمل) کے فاصلے اور بریک کے فاصلے کا مجموعہ ہے۔","یہ آپ کے ردعمل کے دوران طے شدہ فاصلے اور بریک لگانے کے دوران کے فاصلے کو ملا کر بنتا ہے۔"],
+["زیادہ بوجھ والی گاڑی کو ڈھلان پر اترتے وقت خالی اور ہموار سڑک کی نسبت زیادہ بریک فاصلہ درکار ہوتا ہے۔","زیادہ وزن اور نیچے کی ڈھلان دونوں رکنے کے لیے درکار فاصلہ بڑھا دیتے ہیں۔"],
+["سرنگ سے بالکل پہلے یا اس کے اندر کسی گاڑی کو اوور ٹیک کرنے کی اجازت ہے۔","سرنگوں اور کم نظر آنے والی دیگر جگہوں پر اوور ٹیکنگ ممنوع ہے۔"],
+["آپ کو ایسی گاڑی کو اوور ٹیک نہیں کرنا چاہیے جو خود کسی اور گاڑی کو اوور ٹیک کر رہی ہو۔","ٹکراؤ کے زیادہ خطرے کی وجہ سے دوہری اوور ٹیکنگ ممنوع ہے۔"],
+["اگر کوئی پیدل شخص موجود نہ ہو تو پیدل کراسنگ پر اوور ٹیکنگ کی اجازت ہے۔","پیدل کراسنگ پر اور اس سے بالکل پہلے اوور ٹیکنگ ممنوع ہے، چاہے پیدل چلنے والے موجود ہوں یا نہ ہوں۔"],
+["اصول کے مطابق آپ دوسری گاڑی کو اس کی بائیں جانب سے گزر کر اوور ٹیک کرتے ہیں۔","عام طور پر آپ دائیں جانب سے اوور ٹیک کرتے ہیں؛ بائیں جانب سے گزرنا عموماً جائز نہیں۔"],
+["آپ فائر ہائیڈرنٹ کے سامنے اپنی گاڑی روک سکتے ہیں بشرطیکہ آپ گاڑی میں موجود رہیں۔","فائر ہائیڈرنٹ کے قریب پارکنگ اور رکنا ممنوع ہے۔"],
+["گیراج یا پارکنگ کی جگہ کے داخلی راستے کے 3 میٹر کے اندر پارکنگ ممنوع ہے۔","آپ کو ایسے داخلی راستے نہیں روکنے چاہئیں؛ ممنوعہ علاقہ تقریباً 3 میٹر تک ہے۔"],
+["ٹریفک قانون کے تحت 'پارکنگ' اور 'رکنا' کا بالکل ایک ہی مطلب ہے۔","رکنا ایک مختصر ٹھہراؤ ہے؛ پارکنگ زیادہ دیر کی ہوتی ہے یا جہاں آپ فوراً چل نہیں سکتے۔"],
+["فائر ہائیڈرنٹ کے 5 میٹر کے اندر پارکنگ ممنوع ہے۔","رسائی صاف رکھنے کے لیے فائر ہائیڈرنٹ کے گرد 5 میٹر کا نو پارکنگ زون لاگو ہوتا ہے۔"],
+["ریلوے کراسنگ پر آپ کو رک کر حفاظت کا جائزہ لینا ہوگا چاہے گیٹ کھلا ہو اور نظر صاف ہو۔","آپ کو ہمیشہ ریلوے کراسنگ سے پہلے رکنا اور اطمینان کرنا ہوگا کہ محفوظ ہے۔"],
+["اگر آپ کی گاڑی ریلوے کراسنگ پر بند ہو جائے تو آپ کو سب سے پہلے انجن دوبارہ اسٹارٹ کرنے کی کوشش کرنی چاہیے۔","پہلے سب کو باہر نکالیں اور کراسنگ کا ایمرجنسی بٹن دبائیں — گاڑی سے پہلے لوگ اہم ہیں۔"],
+["جاپان میں کسی بھی مقدار میں شراب پینے کے بعد گاڑی چلانا غیر قانونی ہے۔","جاپان سخت معیار اپناتا ہے — شراب کے زیرِ اثر گاڑی چلانا ممنوع ہے۔"],
+["قانونی طور پر صرف ڈرائیور کو سیٹ بیلٹ پہننا ضروری ہے؛ مسافر مستثنیٰ ہیں۔","پچھلی سیٹ کے مسافروں سمیت تمام سواروں کو سیٹ بیلٹ پہننا ضروری ہے۔"],
+["آپ دوسرے ڈرائیوروں کو خبردار کرنے کے لیے کہیں بھی آزادانہ ہارن استعمال کر سکتے ہیں۔","ہارن صرف وہاں استعمال کریں جہاں نشان تقاضا کرے، یا خطرے سے بچنے کے لیے ایمرجنسی میں۔"],
+["گاڑی چلاتے ہوئے ہاتھ میں موبائل فون استعمال کرنا ممنوع ہے۔","گاڑی چلاتے ہوئے فون ہاتھ میں پکڑنا یا اسکرین کو گھورنا جرم ہے۔"],
+["اگر آپ کو نیند آ رہی ہو تو آپ کو منزل تک کھڑکی کھول کر گاڑی چلاتے رہنا چاہیے۔","نیند میں گاڑی چلانا خطرناک ہے — آگے بڑھنے کے بجائے رک کر آرام کریں۔"],
+["چھوٹے بچے کو مناسب چائلڈ سیٹ میں محفوظ کرنا ضروری ہے۔","چھ سال سے کم عمر کے بچوں کو مناسب چائلڈ سیٹ استعمال کرنی چاہیے۔"],
+["جاپان میں گاڑیاں سڑک کی بائیں جانب چلتی ہیں۔","جاپان میں بائیں جانب گاڑی چلتی ہے؛ اوور ٹیک کے علاوہ، جہاں اجازت ہو، بائیں رہیں۔"],
+["سائیکل کو ہلکی گاڑی شمار کیا جاتا ہے اور اصول کے مطابق اسے سڑک کی بائیں جانب چلنا چاہیے۔","سائیکلیں 軽車両 (ہلکی گاڑیاں) ہیں اور عام طور پر بائیں جانب چلتی ہیں۔"],
+["موٹر سائیکل سوار عام سڑکوں پر ہیلمٹ پہننے یا نہ پہننے کا انتخاب کر سکتا ہے۔","موٹر سائیکل اور موپیڈ سواروں کے لیے ہیلمٹ لازمی ہے۔"],
+["عام لائسنس کے ساتھ اپنے پہلے سال میں ڈرائیور کو ابتدائی (وکابا) نشان لگانا ضروری ہے۔","نئے ڈرائیوروں کو ایک سال تک سبز اور پیلا ابتدائی نشان لگانا ضروری ہے۔"],
+["بزرگ ڈرائیور کا نشان لگائی ہوئی گاڑی کے ارد گرد آپ کو زیادہ احتیاط کرنی چاہیے۔","بزرگ ڈرائیور کا نشان عمر رسیدہ ڈرائیور کو ظاہر کرتا ہے؛ انہیں زیادہ جگہ دیں۔"],
+["ایکسپریس وے پر پیدل چلنے والوں اور سائیکلوں کی ممانعت ہے۔","ایکسپریس وے صرف موٹر گاڑیوں کے لیے ہیں — پیدل، سائیکل یا موپیڈ کی اجازت نہیں۔"],
+["ایکسپریس وے پر عام کار کے لیے کم سے کم رفتار عموماً 50 کلومیٹر فی گھنٹہ ہے۔","بہت آہستہ چلنا خطرناک ہے؛ عام کاروں کے لیے معمول کی کم سے کم رفتار 50 کلومیٹر فی گھنٹہ ہے۔"],
+["جب بھی آپ آرام کرنا چاہیں ایکسپریس وے کے کنارے (شولڈر) پر رک سکتے ہیں۔","شولڈر پر رکنا صرف ایمرجنسی کے لیے ہے — آرام کے لیے سروس ایریا استعمال کریں۔"],
+["زیادہ تر ایکسپریس وے پر عام کار کے لیے زیادہ سے زیادہ رفتار 100 کلومیٹر فی گھنٹہ ہے۔","100 کلومیٹر فی گھنٹہ عام زیادہ سے زیادہ حد ہے، اگرچہ بعض حصوں پر 120 تک کے نشان ہوتے ہیں۔"],
+["رات کے وقت سامنے سے آنے والی گاڑی کے ملنے پر آپ کو ہیڈلائٹس مدھم کر لینی چاہئیں۔","سامنے والے ڈرائیور کو چندھیانے سے بچنے کے لیے لو بیم پر آ جائیں۔"],
+["سرنگ سے گزرتے وقت دن میں بھی آپ کو ہیڈلائٹس آن کرنی چاہئیں۔","سرنگیں اندھیری ہوتی ہیں — ہیڈلائٹس دیکھنے اور نظر آنے میں مدد دیتی ہیں۔"],
+["گہری دھند میں زیادہ سے زیادہ نظر کے لیے آپ کو ہائی بیم استعمال کرنی چاہیے۔","ہائی بیم دھند سے منعکس ہو کر نظر خراب کرتی ہے — لو بیم یا فوگ لائٹس استعمال کریں۔"]
+,
+["اس نشان کا مطلب ہے کہ تمام گاڑیوں کا گزرنا ممنوع ہے۔","ترچھی لکیر والا سرخ دائرہ تمام گاڑیوں کے لیے بند سڑک ظاہر کرتا ہے۔"],
+["یہ نشان سڑک کو صرف گاڑیوں کے لیے بند کرتا ہے؛ پیدل چلنے والے پھر بھی گزر سکتے ہیں۔","'通行止め' (سڑک بند) گاڑیوں اور پیدل چلنے والوں دونوں کے لیے بند ہوتی ہے۔"],
+["یہ نشان یو ٹرن لینے سے منع کرتا ہے۔","سرخ لکیر والا یو ٹرن تیر بتاتا ہے کہ یہاں یو ٹرن منع ہے۔"],
+["یہ نشان کم سے کم رفتار بتاتا ہے؛ آپ اس سے آہستہ نہیں چل سکتے۔","نیچے لکیر والے نمبر والا نیلا دائرہ کم سے کم رفتار بتاتا ہے، زیادہ سے زیادہ نہیں۔"],
+["یہ نشان آپ کو ہارن بجانے کا حکم دیتا ہے۔","جہاں یہ نشان ہو، جیسے اندھے موڑ پر، آپ کو ہارن بجانا ضروری ہے۔"],
+["اس انتباہی نشان کا مطلب ہے کہ آپ کو ہمیشہ مکمل رکنا ہے۔","یہ خبردار کرتا ہے کہ بچے اچانک آ سکتے ہیں، اس لیے محتاط رہیں اور رکنے کو تیار رہیں — مگر یہ خود مکمل رکنے کا تقاضا نہیں کرتا۔"],
+["یہ پیلا ہیرا خبردار کرتا ہے کہ آگے سڑک پھسلن والی ہو سکتی ہے۔","پیلے ہیرے انتباہ ہوتے ہیں؛ یہ آگے پھسلن والی سطح سے خبردار کرتا ہے۔"],
+["یہ پیلا ہیرا آگے چوراہے سے خبردار کرتا ہے۔","جمع (+) کی شکل بتاتی ہے کہ آگے چوراہا آ رہا ہے۔"],
+["جہاں یہ نشان ہو، آپ پیدل چلنے والوں اور آنے والی ٹریفک کو راستہ دے کر سرخ بتی پر بھی بائیں مڑ سکتے ہیں۔","نیلا 'بائیں مڑنا جائز' نشان محفوظ ہونے پر سرخ بتی پر بائیں مڑنے کی اجازت دیتا ہے۔"],
+["سڑک پر بنے ہیرے کے نشان خبردار کرتے ہیں کہ آگے پیدل کراسنگ ہے۔","سڑک کی سطح پر سفید ہیرے بتاتے ہیں کہ آگے کراسنگ ہے — رکنے کو تیار رہیں۔"],
+["کنارے پر مسلسل پیلی لکیر کا مطلب ہے کسی بھی وقت پارکنگ اور رکنا دونوں ممنوع۔","مسلسل پیلی لکیر پارکنگ اور رکنا دونوں منع کرتی ہے؛ ٹوٹی پیلی لکیر صرف پارکنگ منع کرتی ہے۔"],
+["چوراہے پر مڑتے وقت آپ کو ہمیشہ رفتار کم کرنی ہوگی، چاہے بتی سبز ہی کیوں نہ ہو۔","چوراہے پر ہر بائیں یا دائیں موڑ سے پہلے رفتار کم کرنا ضروری ہے۔"],
+["چوراہے پر دائیں مڑتے وقت آپ کو ہمیشہ پہلے مکمل رکنا ہوگا۔","آپ کو رفتار کم کرنی ہوگی، مگر اگر کوئی آنے والی گاڑی یا پیدل شخص نہ ہو تو مکمل رکنا ضروری نہیں۔"],
+["سبز بتی پر بھی چوراہے میں داخل نہ ہوں اگر امکان ہو کہ آپ اندر پھنس کر دوسری ٹریفک روک دیں گے۔","اسی وقت داخل ہوں جب چوراہا پار کر سکیں؛ راستہ روکنا منع ہے۔"],
+["اگر آگے کوئی گاڑی پیدل کراسنگ پر رک گئی ہو تو کوئی نظر نہ آنے پر آپ آہستہ گزر سکتے ہیں۔","آپ کو اس کے پیچھے رکنا ہوگا — کراسنگ پر یا اس سے پہلے رکی گاڑی سے کبھی آگے نہ نکلیں۔"],
+["پٹرول پمپ جیسی سڑک کنارے جگہ میں داخل ہونے کے لیے فٹ پاتھ عبور کرنے سے پہلے، چاہے کوئی پیدل نہ ہو، آپ کو رکنا ہوگا۔","آپ کو فٹ پاتھ عبور کرنے سے پہلے رکنا ہوگا، چاہے وہاں کوئی چل رہا ہو یا نہیں۔"],
+["موڑ سے تقریباً 30 میٹر پہلے اشارہ دیں، مگر لین بدلنے سے تقریباً 3 سیکنڈ پہلے۔","وقت مختلف ہے: موڑ کے لیے 30 میٹر پہلے، لین بدلنے کے لیے 3 سیکنڈ پہلے۔"],
+["نشان کے بغیر عام سڑک پر بڑی اور عام دونوں موٹر سائیکلیں 60 کلومیٹر فی گھنٹہ چل سکتی ہیں، جبکہ موپیڈ کی حد 30 ہے۔","موٹر سائیکلیں کاروں کے ساتھ 60 کی حد رکھتی ہیں؛ موپیڈ 30 تک محدود ہیں۔"],
+["جس سڑک پر ایک ہی سمت میں دو لینیں ہوں، وہاں بائیں لین میں چلیں اور دائیں لین اوور ٹیکنگ کے لیے کھلی چھوڑیں۔","پہلی (بائیں) لین میں رہیں؛ دائیں لین اوور ٹیکنگ، دائیں موڑ یا یو ٹرن کے لیے ہے۔"],
+["ریلوے کراسنگ سے 30 میٹر پہلے کے اندر اوور ٹیکنگ ممنوع ہے۔","ریلوے کراسنگ کی طرف 30 میٹر کے فاصلے میں اوور ٹیکنگ کی اجازت نہیں۔"],
+["گاڑی چلاتے وقت آپ کو اپنا لازمی انشورنس سرٹیفکیٹ اور گاڑی کا معائنہ سرٹیفکیٹ دونوں ساتھ رکھنے ہوں گے۔","آپ کو دونوں دستاویزات رکھنی ہوں گی — ایک نہیں — اور وہ اصل ہونی چاہئیں۔"],
+["آٹومیٹک گاڑی کو ڈھلان پر کھڑا کرتے وقت اسے 'P' پر رکھیں۔","'P' (پارک) استعمال کریں؛ ڈھلان پر کھڑا کرنے کے لیے 'R' درست نہیں۔"],
+["نئے ڈرائیوروں کو ایک سال تک گاڑی کے آگے اور پیچھے ابتدائی نشان لگانا ضروری ہے، چاہے وہ عام سائز کا ٹرک ہی کیوں نہ چلا رہے ہوں۔","ایک سالہ ابتدائی نشان کا قاعدہ عام گاڑیوں پر لاگو ہوتا ہے، جن میں عام سائز کے ٹرک بھی شامل ہیں۔"],
+["لائسنس معطلی کے دوران گاڑی چلانا بغیر لائسنس چلانے کے برابر ہے۔","معطلی کے دوران بھی گاڑی چلانا منع ہے؛ ایسا کرنا بغیر لائسنس ڈرائیونگ سمجھا جاتا ہے۔"]
+,["یہ نشان چوراہے سے سیدھا گزرنے سے منع کرتا ہے۔","دائیں مڑنے کے تیر پر سرخ دائرہ اور لکیر دائیں مڑنے سے منع کرتی ہے، سیدھا جانے سے نہیں۔"],
+["جہاں یہ نشان لگا ہو، آپ سامنے سے آنے والی لین میں جا کر کسی گاڑی کو اوور ٹیک نہیں کر سکتے۔","یہ 'اوور ٹیک ممنوع' نشان ایسی اوور ٹیکنگ سے منع کرتا ہے جس میں مخالف ٹریفک کی لین میں جانا پڑے۔"],
+["اس نشان کا مطلب ہے کہ جن گاڑیوں کا کل وزن دکھائے گئے عدد سے زیادہ ہو وہ نہیں گزر سکتیں۔","ٹن میں وزن کے گرد سرخ دائرہ گاڑی کے زیادہ سے زیادہ مجاز کل وزن کو ظاہر کرتا ہے۔"],
+["اس نشان کا مطلب ہے کہ جو گاڑیاں اپنے سامان سمیت دکھائی گئی اونچائی سے زیادہ ہوں وہ نہیں گزر سکتیں۔","زیادہ سے زیادہ اونچائی کا نشان گاڑی اور اس کے سامان دونوں پر لاگو ہوتا ہے۔"],
+["یہ نیلا نشان ظاہر کرتا ہے کہ گاڑیاں سڑک استعمال کر سکتی ہیں لیکن پیدل چلنے والوں کو راستہ دیں۔","نیلے دائرے پر پیدل چلنے والے کا نشان صرف پیدل چلنے والوں کا راستہ ظاہر کرتا ہے؛ عام گاڑیوں کو وہاں اجازت نہیں۔"],
+["جہاں یہ نشان لگا ہو، جیسے اندھے موڑ پر، آپ کو ہارن بجانا ضروری ہے۔","یہ نیلا 'ہارن بجائیں' نشان نشان زدہ جگہ پر، جیسے تیز اندھے موڑ پر، ہارن استعمال کرنا لازمی کرتا ہے۔"],
+["یہ نیلا نشان صرف سائیکلوں کے لیے مخصوص راستہ ظاہر کرتا ہے۔","نیلے دائرے پر سائیکل کا نشان صرف سائیکل کا راستہ مقرر کرتا ہے؛ دوسری گاڑیاں اسے استعمال نہیں کر سکتیں۔"],
+["جہاں یہ نشان دو مرحلوں میں دائیں مڑنے کا تقاضا کرے، موپیڈ کو پیدل کراسنگ کی طرح دو مرحلوں میں دائیں مڑنا ہوگا۔","دو مرحلوں والا موڑ نشان موپیڈ کو پہلے سیدھا گزرنے پھر مڑنے پر مجبور کرتا ہے، بجائے بیچ سے ایک ہی بار دائیں مڑنے کے۔"],
+["نشان زدہ سیفٹی زون ایک نو-اسٹاپنگ علاقہ ہے؛ آپ اس میں گاڑی روک یا پارک نہیں کر سکتے۔","سیفٹی زون انتظار کرنے والے پیدل چلنے والوں کی حفاظت کرتے ہیں، اس لیے ان میں رکنا اور پارک کرنا ممنوع ہے۔"],
+["یہ پیلا ہیرا خبردار کرتا ہے کہ آگے پیدل کراسنگ ہے، اس لیے سست ہونے یا رکنے کے لیے تیار رہیں۔","ہیرے کی شکل کے انتباہی نشان اور سڑک پر ہیرے دونوں آگے کراسنگ کا اشارہ دیتے ہیں جہاں پیدل چلنے والے گزر سکتے ہیں۔"],
+["چمکتا ہوا سرخ سگنل ییلڈ نشان کی طرح ہوتا ہے، اس لیے آپ بغیر رکے آہستہ گزر سکتے ہیں۔","چمکتا ہوا سرخ سگنل رکنے کا مطلب رکھتا ہے: آپ کو مکمل رکنا ہوگا اور صرف اس وقت بڑھنا ہوگا جب محفوظ ہو۔"],
+["چمکتا ہوا پیلا سگنل ظاہر کرتا ہے کہ آپ احتیاط سے، دوسری ٹریفک کو دیکھتے ہوئے بڑھ سکتے ہیں۔","چمکتا ہوا پیلا سگنل آپ کو احتیاط سے جاری رہنے دیتا ہے؛ یہ رکنے کا تقاضا نہیں کرتا لیکن آپ کو چوکنا رہنا ہوگا۔"],
+["سبز تیر کا سگنل گاڑیوں کو تیر کی سمت میں بڑھنے دیتا ہے چاہے مرکزی بتی سرخ ہو۔","جب سبز تیر روشن ہو، آپ گول سرخ سگنل کے باوجود تیر کی سمت میں بڑھ سکتے ہیں۔"],
+["جب سگنل پیلا ہو جائے، آپ کو رفتار بڑھا کر سرخ ہونے سے پہلے چوراہا پار کر لینا چاہیے۔","پیلا مطلب رکنا اگر آپ محفوظ طریقے سے رک سکیں؛ سرخ بتی سے پہلے نکلنے کے لیے رفتار نہ بڑھائیں۔"],
+["جب سڑک کی سطح گیلی ہو، آپ کو رفتار کم کرنی چاہیے کیونکہ بریک لگانے کا فاصلہ بڑھ جاتا ہے۔","گیلی سڑکیں ٹائر کی گرفت کم کرتی ہیں اور رکنے کا فاصلہ بڑھاتی ہیں، اس لیے کم رفتار محفوظ ہے۔"],
+["لگی ہوئی رفتار کی حد ایک ہدف رفتار ہے جسے آپ کو ہر وقت برقرار رکھنے کی کوشش کرنی چاہیے۔","رفتار کی حد زیادہ سے زیادہ ہے، ہدف نہیں؛ حالات کے مطابق آپ کو اکثر آہستہ چلانا ہوگا۔"],
+["رکنے کا کل فاصلہ ردعمل کے وقت طے ہونے والے فاصلے اور بریکنگ فاصلے کا مجموعہ ہے۔","رکنے کا فاصلہ آپ کے ردعمل کے دوران چلنے والے فاصلے اور اصل بریکنگ فاصلے کو ملا کر بنتا ہے۔"],
+["بغیر سگنل یا نشانات والے چوراہے پر، آپ کو زیادہ چوڑی سڑک سے آنے والی ٹریفک کو راستہ دینا ہوگا۔","جب سڑکیں دیگر لحاظ سے برابر ہوں، تنگ سڑک والی گاڑی واضح طور پر چوڑی سڑک والی کو راستہ دیتی ہے۔"],
+["جب دو گاڑیاں بیک وقت بے قابو چوراہے پر پہنچیں، جس کی دائیں طرف دوسری گاڑی ہو اسے راستہ دینا چاہیے۔","باقی سب برابر ہو تو بے قابو چوراہے پر آپ اپنی دائیں طرف سے آنے والی گاڑی کو راستہ دیتے ہیں۔"],
+["چوراہے پر دائیں مڑنے والی گاڑی کو سامنے سے سیدھا آنے والی گاڑی پر فوقیت حاصل ہے۔","سامنے سے سیدھا یا بائیں مڑنے والی گاڑیوں کو فوقیت ہے؛ دائیں مڑنے والی گاڑی کو ان کا انتظار کرنا ہوگا۔"],
+["جب پیدل چلنے والے کراسنگ پر ہوں یا واضح طور پر قدم رکھنے والے ہوں تو آپ کو رک کر انہیں گزرنے دینا ہوگا۔","کراسنگ پر موجود یا اس میں داخل ہوتے پیدل چلنے والوں کو حقِ راہ حاصل ہے، اور آپ کو ان کے لیے رکنا ہوگا۔"],
+["اکیلے چلتے بچے یا سفید چھڑی استعمال کرنے والے شخص کے پاس سے گزرتے وقت آپ کو رفتار کم کرنی یا رکنا ہوگا۔","اکیلے بچوں اور سفید چھڑی یا رہنما کتے والے نابینا افراد کے لیے اضافی تحفظ ضروری ہے؛ رفتار کم کریں یا رکیں۔"],
+["اگر کوئی پیدل چلنے والا نظر نہ آئے تو آپ بغیر رفتار کم کیے کراسنگ سے گزر سکتے ہیں۔","کراسنگ کے قریب آپ کو ہمیشہ رکنے کے لیے تیار رہنا ہوگا کیونکہ پیدل چلنے والا اچانک آ سکتا ہے؛ پوری رفتار برقرار نہ رکھیں۔"],
+["جب آپ کے آگے والی گاڑی کراسنگ پر رک گئی ہو، آپ اسے اوور ٹیک نہیں کر سکتے۔","کراسنگ پر یا اس سے ذرا پہلے رکی گاڑی کو پاس کرنا ممنوع ہے، کیونکہ جس پیدل کو وہ راستہ دے رہی ہے وہ چھپا ہو سکتا ہے۔"],
+["آپ کسی گاڑی کو پیدل کراسنگ سے ذرا پہلے یا اس پر اوور ٹیک نہیں کر سکتے۔","کراسنگ پر اور اس سے بالکل پہلے اوور ٹیکنگ ممنوع ہے، جہاں گزرتا پیدل آگے والی گاڑی سے چھپ سکتا ہے۔"],
+["آگے والی گاڑی کی بائیں طرف سے اوور ٹیک کرنا ہمیشہ محفوظ ہوتا ہے۔","اصول کے مطابق آپ دائیں طرف سے اوور ٹیک کرتے ہیں؛ بائیں سے گزرنا صرف خاص صورتوں میں جائز ہے، جیسے جب آگے والی گاڑی دائیں مڑ رہی ہو۔"],
+["آپ کسی چوراہے یا موڑ کے 5 میٹر کے اندر پارک نہیں کر سکتے۔","نظر صاف رکھنے کے لیے چوراہے، اس کے کونے یا سڑک کے موڑ کے 5 میٹر کے اندر پارکنگ ممنوع ہے۔"],
+["آپ فائر ہائیڈرنٹ یا آگ بجھانے کے پانی کے ماخذ کے 5 میٹر کے اندر پارک نہیں کر سکتے۔","فائر ہائیڈرنٹ اور آگ کے پانی کے ماخذ کے قریب جگہ خالی رہنی چاہیے، اس لیے 5 میٹر کے اندر پارکنگ ممنوع ہے۔"],
+["آپ کو ریلوے کراسنگ سے پہلے رک کر یقین کرنا ہوگا کہ محفوظ ہے، چاہے کوئی ٹرین نظر نہ آئے۔","ریلوے کراسنگ پر گزرنے سے پہلے رکنا اور دونوں طرف دیکھنا ضروری ہے۔"],
+["اگر کراسنگ کا بیریئر اٹھ رہا ہو، آپ اس کے پوری طرح کھلنے سے پہلے گزرنا شروع کر سکتے ہیں۔","کراسنگ میں داخل ہونے سے پہلے آپ کو انتظار کرنا ہوگا جب تک بیریئر مکمل اوپر نہ ہو جائے اور انتباہ بند نہ ہو جائے۔"],
+["لرنر پرمٹ رکھنے والے کو قواعد کے مطابق صرف ایک اہل انسٹرکٹر کی نگرانی میں ہی چلانا ہوگا۔","لرنر پرمٹ پر مشق کی ڈرائیونگ کو سیکھنے والوں کے لیے مقرر نگرانی اور نشان کی شرائط پر عمل کرنا ہوگا۔"],
+["جب بھی آپ گاڑی چلائیں آپ کو اپنا ڈرائیونگ لائسنس ساتھ رکھنا ہوگا۔","لائسنس کے بغیر گاڑی چلانا جرم ہے؛ گاڑی چلاتے وقت لائسنس ساتھ ہونا ضروری ہے۔"],
+["ڈرائیور اس بات کا ذمہ دار ہے کہ ہر مسافر، بشمول پچھلی نشستوں والے، سیٹ بیلٹ پہنے۔","جہاں سیٹ بیلٹ لگی ہوں وہاں تمام سواروں کے لیے ضروری ہیں، اور ڈرائیور کو یقینی بنانا ہوگا کہ مسافر بیلٹ پہنیں۔"],
+["گاڑی چلاتے ہوئے ہاتھ میں موبائل فون استعمال کرنا قابل قبول ہے بشرطیکہ آپ آہستہ چلائیں۔","گاڑی چلتے ہوئے ہاتھ میں فون استعمال کرنا آپ کی رفتار سے قطع نظر ممنوع ہے۔"],
+["کسی بھی مقدار میں شراب پینے کے بعد گاڑی چلانا ممنوع ہے۔","شراب پی کر گاڑی چلانا یکسر منع ہے؛ تھوڑی سی شراب بھی گاڑی چلانا غیر قانونی بنا دیتی ہے۔"],
+["ڈرائیو شروع کرنے سے پہلے آپ کو ٹائر، بریک، لائٹس اور سیال کی سطح چیک کرنی چاہیے۔","ٹائر، بریک، لائٹس اور سیالوں کا ڈرائیو سے پہلے معائنہ خرابیوں کو حادثے یا خرابی سے پہلے پکڑنے میں مدد دیتا ہے۔"],
+["سامان اس طرح لادنا کہ وہ گاڑی سے کافی باہر نکلے ٹھیک ہے بشرطیکہ آپ احتیاط سے چلائیں۔","بوجھ قانونی لمبائی اور وزن کی حدود میں رہنا چاہیے؛ مقررہ حد سے باہر نکلنے والا سامان جائز نہیں۔"],
+["ایکسپریس وے پر پیدل چلنے والے، سائیکلیں اور موپیڈ کی اجازت نہیں۔","ایکسپریس وے صرف موٹر گاڑیوں کے لیے ہیں؛ پیدل چلنے والے، سائیکلیں اور موپیڈ کے داخلے پر پابندی ہے۔"],
+["ایکسپریس وے کی مرکزی لینوں پر مختصر آرام کے لیے رکنا جائز ہے۔","ایکسپریس وے کی گزرگاہ لینوں پر رکنا یا پارک کرنا ہنگامی صورت کے علاوہ ممنوع ہے؛ آرام کے لیے سروس یا پارکنگ ایریا استعمال کریں۔"],
+["رات کو سامنے سے گاڑی آنے پر آپ کو ہیڈلائٹس ہائی سے لو بیم پر کرنی چاہئیں۔","سامنے سے ٹریفک ملنے پر لو بیم پر جانا دوسرے ڈرائیور کی آنکھیں چندھیانے سے روکتا ہے۔"],
+["گاڑی چلاتے ہوئے زلزلے میں آپ کو رفتار کم کر کے بائیں طرف رک جانا اور سڑک بند نہ کرنا چاہیے۔","تیز زلزلے کے دوران رفتار کم کریں، بائیں طرف رکیں، اور چابی چھوڑ دیں تاکہ ہنگامی گاڑیاں گزر سکیں۔"]
+,["وھیل بیس فرق — پچھلے پہیوں کا اگلے پہیوں سے اندر کی طرف چلنا — ہر موڑ پر ہوتا ہے، رفتار سے قطع نظر۔","اندرونی پہیے کا فرق ہر بار بائیں یا دائیں موڑ پر ہوتا ہے، بہت کم رفتار پر بھی، اس لیے رکاوٹوں کے قریب پچھلے پہیوں پر نظر رکھیں۔"],
+["موڑ کے لیے اشارہ موڑ سے 3 سیکنڈ پہلے دینا شروع کرنا چاہیے۔","بائیں یا دائیں موڑ کے لیے آپ تقریباً 30 میٹر پہلے اشارہ دیتے ہیں؛ 3 سیکنڈ کا اصول لین بدلنے پر لاگو ہوتا ہے، موڑنے پر نہیں۔"],
+["موڑ مکمل کرنے کے فوراً بعد اشارہ بند کر دینا چاہیے، اور جب کوئی حرکت ضروری نہ ہو تو اشارہ نہیں دینا چاہیے۔","موڑ مکمل ہوتے ہی انڈیکیٹر بند کریں؛ اسے چالو رکھنا یا بلا وجہ اشارہ دینا دوسرے ڈرائیوروں کو الجھاتا ہے۔"],
+["جب پولیس افسر چوراہے پر دونوں بازو عمودی اٹھائے تو افسر کے آگے یا پیچھے والی ٹریفک کے لیے یہ سرخ بتی کے برابر ہے۔","افسر کا عمودی بازو اشارہ افسر کے جسم کے آگے یا پیچھے آنے والی ٹریفک کے لیے پہلے پیلی پھر سرخ بتی کی طرح کام کرتا ہے۔"],
+["اگر پولیس افسر کا ہاتھ کا اشارہ ٹریفک لائٹ سے متصادم ہو، تو آپ کو پولیس افسر کی بات ماننی ہوگی۔","پولیس افسر کے ہاتھ کے اشارے ٹریفک لائٹس پر فوقیت رکھتے ہیں، اس لیے بتی کچھ بھی کہے افسر کی پیروی کریں۔"],
+["خشک سڑک پر 60 کلومیٹر فی گھنٹہ پر عام کار کا رکنے کا فاصلہ تقریباً 30 میٹر ہے۔","60 کلومیٹر فی گھنٹہ پر کل رکنے کا فاصلہ 30 نہیں بلکہ تقریباً 44 میٹر کے قریب ہے؛ یہ ردعمل اور بریکنگ فاصلے کو ملا کر بنتا ہے۔"],
+["ردعمل کا فاصلہ وہ فاصلہ ہے جو گاڑی ڈرائیور کے خطرہ محسوس کرنے سے بریک کام شروع کرنے تک طے کرتی ہے۔","ردعمل کا فاصلہ بریک لگنے سے پہلے کا آزاد چلنے والا حصہ ہے؛ یہ رفتار اور سست ردعمل والے ڈرائیور کے ساتھ بڑھتا ہے۔"],
+["رکنے کا فاصلہ تب بڑھ جاتا ہے جب ڈرائیور تھکا ہو، سڑک گیلی ہو، یا گاڑی پر زیادہ بوجھ ہو۔","تھکاوٹ، گیلی سطحیں اور بھاری بوجھ سب رکنے کے لیے درکار فاصلہ بڑھاتے ہیں، اس لیے ان حالات میں زیادہ جگہ رکھیں۔"],
+["جس سڑک پر رفتار کی حد نہ لگی ہو وہاں آپ جتنی چاہیں رفتار پر چلا سکتے ہیں بشرطیکہ محفوظ محسوس کریں۔","بغیر لگی حد کے بھی آپ کو اپنی گاڑی کی قسم کے لیے قانونی رفتار کی پابندی کرنی ہوگی؛ آپ کوئی بھی رفتار نہیں چن سکتے۔"],
+["عام سڑک پر بڑے ٹرک کی قانونی زیادہ سے زیادہ رفتار 50 کلومیٹر فی گھنٹہ ہے۔","عام سڑک پر بڑے ٹرک کی قانونی زیادہ سے زیادہ رفتار 60 کلومیٹر فی گھنٹہ ہے، جو کاروں اور موٹر سائیکلوں جیسی ہے۔"],
+["سبز بتی کا مطلب ہے کہ آگے ٹریفک جو بھی کر رہی ہو آپ کو ہمیشہ آگے بڑھنا ہوگا۔","سبز کا مطلب ہے آپ بڑھ سکتے ہیں، یہ نہیں کہ ضرور بڑھیں؛ اگر آگے راستہ بند ہو تو رکیں تاکہ چوراہے میں پھنس نہ جائیں۔"],
+["جیسے ہی سبز بتی پیلی ہو آپ کو زور سے بریک لگا کر رکنا ہوگا، چاہے آپ پہلے ہی چوراہے کے اندر ہوں۔","اگر آپ پہلے ہی داخل ہو چکے ہوں یا محفوظ طریقے سے نہ رک سکیں، تو چوراہے میں اچانک رکنے کے بجائے فوراً اسے پار کر لیں۔"],
+["جب آپ ایسے بے قابو چوراہے پر پہنچیں جہاں عبور کرنے والی سڑک ترجیحی ہو، تو آپ کو مکمل رکنا ہوگا۔","ترجیحی سڑک کے قریب آپ کو رفتار کم کرنی اور اس کی ٹریفک میں رکاوٹ نہ ڈالنی ہوگی، لیکن مکمل رکنا ہمیشہ ضروری نہیں جب تک نشان نہ کہے۔"],
+["ون وے سڑک سے دائیں مڑنے والی گاڑی کو دائیں کنارے کے قریب ہو کر، رفتار کم کر کے، چوراہے کے مرکز کے اندر سے مڑنا چاہیے۔","ون وے سڑک سے دائیں مڑنے والی گاڑی دائیں طرف رہتی ہے اور جنکشن کے مرکزی نقطے کے اندر سے گزرتی ہے۔"],
+["سڑک پر چلتے بچے کے پاس سے گزرتے وقت اسے خبردار کرنے کے لیے ہارن بجائیں اور اسی رفتار پر چلتے رہیں۔","پیدل چلنے والوں کے قریب آپ کو رفتار کم کرنی یا رکنا ہوگا تاکہ وہ محفوظ گزر سکیں؛ انہیں ہٹانے کے لیے ہارن استعمال نہ کریں۔"],
+["جس چوراہے پر نشان زدہ کراسنگ نہ ہو وہاں آپ کو گزرتے پیدل چلنے والوں کو کبھی راستہ نہیں دینا پڑتا۔","نشان زدہ کراسنگ نہ ہونے پر بھی آپ کو گزرتے پیدل چلنے والوں میں رکاوٹ نہیں ڈالنی چاہیے؛ انہیں راستہ دیں۔"],
+["دائیں موڑ کے تیر اور لکیر والا یہ گول نشان ظاہر کرتا ہے کہ آپ سڑک کنارے کسی جگہ میں داخل ہونے کے لیے دائیں طرف سڑک عبور نہیں کر سکتے۔","یہ 'دائیں عبور ممنوع' نشان ہے؛ یہ سڑک کنارے جگہ میں جانے سے روکتا ہے، لیکن آپ پھر بھی چوراہے پر عام دائیں موڑ لے سکتے ہیں۔"],
+["جہاں یہ نشان لگا ہو، موٹر گاڑیاں دکھائی گئی کم از کم رفتار سے نیچے نہیں چل سکتیں۔","نیلے دائرے میں خط کشیدہ عدد کم از کم رفتار کا نشان ہے؛ بلا وجہ اس سے آہستہ چلانا جائز نہیں۔"],
+["یہ نشان، سرخ دائرہ اور ترچھی لکیر، ظاہر کرتا ہے کہ سڑک تمام گاڑیوں کے لیے بند ہے۔","یہ 'تمام گاڑیوں کے لیے بند' نشان ہے؛ کوئی گاڑی داخل نہیں ہو سکتی، اگرچہ یہ 'گاڑیوں اور پیدل چلنے والوں کے لیے بند' سے مختلف ہے۔"],
+["'روڈ بند' نشان سڑک کو صرف گاڑیوں کے لیے بند کرتا ہے، اس لیے پیدل چلنے والے پھر بھی گزر سکتے ہیں۔","'روڈ بند' (通行止め) نشان سڑک کو گاڑیوں اور پیدل چلنے والوں دونوں کے لیے بند کرتا ہے۔"],
+["یہ پیلا ہیرا ہر گاڑی سے مکمل رکنے کا تقاضا کرتا ہے۔","یہ انتباہ ہے کہ بچے اچانک آ سکتے ہیں، اس لیے رفتار کم کریں اور رکنے کے لیے تیار رہیں، لیکن یہ بذاتِ خود مکمل رکنے کا تقاضا نہیں کرتا۔"],
+["جہاں سڑک کا نشان نو-اسٹاپنگ زون دکھائے، وہاں صرف پارکنگ ممنوع ہے۔","نو-اسٹاپنگ زون رکنے اور پارکنگ دونوں سے منع کرتا ہے؛ آپ وہاں ٹریفک یا رش کے لیے بھی نہیں رک سکتے۔"],
+["لرنر پرمٹ رکھنے والا عوامی سڑک صرف مشق کی ڈرائیونگ یا ڈرائیونگ ٹیسٹ کے لیے استعمال کر سکتا ہے۔","لرنر پرمٹ پر ڈرائیونگ صرف اجازت شدہ مشق اور ٹیسٹ کے مقاصد تک محدود ہے، ضروری نگرانی اور نشانات کے ساتھ۔"],
+["لائسنس معطل ہونے کے دوران گاڑی چلانا بغیر لائسنس چلانے کے برابر ہے۔","معطلی پھر بھی آپ کو چلانے سے روکتی ہے، اس لیے معطلی کے دوران چلانا بغیر لائسنس ڈرائیونگ سمجھا جاتا ہے۔"],
+["جب آپ ایک سال سے زیادہ عام لائسنس رکھ لیں تب بھی عام سائز ٹرک چلاتے وقت آپ کو بیگنر مارک لگانا ہوگا۔","ایک سالہ بیگنر مارک اصول عام گاڑیوں پر لاگو ہوتا ہے، جن میں عام ٹرک شامل ہیں، لیکن یہ پہلے سال کے بعد ختم ہو جاتا ہے۔"],
+["جب آپ تھکے یا نڈھال ہوں تو آپ کو گاڑی نہیں چلانی چاہیے، چاہے آپ آہستہ چلانے کا ارادہ رکھتے ہوں۔","تھکاوٹ ردعمل اور فیصلے کو کند کرتی ہے، اس لیے نڈھال حالت میں چلانا غیر محفوظ ہے چاہے آپ کتنا ہی آہستہ چلیں۔"],
+["موپیڈ چلاتے وقت تعمیراتی حفاظتی ہیلمٹ پہننا قابل قبول ہے۔","موپیڈ کے لیے حفاظتی معیار پر پورا اترنے والا مناسب رائڈنگ ہیلمٹ ضروری ہے؛ تعمیراتی ہیلمٹ کی اجازت نہیں۔"],
+["آپ اچانک، تیز حرکت کر سکتے ہیں بشرطیکہ پہلے اپنے آئینے دیکھ لیں۔","تیز، اچانک حرکتیں جو پیچھے والے ڈرائیوروں کو بریک یا موڑنے پر مجبور کریں ممنوع ہیں؛ نرمی اور قابلِ پیش گوئی انداز میں حرکت کریں۔"],
+["جب پیچھے والی گاڑی پہلے ہی آپ کو اوور ٹیک کرنے کی کوشش کر رہی ہو تو آپ اوور ٹیک نہیں کر سکتے۔","اگر پیچھے آنے والی گاڑی آپ کو پاس کرنا شروع کر چکی ہو، تو اسی وقت اپنا اوور ٹیک شروع کرنا ممنوع اور خطرناک ہے۔"],
+["موڑ پر، پہاڑی کی چوٹی کے قریب، یا تیز ڈھلوان پر اوور ٹیکنگ ممنوع ہے۔","موڑوں، پہاڑی چوٹیوں اور تیز اترائیوں پر محدود نظر اوور ٹیکنگ کو غیر محفوظ اور ناجائز بناتی ہے۔"],
+["ریلوے کراسنگ پر کسی گاڑی کے پیچھے چلتے ہوئے، اگر صاف لگے تو آپ رفتار کم کر کے گزر سکتے ہیں۔","ہر گاڑی کو کراسنگ پر رک کر حفاظت کی جانچ کرنی ہوگی؛ آپ محض آگے والی گاڑی کے پیچھے گزر نہیں سکتے۔"],
+["آپ اصل کے بجائے گاڑی میں اپنی گاڑی کے معائنہ سرٹیفکیٹ کی فوٹو کاپی رکھ سکتے ہیں۔","گاڑی میں رکھا گیا گاڑی کا معائنہ سرٹیفکیٹ اصل دستاویز ہونا چاہیے، کاپی نہیں۔"],
+["ریگولر موٹر سائیکل لائسنس کے ساتھ آپ موپیڈ (خاص ہلکا آلہ) بھی چلا سکتے ہیں۔","ریگولر موٹر سائیکل لائسنس رکھنا موپیڈ چلانے کا بھی احاطہ کرتا ہے۔"],
+["سڑک پر بنے ہیرے کے نشان ظاہر کرتے ہیں کہ بالکل آگے چوراہا ہے۔","ہیرے کے سڑک نشان خبردار کرتے ہیں کہ آگے پیدل کراسنگ ہے، اس لیے گزرتے لوگوں کے لیے سست ہونے یا رکنے کو تیار رہیں۔"]
+],
+ hi:[
+["जब सिग्नल पीला हो जाए, तो आपको गति बढ़ाकर लाल होने से पहले चौराहा पार कर लेना चाहिए।","पीले का मतलब है कि यदि सुरक्षित रूप से रुक सकते हैं तो रुकें। आगे केवल तब बढ़ें जब रुकना खतरनाक हो — गति कभी न बढ़ाएँ।"],
+["चमकता हुआ लाल सिग्नल बताता है कि आपको रुकना है, फिर सुरक्षित होने पर ही आगे बढ़ें।","चमकते लाल को रुकने के संकेत की तरह माना जाता है: पूरी तरह रुकें, देखें, फिर चलें।"],
+["चमकते हुए पीले सिग्नल का मतलब है कि आपको पूरी तरह रुकना है।","चमकते पीले का मतलब है सावधानी से आगे बढ़ें — आप बिना रुके जा सकते हैं पर सतर्क रहें।"],
+["जब सिग्नल हरा हो तो आप चल सकते हैं, पर फिर भी पैदल यात्रियों और चौराहे के भीतर मौजूद वाहनों को रास्ता देना होगा।","हरा आगे बढ़ने की अनुमति देता है, पर जो पहले से वैध रूप से चौराहे में हैं उन पर प्राथमिकता नहीं देता।"],
+["यातायात निर्देशित करने वाले पुलिस अधिकारी का हाथ का संकेत ट्रैफिक लाइट से ऊपर होता है।","जब कोई अधिकारी यातायात निर्देशित कर रहा हो, तो उसके संकेतों का पालन करें भले ही लाइट कुछ और कहे।"],
+["इस संकेत का मतलब है कि आपको पूरी तरह रुकना है।","止まれ लिखा लाल उल्टा त्रिकोण आगे बढ़ने से पहले पूरी तरह रुकने की माँग करता है।"],
+["इस संकेत का मतलब है कि वाहनों का प्रवेश वर्जित है।","सफेद पट्टी वाला लाल घेरा वाहनों के प्रवेश की मनाही दर्शाता है।"],
+["यह संकेत पाँच मिनट तक पार्किंग की अनुमति देता है।","यह नो-पार्किंग का संकेत है — पार्किंग वर्जित है।"],
+["यह संकेत पार्किंग और रुकना दोनों वर्जित करता है।","लाल घेरे और X वाला नीला घेरा नो-पार्किंग और नो-स्टॉपिंग दर्शाता है।"],
+["यह संकेत अधिकतम गति 40 किमी/घंटा निर्धारित करता है।","लाल घेरे और संख्या वाला सफेद घेरा अधिकतम गति सीमा बताता है।"],
+["यह संकेत वन-वे सड़क दर्शाता है; आप केवल तीर की दिशा में चल सकते हैं।","सफेद तीर वाला नीला आयत वन-वे यातायात दर्शाता है।"],
+["यह संकेत चेतावनी देता है कि यहाँ कोई पैदल क्रॉसिंग नहीं है।","इसके विपरीत — यह पैदल क्रॉसिंग दर्शाता है; पार करते लोगों का ध्यान रखें।"],
+["यह संकेत ओवरटेक करना वर्जित करता है।","एक वाहन को दूसरे से आगे निकलते दिखाता लाल घेरा ओवरटेक करना वर्जित करता है।"],
+["इस संकेत का मतलब है कि आप क्षेत्र में अपनी गति बनाए रख सकते हैं।","徐行 / SLOW का मतलब है गति इतनी कम करें कि ज़रूरत पर तुरंत रुक सकें।"],
+["यह पीला हीरा आगे पैदल क्रॉसिंग की चेतावनी देता है।","पीले हीरे के संकेत चेतावनी होते हैं; यह आगे पैदल क्रॉसिंग की चेतावनी देता है।"],
+["यदि चौराहे के भीतर रहते हुए कोई आपातकालीन वाहन पास आए, तो आपको तुरंत वहीं रुक जाना चाहिए।","पहले चौराहा खाली करें, बाईं ओर हो जाएँ, फिर रुककर उसे जाने दें।"],
+["बिना सिग्नल वाले चौराहे पर सँकरी सड़क वाले वाहन को स्पष्ट रूप से चौड़ी सड़क वाले वाहन को रास्ता देना होगा।","जहाँ सिग्नल या संकेत न हों, स्पष्ट रूप से चौड़ी सड़क वाले वाहन को प्राथमिकता है।"],
+["आप चौराहे के 5 मीटर के भीतर पार्किंग कर सकते हैं बशर्ते यातायात न रुके।","चौराहे या उसके कोने के 5 मीटर के भीतर पार्किंग और रुकना वर्जित है।"],
+["समान चौड़ाई की सड़कों के बिना-सिग्नल चौराहे पर आपको अपनी बाईं ओर से आने वाले वाहन को रास्ता देना होगा।","जापान में समान चौड़ाई के अनियंत्रित चौराहों पर बाईं ओर को प्राथमिकता (左方優先) दी जाती है।"],
+["जब कोई पैदल यात्री पैदल क्रॉसिंग पर पार कर रहा हो, तो आपको क्रॉसिंग से पहले रुककर उसे जाने देना होगा।","क्रॉसिंग पर पैदल यात्रियों को हमेशा प्राथमिकता है — रुकें और रास्ता दें।"],
+["यदि कोई व्यक्ति सड़क के पास सफेद छड़ी या गाइड डॉग का उपयोग कर रहा हो, तो आप बिना गति घटाए सामान्य रूप से गुज़र सकते हैं।","आपको गति घटानी या रुकना चाहिए ताकि उनकी सुरक्षा सुनिश्चित हो; वे दृष्टिबाधित हो सकते हैं।"],
+["आप पानी के गड्ढे से सामान्य गति पर गुज़र सकते हैं भले ही उससे फुटपाथ पर पैदल यात्रियों पर छींटे पड़ें।","आपको गति घटानी होगी ताकि पैदल यात्रियों पर कीचड़ या पानी न उछले — ऐसा करना अपराध है।"],
+["बिना सिग्नल वाली पैदल क्रॉसिंग पर पार करने की प्रतीक्षा कर रहे पैदल यात्री के लिए आपको रुकना होगा।","बिना सिग्नल वाली क्रॉसिंग पर प्रतीक्षारत पैदल यात्रियों को रुककर पार करने दें।"],
+["जिस सामान्य सड़क पर गति का संकेत न हो, वहाँ सामान्य कार के लिए पूर्वनिर्धारित सीमा 60 किमी/घंटा है।","जहाँ कोई संकेत न हो, सामान्य सड़कों पर सामान्य कारों के लिए वैधानिक सीमा 60 किमी/घंटा है।"],
+["जब गति दोगुनी हो तो ब्रेकिंग दूरी लगभग दोगुनी हो जाती है।","ब्रेकिंग दूरी गति के वर्ग के साथ बढ़ती है — गति दोगुनी होने पर ब्रेकिंग दूरी लगभग चार गुना हो जाती है।"],
+["गीली या बर्फीली सड़क पर उसी गति पर रुकने की दूरी सूखी सड़क की तुलना में अधिक हो जाती है।","कम पकड़ ब्रेकिंग दूरी बढ़ा देती है, इसलिए खराब परिस्थितियों में अधिक दूरी रखें।"],
+["कुल रुकने की दूरी मुक्त-गति (प्रतिक्रिया) दूरी और ब्रेकिंग दूरी का योग है।","यह आपकी प्रतिक्रिया के दौरान तय दूरी और ब्रेक लगाते समय की दूरी को मिलाकर बनती है।"],
+["भारी लदा वाहन ढलान पर उतरते समय खाली और समतल की तुलना में अधिक ब्रेकिंग दूरी माँगता है।","अधिक वज़न और नीचे की ढलान दोनों रुकने के लिए आवश्यक दूरी बढ़ा देते हैं।"],
+["सुरंग से ठीक पहले या उसके भीतर किसी वाहन को ओवरटेक करने की अनुमति है।","सुरंगों और कम दृश्यता वाली अन्य जगहों पर ओवरटेक करना वर्जित है।"],
+["आपको ऐसे वाहन को ओवरटेक नहीं करना चाहिए जो स्वयं किसी अन्य वाहन को ओवरटेक कर रहा हो।","टक्कर के अधिक जोखिम के कारण दोहरा ओवरटेक करना वर्जित है।"],
+["यदि कोई पैदल यात्री मौजूद न हो तो पैदल क्रॉसिंग पर ओवरटेक करने की अनुमति है।","पैदल क्रॉसिंग पर और उससे ठीक पहले ओवरटेक वर्जित है, चाहे पैदल यात्री हों या नहीं।"],
+["नियमतः आप दूसरे वाहन को उसकी बाईं ओर से गुज़रकर ओवरटेक करते हैं।","सामान्यतः आप दाईं ओर से ओवरटेक करते हैं; बाईं ओर से गुज़रना आमतौर पर अनुमत नहीं है।"],
+["आप फायर हाइड्रेंट के सामने अपनी कार रोक सकते हैं बशर्ते आप वाहन में रहें।","फायर हाइड्रेंट के पास पार्किंग और रुकना वर्जित है।"],
+["गैरेज या पार्किंग सुविधा के प्रवेश के 3 मीटर के भीतर पार्किंग वर्जित है।","आपको ऐसे प्रवेश नहीं रोकने चाहिए; वर्जित क्षेत्र लगभग 3 मीटर तक है।"],
+["यातायात कानून के तहत 'पार्किंग' और 'रुकना' का बिल्कुल एक ही अर्थ है।","रुकना एक संक्षिप्त ठहराव है; पार्किंग लंबी होती है या जहाँ आप तुरंत चल नहीं सकते।"],
+["फायर हाइड्रेंट के 5 मीटर के भीतर पार्किंग वर्जित है।","पहुँच साफ रखने के लिए फायर हाइड्रेंट के चारों ओर 5 मीटर का नो-पार्किंग ज़ोन लागू होता है।"],
+["रेलवे क्रॉसिंग पर आपको रुककर सुरक्षा जाँचनी होगी भले ही गेट खुला हो और दृश्यता अच्छी हो।","आपको हमेशा रेलवे क्रॉसिंग से पहले रुकना और पुष्टि करनी होगी कि सुरक्षित है।"],
+["यदि आपकी कार रेलवे क्रॉसिंग पर बंद हो जाए, तो आपको सबसे पहले इंजन फिर से स्टार्ट करने की कोशिश करनी चाहिए।","पहले सबको बाहर निकालें और क्रॉसिंग का आपातकालीन बटन दबाएँ — वाहन से पहले लोग ज़रूरी हैं।"],
+["जापान में किसी भी मात्रा में शराब पीने के बाद वाहन चलाना अवैध है।","जापान सख्त मानक अपनाता है — शराब के प्रभाव में वाहन चलाना वर्जित है।"],
+["कानूनन केवल चालक को सीट बेल्ट पहनना आवश्यक है; यात्री छूट प्राप्त हैं।","पिछली सीट के यात्रियों सहित सभी सवारों को सीट बेल्ट पहनना आवश्यक है।"],
+["आप अन्य चालकों को सचेत करने के लिए कहीं भी स्वतंत्र रूप से हॉर्न का उपयोग कर सकते हैं।","हॉर्न केवल वहाँ उपयोग करें जहाँ संकेत माँगे, या खतरे से बचने के लिए आपात स्थिति में।"],
+["वाहन चलाते समय हाथ में मोबाइल फोन का उपयोग करना वर्जित है।","वाहन चलाते समय फोन हाथ में पकड़ना या स्क्रीन को घूरना अपराध है।"],
+["यदि आपको नींद आ रही हो तो आपको गंतव्य तक खिड़की खोलकर वाहन चलाते रहना चाहिए।","नींद में वाहन चलाना खतरनाक है — आगे बढ़ने के बजाय रुककर आराम करें।"],
+["छोटे बच्चे को उपयुक्त चाइल्ड सीट में सुरक्षित करना आवश्यक है।","छह वर्ष से कम उम्र के बच्चों को उपयुक्त चाइल्ड सीट का उपयोग करना चाहिए।"],
+["जापान में वाहन सड़क की बाईं ओर चलते हैं।","जापान में बाईं ओर वाहन चलते हैं; ओवरटेक के अलावा, जहाँ अनुमति हो, बाएँ रहें।"],
+["साइकिल को हल्का वाहन माना जाता है और नियमतः उसे सड़क की बाईं ओर चलना चाहिए।","साइकिलें 軽車両 (हल्के वाहन) हैं और आमतौर पर बाईं ओर चलती हैं।"],
+["मोटरसाइकिल चालक सामान्य सड़कों पर हेलमेट पहनने या न पहनने का चुनाव कर सकता है।","मोटरसाइकिल और मोपेड चालकों के लिए हेलमेट अनिवार्य है।"],
+["सामान्य लाइसेंस के साथ अपने पहले साल में चालक को शुरुआती (वकाबा) चिह्न लगाना आवश्यक है।","नए चालकों को एक साल तक हरा-पीला शुरुआती चिह्न लगाना आवश्यक है।"],
+["वृद्ध चालक चिह्न लगे वाहन के आसपास आपको अतिरिक्त सावधानी बरतनी चाहिए।","वृद्ध चालक चिह्न बुज़ुर्ग चालक को दर्शाता है; उन्हें अधिक जगह दें।"],
+["एक्सप्रेसवे पर पैदल यात्रियों और साइकिलों की मनाही है।","एक्सप्रेसवे केवल मोटर वाहनों के लिए हैं — पैदल यात्री, साइकिल या मोपेड की अनुमति नहीं।"],
+["एक्सप्रेसवे पर सामान्य कार के लिए न्यूनतम गति आमतौर पर 50 किमी/घंटा है।","बहुत धीमे चलना खतरनाक है; सामान्य कारों के लिए सामान्य न्यूनतम गति 50 किमी/घंटा है।"],
+["जब भी आप आराम करना चाहें एक्सप्रेसवे के किनारे (शोल्डर) पर रुक सकते हैं।","शोल्डर पर रुकना केवल आपात स्थिति के लिए है — आराम के लिए सर्विस एरिया का उपयोग करें।"],
+["अधिकांश एक्सप्रेसवे पर सामान्य कार के लिए अधिकतम गति 100 किमी/घंटा है।","100 किमी/घंटा सामान्य अधिकतम है, हालाँकि कुछ हिस्सों पर 120 तक के संकेत होते हैं।"],
+["रात में सामने से आते वाहन के मिलने पर आपको हेडलाइट मद्धम कर लेनी चाहिए।","सामने वाले चालक की आँखें चौंधियाने से बचाने के लिए लो बीम पर आ जाएँ।"],
+["सुरंग से गुज़रते समय दिन में भी आपको हेडलाइट चालू करनी चाहिए।","सुरंगें अँधेरी होती हैं — हेडलाइट देखने और दिखने में मदद करती हैं।"],
+["घने कोहरे में अधिकतम दृश्यता के लिए आपको हाई बीम का उपयोग करना चाहिए।","हाई बीम कोहरे से परावर्तित होकर दृश्यता बिगाड़ती है — लो बीम या फॉग लाइट का उपयोग करें।"]
+,
+["इस संकेत का मतलब है कि सभी वाहनों का गुज़रना वर्जित है।","तिरछी पट्टी वाला लाल घेरा सभी वाहनों के लिए बंद सड़क दर्शाता है।"],
+["यह संकेत सड़क को केवल वाहनों के लिए बंद करता है; पैदल यात्री फिर भी गुज़र सकते हैं।","'通行止め' (सड़क बंद) वाहनों और पैदल यात्रियों दोनों के लिए बंद होती है।"],
+["यह संकेत यू-टर्न लेना वर्जित करता है।","लाल पट्टी वाला यू-टर्न तीर बताता है कि यहाँ यू-टर्न मना है।"],
+["यह संकेत न्यूनतम गति दर्शाता है; आप इससे धीमे नहीं चल सकते।","रेखांकित संख्या वाला नीला घेरा न्यूनतम गति बताता है, अधिकतम नहीं।"],
+["यह संकेत आपको हॉर्न बजाने का निर्देश देता है।","जहाँ यह संकेत हो, जैसे अंधे मोड़ पर, आपको हॉर्न बजाना ज़रूरी है।"],
+["इस चेतावनी संकेत का मतलब है कि आपको हमेशा पूरी तरह रुकना है।","यह चेतावनी देता है कि बच्चे अचानक आ सकते हैं, इसलिए सावधान रहें और रुकने को तैयार रहें — पर यह स्वयं पूरी तरह रुकने की माँग नहीं करता।"],
+["यह पीला हीरा चेतावनी देता है कि आगे सड़क फिसलन भरी हो सकती है।","पीले हीरे चेतावनी होते हैं; यह आगे फिसलन भरी सतह की चेतावनी देता है।"],
+["यह पीला हीरा आगे चौराहे की चेतावनी देता है।","जोड़ (+) का आकार बताता है कि आगे चौराहा आ रहा है।"],
+["जहाँ यह संकेत हो, आप पैदल यात्रियों और आती ट्रैफिक को रास्ता देकर लाल बत्ती पर भी बाएँ मुड़ सकते हैं।","नीला 'बाएँ मुड़ना अनुमत' संकेत सुरक्षित होने पर लाल बत्ती पर बाएँ मुड़ने देता है।"],
+["सड़क पर बने हीरे के निशान चेतावनी देते हैं कि आगे पैदल क्रॉसिंग है।","सड़क की सतह पर सफेद हीरे बताते हैं कि आगे क्रॉसिंग है — रुकने को तैयार रहें।"],
+["किनारे पर ठोस पीली रेखा का मतलब है किसी भी समय पार्किंग और रुकना दोनों वर्जित।","ठोस पीली रेखा पार्किंग और रुकना दोनों मना करती है; टूटी पीली रेखा केवल पार्किंग मना करती है।"],
+["चौराहे पर मुड़ते समय आपको हमेशा गति कम करनी होगी, भले ही बत्ती हरी हो।","चौराहे पर हर बाएँ या दाएँ मोड़ से पहले गति कम करना ज़रूरी है।"],
+["चौराहे पर दाएँ मुड़ते समय आपको हमेशा पहले पूरी तरह रुकना होगा।","आपको गति कम करनी होगी, पर यदि कोई आती गाड़ी या पैदल यात्री न हो तो पूरी तरह रुकना ज़रूरी नहीं।"],
+["हरी बत्ती पर भी चौराहे में प्रवेश न करें यदि संभावना हो कि आप अंदर फँसकर दूसरी ट्रैफिक रोक देंगे।","तभी प्रवेश करें जब चौराहा पार कर सकें; रास्ता रोकना मना है।"],
+["यदि आगे कोई गाड़ी पैदल क्रॉसिंग पर रुक गई हो तो किसी के न दिखने पर आप धीरे गुज़र सकते हैं।","आपको उसके पीछे रुकना होगा — क्रॉसिंग पर या उससे पहले रुकी गाड़ी से कभी आगे न निकलें।"],
+["पेट्रोल पंप जैसी सड़क किनारे जगह में घुसने के लिए फुटपाथ पार करने से पहले, भले ही कोई पैदल यात्री न हो, आपको रुकना होगा।","आपको फुटपाथ पार करने से पहले रुकना होगा, चाहे वहाँ कोई चल रहा हो या नहीं।"],
+["मोड़ से लगभग 30 मीटर पहले संकेत दें, पर लेन बदलने से लगभग 3 सेकंड पहले।","समय अलग है: मोड़ के लिए 30 मीटर पहले, लेन बदलने के लिए 3 सेकंड पहले।"],
+["बिना संकेत वाली सामान्य सड़क पर बड़ी और सामान्य दोनों मोटरसाइकिलें 60 किमी/घंटा चल सकती हैं, जबकि मोपेड की सीमा 30 है।","मोटरसाइकिलें कारों के साथ 60 की सीमा साझा करती हैं; मोपेड 30 तक सीमित हैं।"],
+["जिस सड़क पर एक ही दिशा में दो लेन हों, वहाँ बाईं लेन में चलें और दाईं लेन ओवरटेक के लिए खुली छोड़ें।","पहली (बाईं) लेन में रहें; दाईं लेन ओवरटेक, दाएँ मोड़ या यू-टर्न के लिए है।"],
+["रेलवे क्रॉसिंग से 30 मीटर पहले के भीतर ओवरटेक करना वर्जित है।","रेलवे क्रॉसिंग की ओर 30 मीटर की दूरी में ओवरटेक की अनुमति नहीं।"],
+["गाड़ी चलाते समय आपको अपना अनिवार्य बीमा प्रमाणपत्र और वाहन निरीक्षण प्रमाणपत्र दोनों साथ रखने होंगे।","आपको दोनों दस्तावेज़ रखने होंगे — एक नहीं — और वे मूल होने चाहिए।"],
+["ऑटोमैटिक गाड़ी को ढलान पर खड़ा करते समय उसे 'P' पर रखें।","'P' (पार्क) उपयोग करें; ढलान पर खड़ा करने के लिए 'R' सही नहीं।"],
+["नए चालकों को एक साल तक गाड़ी के आगे और पीछे शुरुआती चिह्न लगाना ज़रूरी है, भले ही वे सामान्य आकार का ट्रक चला रहे हों।","एक-वर्षीय शुरुआती चिह्न नियम सामान्य वाहनों पर लागू होता है, जिनमें सामान्य आकार के ट्रक भी शामिल हैं।"],
+["लाइसेंस निलंबन के दौरान गाड़ी चलाना बिना लाइसेंस चलाने के बराबर है।","निलंबन के दौरान भी गाड़ी चलाना मना है; ऐसा करना बिना लाइसेंस ड्राइविंग माना जाता है।"]
+,["यह संकेत चौराहे से सीधे जाने पर रोक लगाता है।","दाएँ मुड़ने वाले तीर पर लाल घेरा और तिरछी रेखा दाएँ मुड़ने पर रोक लगाती है, सीधे जाने पर नहीं।"],
+["जहाँ यह संकेत लगा हो, वहाँ आप सामने से आने वाली लेन में जाकर किसी वाहन को ओवरटेक नहीं कर सकते।","यह 'ओवरटेक निषेध' संकेत ऐसी ओवरटेकिंग रोकता है जिसमें विपरीत यातायात की लेन में जाना पड़े।"],
+["इस संकेत का अर्थ है कि जिन वाहनों का कुल वजन दिखाए गए अंक से अधिक है, वे नहीं गुजर सकते।","टन में वजन के चारों ओर लाल घेरा वाहन के अधिकतम स्वीकार्य कुल वजन को दर्शाता है।"],
+["इस संकेत का अर्थ है कि अपने सामान सहित दिखाई गई ऊँचाई से अधिक ऊँचे वाहन नहीं गुजर सकते।","अधिकतम ऊँचाई का संकेत वाहन और उसके सामान दोनों पर लागू होता है।"],
+["यह नीला संकेत दर्शाता है कि कारें सड़क का उपयोग कर सकती हैं पर पैदल यात्रियों को रास्ता दें।","नीले घेरे पर पैदल यात्री का चिह्न केवल पैदल यात्रियों के मार्ग को दर्शाता है; सामान्य कारों को वहाँ अनुमति नहीं।"],
+["जहाँ यह संकेत लगा हो, जैसे अंधे मोड़ पर, वहाँ हॉर्न बजाना आवश्यक है।","यह नीला 'हॉर्न बजाएँ' संकेत चिह्नित स्थान पर, जैसे तीखे अंधे मोड़ पर, हॉर्न उपयोग करना अनिवार्य करता है।"],
+["यह नीला संकेत केवल साइकिलों के लिए आरक्षित मार्ग दर्शाता है।","नीले घेरे पर साइकिल का चिह्न केवल साइकिल मार्ग निर्धारित करता है; अन्य वाहन इसका उपयोग नहीं कर सकते।"],
+["जहाँ यह संकेत दो-चरणीय दाएँ मोड़ की माँग करे, वहाँ मोपेड को पैदल क्रॉसिंग की तरह दो चरणों में दाएँ मुड़ना होगा।","दो-चरणीय मोड़ संकेत मोपेड को पहले सीधे पार करने फिर मुड़ने पर बाध्य करता है, बजाय बीच से एक ही बार दाएँ मुड़ने के।"],
+["चिह्नित सुरक्षा क्षेत्र एक नो-स्टॉपिंग क्षेत्र है; आप इसमें वाहन रोक या पार्क नहीं कर सकते।","सुरक्षा क्षेत्र प्रतीक्षारत पैदल यात्रियों की रक्षा करते हैं, इसलिए इनमें रुकना और पार्क करना निषिद्ध है।"],
+["यह पीला हीरा चेतावनी देता है कि आगे पैदल क्रॉसिंग है, इसलिए धीमा होने या रुकने के लिए तैयार रहें।","हीरे के आकार के चेतावनी संकेत और सड़क पर हीरे दोनों आगे क्रॉसिंग का संकेत देते हैं जहाँ पैदल यात्री पार कर सकते हैं।"],
+["चमकता हुआ लाल सिग्नल यील्ड संकेत के समान होता है, इसलिए आप बिना रुके धीरे गुजर सकते हैं।","चमकता लाल सिग्नल रुकने का अर्थ रखता है: आपको पूरी तरह रुकना होगा और केवल सुरक्षित होने पर ही आगे बढ़ना होगा।"],
+["चमकता पीला सिग्नल दर्शाता है कि आप सावधानी से, अन्य यातायात पर ध्यान देते हुए आगे बढ़ सकते हैं।","चमकता पीला सिग्नल आपको सावधानी से जारी रहने देता है; यह रुकने की माँग नहीं करता पर आपको सतर्क रहना होगा।"],
+["हरा तीर सिग्नल वाहनों को तीर की दिशा में आगे बढ़ने देता है, भले ही मुख्य बत्ती लाल हो।","जब हरा तीर जले, तो आप गोल लाल सिग्नल के बावजूद तीर की दिशा में बढ़ सकते हैं।"],
+["जब सिग्नल पीला हो जाए, तो आपको गति बढ़ाकर लाल होने से पहले चौराहा पार कर लेना चाहिए।","पीला अर्थ रुकना यदि आप सुरक्षित रूप से रुक सकें; लाल बत्ती से पहले निकलने के लिए गति न बढ़ाएँ।"],
+["जब सड़क की सतह गीली हो, तो आपको गति कम करनी चाहिए क्योंकि ब्रेक लगाने की दूरी बढ़ जाती है।","गीली सड़कें टायर की पकड़ कम करती हैं और रुकने की दूरी बढ़ाती हैं, इसलिए कम गति सुरक्षित है।"],
+["लगी हुई गति सीमा एक लक्ष्य गति है जिसे आपको हर समय बनाए रखने का प्रयास करना चाहिए।","गति सीमा अधिकतम है, लक्ष्य नहीं; परिस्थितियों के अनुसार आपको अक्सर धीमे चलाना होगा।"],
+["रुकने की कुल दूरी प्रतिक्रिया समय में तय की गई दूरी और ब्रेकिंग दूरी का योग है।","रुकने की दूरी आपकी प्रतिक्रिया के दौरान चली दूरी और वास्तविक ब्रेकिंग दूरी को मिलाकर बनती है।"],
+["बिना सिग्नल या संकेत वाले चौराहे पर, आपको अधिक चौड़ी सड़क से आने वाले यातायात को रास्ता देना होगा।","जब सड़कें अन्यथा बराबर हों, तो संकरी सड़क वाला वाहन स्पष्ट रूप से चौड़ी सड़क वाले को रास्ता देता है।"],
+["जब दो वाहन एक साथ अनियंत्रित चौराहे पर पहुँचें, तो जिसके दाईं ओर दूसरा वाहन हो उसे रास्ता देना चाहिए।","बाकी सब बराबर हो तो अनियंत्रित चौराहे पर आप अपनी दाईं ओर से आने वाले वाहन को रास्ता देते हैं।"],
+["चौराहे पर दाएँ मुड़ने वाले वाहन को सामने से सीधे आने वाले वाहन पर प्राथमिकता है।","सामने से सीधे या बाएँ मुड़ने वाले वाहनों को प्राथमिकता है; दाएँ मुड़ने वाले वाहन को उनका इंतज़ार करना होगा।"],
+["जब पैदल यात्री क्रॉसिंग पर हों या स्पष्ट रूप से कदम रखने वाले हों, तो आपको रुककर उन्हें पार करने देना होगा।","क्रॉसिंग पर मौजूद या उसमें प्रवेश करते पैदल यात्रियों को रास्ते का अधिकार है, और आपको उनके लिए रुकना होगा।"],
+["अकेले चलते बच्चे या सफेद छड़ी का उपयोग करने वाले व्यक्ति के पास से गुजरते समय आपको धीमा होना या रुकना होगा।","अकेले बच्चों और सफेद छड़ी या गाइड डॉग वाले दृष्टिबाधित लोगों के लिए अतिरिक्त सुरक्षा आवश्यक है; धीमे हों या रुकें।"],
+["यदि कोई पैदल यात्री दिखाई न दे, तो आप बिना धीमे हुए क्रॉसिंग से गुजर सकते हैं।","क्रॉसिंग के पास आपको हमेशा रुकने के लिए तैयार रहना होगा क्योंकि पैदल यात्री अचानक आ सकता है; पूरी गति बनाए न रखें।"],
+["जब आपके आगे का वाहन क्रॉसिंग पर रुक गया हो, तो आप उसे ओवरटेक नहीं कर सकते।","क्रॉसिंग पर या ठीक पहले रुके वाहन को पार करना निषिद्ध है, क्योंकि जिस पैदल यात्री को वह रास्ता दे रहा है वह छिपा हो सकता है।"],
+["आप किसी वाहन को पैदल क्रॉसिंग से ठीक पहले या उस पर ओवरटेक नहीं कर सकते।","क्रॉसिंग पर और ठीक पहले ओवरटेकिंग निषिद्ध है, जहाँ पार करता पैदल यात्री आगे के वाहन से छिप सकता है।"],
+["आगे के वाहन की बाईं ओर से ओवरटेक करना हमेशा सुरक्षित होता है।","नियमतः आप दाईं ओर से ओवरटेक करते हैं; बाईं ओर से पार करना केवल विशेष स्थितियों में, जैसे आगे का वाहन दाएँ मुड़ रहा हो, अनुमत है।"],
+["आप किसी चौराहे या मोड़ के 5 मीटर के भीतर पार्क नहीं कर सकते।","दृश्यता साफ रखने के लिए चौराहे, उसके कोने या सड़क के मोड़ के 5 मीटर के भीतर पार्किंग प्रतिबंधित है।"],
+["आप फायर हाइड्रेंट या अग्निशमन जल स्रोत के 5 मीटर के भीतर पार्क नहीं कर सकते।","फायर हाइड्रेंट और अग्नि-जल स्रोत के पास जगह खाली रहनी चाहिए, इसलिए 5 मीटर के भीतर पार्किंग प्रतिबंधित है।"],
+["आपको रेलवे क्रॉसिंग से पहले रुककर सुनिश्चित करना होगा कि सुरक्षित है, भले ही कोई ट्रेन न दिखे।","रेलवे क्रॉसिंग पर पार करने से पहले रुकना और दोनों दिशाओं में देखना आवश्यक है।"],
+["यदि क्रॉसिंग का अवरोधक उठ रहा हो, तो आप उसके पूरी तरह खुलने से पहले पार करना शुरू कर सकते हैं।","क्रॉसिंग में प्रवेश से पहले आपको प्रतीक्षा करनी होगी जब तक अवरोधक पूरी तरह ऊपर न हो जाए और चेतावनी बंद न हो।"],
+["लर्नर परमिट धारक को नियमों के अनुसार केवल योग्य प्रशिक्षक की निगरानी में ही चलाना होगा।","लर्नर परमिट पर अभ्यास ड्राइविंग को सीखने वालों के लिए निर्धारित निगरानी और चिह्न आवश्यकताओं का पालन करना होगा।"],
+["जब भी आप वाहन चलाएँ, आपको अपना ड्राइविंग लाइसेंस साथ रखना होगा।","लाइसेंस के बिना वाहन चलाना अपराध है; वाहन चलाते समय लाइसेंस साथ होना आवश्यक है।"],
+["चालक यह सुनिश्चित करने के लिए जिम्मेदार है कि हर यात्री, पिछली सीटों वाले सहित, सीट बेल्ट पहने।","जहाँ सीट बेल्ट लगी हों वहाँ सभी सवारों के लिए आवश्यक हैं, और चालक को सुनिश्चित करना होगा कि यात्री बेल्ट पहनें।"],
+["वाहन चलाते समय हाथ में मोबाइल फोन का उपयोग स्वीकार्य है बशर्ते आप धीरे चलाएँ।","वाहन चलते समय हाथ में फोन का उपयोग आपकी गति की परवाह किए बिना निषिद्ध है।"],
+["किसी भी मात्रा में शराब पीने के बाद वाहन चलाना निषिद्ध है।","शराब पीकर वाहन चलाना पूरी तरह प्रतिबंधित है; थोड़ी सी शराब भी वाहन चलाना अवैध बना देती है।"],
+["ड्राइव शुरू करने से पहले आपको टायर, ब्रेक, लाइट और तरल स्तर जाँचने चाहिए।","टायर, ब्रेक, लाइट और तरल पदार्थों की ड्राइव-पूर्व जाँच खराबियों को दुर्घटना या ब्रेकडाउन से पहले पकड़ने में मदद करती है।"],
+["सामान इस तरह लादना कि वह वाहन से काफी बाहर निकले ठीक है बशर्ते आप सावधानी से चलाएँ।","भार कानूनी लंबाई और वजन सीमा में रहना चाहिए; निर्धारित सीमा से बाहर निकलने वाला सामान अनुमत नहीं है।"],
+["एक्सप्रेसवे पर पैदल यात्री, साइकिल और मोपेड की अनुमति नहीं है।","एक्सप्रेसवे केवल मोटर वाहनों के लिए हैं; पैदल यात्री, साइकिल और मोपेड का प्रवेश निषिद्ध है।"],
+["एक्सप्रेसवे की मुख्य लेन पर छोटे आराम के लिए रुकना अनुमत है।","एक्सप्रेसवे की चलती लेन पर रुकना या पार्क करना आपात स्थिति को छोड़कर निषिद्ध है; आराम के लिए सर्विस या पार्किंग एरिया का उपयोग करें।"],
+["रात में सामने से वाहन आने पर आपको हेडलाइट हाई से लो बीम पर करनी चाहिए।","सामने से यातायात मिलने पर लो बीम पर जाना दूसरे चालक की आँखें चौंधियाने से रोकता है।"],
+["वाहन चलाते समय भूकंप में आपको गति कम कर बाईं ओर रुकना और सड़क न रोकना चाहिए।","तेज़ भूकंप के दौरान गति घटाएँ, बाईं ओर रुकें, और चाबी छोड़ दें ताकि आपातकालीन वाहन गुजर सकें।"]
+,["व्हीलबेस अंतर — पिछले पहियों का अगले पहियों के अंदर की ओर चलना — हर मोड़ पर होता है, गति चाहे जो हो।","भीतरी पहिये का अंतर हर बार बाएँ या दाएँ मुड़ने पर होता है, बहुत कम गति पर भी, इसलिए रुकावटों के पास पिछले पहियों पर ध्यान दें।"],
+["मोड़ के लिए संकेत मोड़ से 3 सेकंड पहले देना शुरू करना चाहिए।","बाएँ या दाएँ मोड़ के लिए आप लगभग 30 मीटर पहले संकेत देते हैं; 3 सेकंड का नियम लेन बदलने पर लागू होता है, मुड़ने पर नहीं।"],
+["मोड़ पूरा करने के तुरंत बाद संकेत बंद कर देना चाहिए, और जब कोई क्रिया आवश्यक न हो तो संकेत नहीं देना चाहिए।","मोड़ पूरा होते ही इंडिकेटर बंद करें; इसे चालू रखना या बिना कारण संकेत देना अन्य चालकों को भ्रमित करता है।"],
+["जब पुलिस अधिकारी चौराहे पर दोनों भुजाएँ ऊर्ध्वाधर उठाए, तो अधिकारी के आगे या पीछे वाले यातायात के लिए यह लाल बत्ती के समान है।","अधिकारी का ऊर्ध्वाधर-भुजा संकेत अधिकारी के शरीर के आगे या पीछे आने वाले यातायात के लिए पहले पीली फिर लाल बत्ती जैसा काम करता है।"],
+["यदि पुलिस अधिकारी का हाथ संकेत ट्रैफिक लाइट से टकराए, तो आपको पुलिस अधिकारी का पालन करना होगा।","पुलिस अधिकारी के हाथ के संकेत ट्रैफिक लाइट पर वरीयता रखते हैं, इसलिए बत्ती कुछ भी कहे, अधिकारी का पालन करें।"],
+["सूखी सड़क पर 60 किमी/घंटा पर सामान्य कार की रुकने की दूरी लगभग 30 मीटर है।","60 किमी/घंटा पर कुल रुकने की दूरी 30 नहीं बल्कि लगभग 44 मीटर के करीब है; यह प्रतिक्रिया और ब्रेकिंग दूरी को मिलाकर बनती है।"],
+["प्रतिक्रिया दूरी वह दूरी है जो वाहन चालक के खतरा भाँपने से ब्रेक काम शुरू करने तक तय करता है।","प्रतिक्रिया दूरी ब्रेक लगने से पहले का स्वतंत्र चलने वाला हिस्सा है; यह गति और धीमी प्रतिक्रिया वाले चालक के साथ बढ़ती है।"],
+["रुकने की दूरी तब बढ़ जाती है जब चालक थका हो, सड़क गीली हो, या वाहन पर भारी भार हो।","थकान, गीली सतहें और भारी भार सभी रुकने के लिए आवश्यक दूरी बढ़ाते हैं, इसलिए इन परिस्थितियों में अधिक जगह रखें।"],
+["जिस सड़क पर गति सीमा न लगी हो वहाँ आप जितनी चाहें गति पर चला सकते हैं बशर्ते सुरक्षित महसूस करें।","बिना लगी सीमा के भी आपको अपने वाहन प्रकार के लिए वैधानिक गति का पालन करना होगा; आप कोई भी गति नहीं चुन सकते।"],
+["सामान्य सड़क पर बड़े ट्रक की वैध अधिकतम गति 50 किमी/घंटा है।","सामान्य सड़क पर बड़े ट्रक की वैध अधिकतम गति 60 किमी/घंटा है, जो कारों और मोटरसाइकिलों जैसी है।"],
+["हरी बत्ती का अर्थ है कि आगे यातायात जो भी कर रहा हो आपको हमेशा आगे बढ़ना होगा।","हरा अर्थ है आप बढ़ सकते हैं, यह नहीं कि अवश्य बढ़ें; यदि आगे रास्ता बंद हो तो रुकें ताकि चौराहे में न फँसें।"],
+["जैसे ही हरी बत्ती पीली हो आपको जोर से ब्रेक लगाकर रुकना होगा, भले ही आप पहले से चौराहे के अंदर हों।","यदि आप पहले ही प्रवेश कर चुके हों या सुरक्षित रूप से न रुक सकें, तो चौराहे में अचानक रुकने के बजाय उसे तुरंत पार करें।"],
+["जब आप ऐसे अनियंत्रित चौराहे पर पहुँचें जहाँ पार करने वाली सड़क प्राथमिक हो, तो आपको पूरी तरह रुकना होगा।","प्राथमिक सड़क के पास आपको धीमा होना और उसके यातायात में बाधा न डालना होगा, पर पूरी तरह रुकना हमेशा आवश्यक नहीं जब तक संकेत न कहे।"],
+["वन-वे सड़क से दाएँ मुड़ने वाले वाहन को दाएँ किनारे के पास होकर, धीमा होकर, चौराहे के केंद्र के अंदर से मुड़ना चाहिए।","वन-वे सड़क से दाएँ मुड़ने वाला वाहन दाईं ओर रहता है और जंक्शन के केंद्र बिंदु के अंदर से गुजरता है।"],
+["सड़क पर चलते बच्चे के पास से गुजरते समय उसे सचेत करने के लिए हॉर्न बजाएँ और उसी गति पर चलते रहें।","पैदल यात्रियों के पास आपको धीमा होना या रुकना होगा ताकि वे सुरक्षित गुजर सकें; उन्हें हटाने के लिए हॉर्न का उपयोग न करें।"],
+["जिस चौराहे पर चिह्नित क्रॉसिंग न हो वहाँ आपको पार करते पैदल यात्रियों को कभी रास्ता नहीं देना पड़ता।","चिह्नित क्रॉसिंग न होने पर भी आपको पार करते पैदल यात्रियों में बाधा नहीं डालनी चाहिए; उन्हें रास्ता दें।"],
+["दाएँ मोड़ तीर और रेखा वाला यह गोल संकेत दर्शाता है कि आप सड़क किनारे किसी स्थान में प्रवेश के लिए दाईं ओर सड़क पार नहीं कर सकते।","यह 'दाएँ पार करना निषेध' संकेत है; यह सड़क किनारे स्थल में जाने से रोकता है, पर आप फिर भी चौराहे पर सामान्य दायाँ मोड़ ले सकते हैं।"],
+["जहाँ यह संकेत लगा हो, मोटर वाहन दिखाई गई न्यूनतम गति से नीचे नहीं चल सकते।","नीले घेरे में रेखांकित अंक न्यूनतम गति का संकेत है; बिना उचित कारण इससे धीमे चलाना अनुमत नहीं।"],
+["यह संकेत, लाल घेरा और तिरछी रेखा, दर्शाता है कि सड़क सभी वाहनों के लिए बंद है।","यह 'सभी वाहनों के लिए बंद' संकेत है; कोई वाहन प्रवेश नहीं कर सकता, हालाँकि यह 'वाहनों और पैदल यात्रियों के लिए बंद' से अलग है।"],
+["'रोड बंद' संकेत सड़क को केवल वाहनों के लिए बंद करता है, इसलिए पैदल यात्री फिर भी गुजर सकते हैं।","'रोड बंद' (通行止め) संकेत सड़क को वाहनों और पैदल यात्रियों दोनों के लिए बंद करता है।"],
+["यह पीला हीरा हर वाहन से पूरी तरह रुकने की माँग करता है।","यह चेतावनी है कि बच्चे अचानक आ सकते हैं, इसलिए धीमे हों और रुकने को तैयार रहें, पर यह स्वयं पूरी तरह रुकने की माँग नहीं करता।"],
+["जहाँ सड़क का चिह्न नो-स्टॉपिंग ज़ोन दिखाए, वहाँ केवल पार्किंग प्रतिबंधित है।","नो-स्टॉपिंग ज़ोन रुकने और पार्किंग दोनों पर रोक लगाता है; आप वहाँ यातायात या भीड़ के लिए भी नहीं रुक सकते।"],
+["लर्नर परमिट धारक सार्वजनिक सड़क का उपयोग केवल अभ्यास ड्राइविंग या ड्राइविंग टेस्ट के लिए कर सकता है।","लर्नर परमिट पर ड्राइविंग केवल अनुमत अभ्यास और टेस्ट उद्देश्यों तक सीमित है, आवश्यक निगरानी और चिह्नों के साथ।"],
+["लाइसेंस निलंबित रहते वाहन चलाना बिना लाइसेंस चलाने के समान है।","निलंबन फिर भी आपको चलाने से रोकता है, इसलिए निलंबन अवधि में चलाना बिना लाइसेंस ड्राइविंग माना जाता है।"],
+["एक साल से अधिक सामान्य लाइसेंस रखने के बाद भी सामान्य आकार का ट्रक चलाते समय आपको बिगिनर मार्क लगाना होगा।","एक-वर्षीय बिगिनर मार्क नियम सामान्य वाहनों पर लागू होता है, जिनमें सामान्य ट्रक शामिल हैं, पर यह पहले वर्ष के बाद समाप्त हो जाता है।"],
+["जब आप थके या थकावट में हों तो वाहन नहीं चलाना चाहिए, भले ही आप धीरे चलाने का इरादा रखते हों।","थकान प्रतिक्रिया और निर्णय को कुंद करती है, इसलिए थकावट में चलाना असुरक्षित है चाहे आप कितना भी धीरे चलें।"],
+["मोपेड चलाते समय निर्माण सुरक्षा हेलमेट पहनना स्वीकार्य है।","मोपेड के लिए सुरक्षा मानक पर खरा उतरने वाला उचित राइडिंग हेलमेट आवश्यक है; निर्माण हेलमेट की अनुमति नहीं।"],
+["आप अचानक, तीव्र क्रिया कर सकते हैं बशर्ते पहले अपने शीशे देख लें।","तीखी, अचानक हरकतें जो पीछे के चालकों को ब्रेक या मोड़ने पर मजबूर करें निषिद्ध हैं; सहजता और पूर्वानुमेय ढंग से चलें।"],
+["जब पीछे का वाहन पहले से ही आपको ओवरटेक करने की कोशिश कर रहा हो तो आप ओवरटेक नहीं कर सकते।","यदि पीछे आने वाला वाहन आपको पार करना शुरू कर चुका हो, तो उसी समय अपना ओवरटेक शुरू करना निषिद्ध और खतरनाक है।"],
+["मोड़ पर, पहाड़ी की चोटी के पास, या तीव्र ढलान पर ओवरटेकिंग निषिद्ध है।","मोड़ों, पहाड़ी चोटियों और तीव्र उतरानों पर सीमित दृश्यता ओवरटेकिंग को असुरक्षित और अनुमति-रहित बनाती है।"],
+["रेलवे क्रॉसिंग पर किसी वाहन के पीछे चलते हुए, यदि साफ लगे तो आप धीमे होकर गुजर सकते हैं।","हर वाहन को क्रॉसिंग पर रुककर सुरक्षा जाँचनी होगी; आप केवल आगे के वाहन के पीछे होकर पार नहीं कर सकते।"],
+["आप मूल के बजाय कार में अपने वाहन निरीक्षण प्रमाणपत्र की फोटोकॉपी रख सकते हैं।","कार में रखा वाहन निरीक्षण प्रमाणपत्र मूल दस्तावेज़ होना चाहिए, प्रति नहीं।"],
+["रेगुलर मोटरसाइकिल लाइसेंस के साथ आप मोपेड (विशेष हल्का उपकरण) भी चला सकते हैं।","रेगुलर मोटरसाइकिल लाइसेंस रखना मोपेड चलाने को भी कवर करता है।"],
+["सड़क पर बने हीरे के निशान दर्शाते हैं कि ठीक आगे चौराहा है।","हीरे के सड़क निशान चेतावनी देते हैं कि आगे पैदल क्रॉसिंग है, इसलिए पार करते लोगों के लिए धीमे होने या रुकने को तैयार रहें।"]
+],
+ es:[
+["Cuando el semáforo se pone en amarillo, debes acelerar para cruzar la intersección antes de que se ponga en rojo.","El amarillo significa detenerse si puedes hacerlo con seguridad. Continúa solo si frenar fuera peligroso — nunca aceleres."],
+["Una luz roja intermitente significa que debes detenerte y luego avanzar solo cuando sea seguro.","Una luz roja intermitente se trata como una señal de stop: detente por completo, mira y avanza."],
+["Una luz amarilla intermitente significa que debes detenerte por completo.","La luz amarilla intermitente significa avanzar con precaución — puedes continuar sin detenerte, pero mantente atento."],
+["Cuando tu semáforo se pone en verde puedes arrancar, pero aún debes ceder el paso a los peatones y vehículos que siguen dentro de la intersección.","El verde da permiso para avanzar, no prioridad sobre quienes ya están legalmente en la intersección."],
+["La señal manual de un agente de policía que dirige el tráfico tiene prioridad sobre los semáforos.","Cuando un agente dirige el tráfico, sigue sus señales aunque el semáforo indique lo contrario."],
+["Esta señal significa que debes detenerte por completo.","El triángulo rojo invertido con 止まれ exige una parada total antes de avanzar."],
+["Esta señal significa que la entrada de vehículos está prohibida.","El círculo rojo con una barra blanca indica prohibido el paso a los vehículos."],
+["Esta señal permite estacionar hasta cinco minutos.","Es la señal de prohibido estacionar — el estacionamiento está prohibido."],
+["Esta señal prohíbe tanto estacionar como detenerse.","El círculo azul con un aro rojo y una X significa prohibido estacionar y detenerse."],
+["Esta señal fija una velocidad máxima de 40 km/h.","Un círculo blanco con aro rojo y un número indica el límite de velocidad máxima."],
+["Esta señal indica una calle de sentido único; solo puedes conducir en la dirección de la flecha.","El rectángulo azul con flecha blanca indica tráfico de sentido único."],
+["Esta señal advierte de que aquí no hay paso de peatones.","Al contrario — indica un paso de peatones; ten cuidado con quienes cruzan."],
+["Esta señal prohíbe adelantar.","El círculo que muestra un vehículo pasando a otro, con aro rojo, prohíbe adelantar."],
+["Esta señal significa que puedes mantener tu velocidad por la zona.","徐行 / SLOW significa que debes reducir mucho la velocidad para poder detenerte de inmediato si hace falta."],
+["Este rombo amarillo advierte de un paso de peatones más adelante.","Las señales en rombo amarillo son de advertencia; esta avisa de un paso de peatones más adelante."],
+["Si un vehículo de emergencia se acerca mientras estás dentro de una intersección, debes detenerte de inmediato donde estés.","Despeja primero la intersección, hazte a la izquierda y luego detente para dejarlo pasar."],
+["En una intersección sin semáforos, un vehículo en una vía estrecha debe ceder el paso a un vehículo en la vía claramente más ancha.","El vehículo en la vía claramente más ancha tiene prioridad cuando no hay semáforos ni señales."],
+["Puedes estacionar a menos de 5 metros de una intersección siempre que no bloquees el tráfico.","Estacionar y detenerse está prohibido a menos de 5 metros de una intersección o su esquina."],
+["En una intersección de vías de igual ancho sin semáforos, debes ceder el paso a un vehículo que se aproxima por tu izquierda.","Japón aplica la prioridad por la izquierda (左方優先) en intersecciones sin control de igual ancho."],
+["Cuando un peatón cruza por un paso de peatones, debes detenerte antes del paso y dejarlo pasar.","Los peatones en un paso siempre tienen prioridad — detente y cede el paso."],
+["Si una persona usa un bastón blanco o un perro guía cerca de la vía, puedes pasar con normalidad sin reducir la velocidad.","Debes reducir la velocidad o detenerte para garantizar su seguridad; podría tener discapacidad visual."],
+["Puedes atravesar un charco a velocidad normal aunque salpiques a los peatones de la acera.","Debes reducir la velocidad para no salpicar barro o agua a los peatones — hacerlo es una infracción."],
+["Debes detenerte por un peatón que espera para cruzar en un paso de peatones sin semáforos.","Debes detenerte y dejar cruzar a los peatones que esperan en un paso sin semáforos."],
+["En una vía ordinaria sin señal de velocidad, el límite por defecto para un coche estándar es 60 km/h.","Donde no hay señal, 60 km/h es el límite legal para coches ordinarios en vías generales."],
+["La distancia de frenado se duplica aproximadamente cuando se duplica la velocidad.","La distancia de frenado crece con el cuadrado de la velocidad — al doble de velocidad, unas cuatro veces la distancia de frenado."],
+["En una vía mojada o helada, la distancia de frenado es mayor que en una vía seca a la misma velocidad.","La menor adherencia alarga la distancia de frenado, así que deja más espacio en malas condiciones."],
+["La distancia total de detención es la distancia de reacción más la distancia de frenado.","Combina la distancia recorrida durante tu tiempo de reacción y la distancia mientras frenas."],
+["Un vehículo muy cargado que baja una pendiente necesita más distancia de frenado que vacío y en llano.","Más peso y una pendiente descendente aumentan la distancia necesaria para detenerse."],
+["Está permitido adelantar a otro vehículo justo antes de un túnel o dentro de él.","Adelantar está prohibido dentro de túneles y otros lugares de baja visibilidad."],
+["No debes adelantar a un vehículo que a su vez está adelantando a otro.","El doble adelantamiento está prohibido por el alto riesgo de colisión."],
+["Se permite adelantar en un paso de peatones si no hay peatones presentes.","Adelantar está prohibido sobre el paso de peatones y justo antes, haya o no peatones."],
+["Por regla general, se adelanta a otro vehículo pasando por su lado izquierdo.","Normalmente se adelanta por la derecha; pasar por la izquierda no suele estar permitido."],
+["Puedes detener tu coche frente a un hidrante siempre que permanezcas dentro del vehículo.","Estacionar y detenerse cerca de los hidrantes está prohibido."],
+["Está prohibido estacionar a menos de 3 metros de la entrada de un garaje o aparcamiento.","No debes bloquear esas entradas; la zona prohibida se extiende unos 3 metros."],
+['"Estacionar" y "detenerse" significan exactamente lo mismo según la ley de tráfico.',"Detenerse es una parada breve; estacionar es más prolongado o cuando no puedes arrancar de inmediato."],
+["Está prohibido estacionar a menos de 5 metros de un hidrante.","Se aplica una zona de no estacionar de 5 metros alrededor de los hidrantes para mantener el acceso libre."],
+["En un paso a nivel debes detenerte y comprobar la seguridad aunque la barrera esté abierta y haya buena visibilidad.","Siempre debes detenerte antes de un paso a nivel y confirmar que es seguro."],
+["Si tu coche se cala en un paso a nivel, primero debes intentar volver a arrancar el motor antes que nada.","Saca a todos primero y pulsa el botón de emergencia del paso — las personas antes que el vehículo."],
+["En Japón es ilegal conducir tras consumir cualquier cantidad de alcohol.","Japón aplica un criterio estricto — conducir bajo los efectos del alcohol está prohibido."],
+["Por ley, solo el conductor debe llevar cinturón de seguridad; los pasajeros están exentos.","Todos los ocupantes, incluidos los de los asientos traseros, deben llevar cinturón."],
+["Puedes usar el claxon libremente en cualquier lugar para avisar a otros conductores.","Usa el claxon solo donde una señal lo exija, o en una emergencia para evitar un peligro."],
+["Está prohibido usar el teléfono móvil en la mano mientras se conduce.","Sujetar el teléfono o mirar la pantalla mientras conduces es una infracción."],
+["Si tienes sueño, debes seguir conduciendo con la ventanilla abierta hasta llegar a tu destino.","Conducir somnoliento es peligroso — detente y descansa en lugar de seguir."],
+["Un niño pequeño debe ir sujeto en una silla infantil adecuada.","Los menores de seis años deben usar una silla infantil adecuada."],
+["En Japón, los vehículos circulan por el lado izquierdo de la vía.","Japón conduce por la izquierda; mantente a la izquierda salvo al adelantar donde esté permitido."],
+["Una bicicleta se clasifica como vehículo ligero y, por regla general, debe circular por el lado izquierdo de la vía.","Las bicicletas son 軽車両 (vehículos ligeros) y suelen circular por la izquierda."],
+["Un motociclista puede elegir si lleva o no casco en vías ordinarias.","El casco es obligatorio para conductores de motocicleta y ciclomotor."],
+["Un conductor en su primer año con permiso ordinario debe exhibir la marca de principiante (wakaba).","Los conductores nuevos deben exhibir la marca verde y amarilla de principiante durante un año."],
+["Debes extremar la precaución cerca de un vehículo que lleva la marca de conductor mayor.","La marca de conductor mayor señala a una persona de edad avanzada; dale más espacio."],
+["Los peatones y las bicicletas están prohibidos en las autopistas.","Las autopistas son solo para vehículos a motor — sin peatones, bicicletas ni ciclomotores."],
+["La velocidad mínima para un coche ordinario en autopista suele ser de 50 km/h.","Ir demasiado lento es peligroso; el mínimo habitual para coches ordinarios es 50 km/h."],
+["Puedes detenerte en el arcén de la autopista siempre que quieras descansar.","Detenerse en el arcén es solo para emergencias — usa un área de servicio para descansar."],
+["En la mayoría de las autopistas la velocidad máxima para un coche ordinario es de 100 km/h.","100 km/h es el máximo habitual, aunque algunos tramos están señalizados hasta 120."],
+["Por la noche debes bajar las luces al cruzarte con un vehículo que viene de frente.","Cambia a las luces cortas para no deslumbrar al conductor que viene de frente."],
+["Debes encender los faros al atravesar un túnel, incluso de día.","Los túneles son oscuros — los faros te ayudan a ver y a ser visto."],
+["Con niebla densa debes usar las luces largas para máxima visibilidad.","Las luces largas se reflejan en la niebla y empeoran la visibilidad — usa las cortas o las antiniebla."]
+,
+["Esta señal significa que el paso está prohibido a todos los vehículos.","Un aro rojo con una barra diagonal indica una vía cerrada a todos los vehículos."],
+["Esta señal cierra la vía solo a los vehículos; los peatones aún pueden pasar.","'Vía cerrada' (通行止め) prohíbe el paso tanto a vehículos como a peatones."],
+["Esta señal prohíbe hacer un cambio de sentido (giro en U).","La flecha de giro en U con una barra roja indica que aquí no se permiten los giros en U."],
+["Esta señal indica una velocidad mínima; no debes circular más despacio que el número mostrado.","Un círculo azul con un número subrayado marca la velocidad mínima, no la máxima."],
+["Esta señal te indica que toques el claxon.","Donde está esta señal, como una curva sin visibilidad, debes tocar el claxon."],
+["Esta señal de advertencia significa que siempre debes detenerte por completo.","Advierte que pueden aparecer niños de repente, así que ten cuidado y prepárate para frenar — pero por sí sola no exige una parada total."],
+["Este rombo amarillo advierte de que la vía puede estar resbaladiza más adelante.","Los rombos amarillos son advertencias; este avisa de una superficie resbaladiza más adelante."],
+["Este rombo amarillo advierte de un cruce más adelante.","La forma de cruz avisa de que se aproxima una intersección."],
+["Donde está esta señal, puedes girar a la izquierda incluso con el semáforo en rojo tras ceder el paso a peatones y al tráfico cruzado.","La señal azul de 'giro a la izquierda permitido' te deja girar a la izquierda en rojo cuando es seguro."],
+["Las marcas en rombo pintadas en la calzada advierten de un paso de peatones más adelante.","Los rombos blancos en el pavimento indican que se acerca un paso de peatones — prepárate para detenerte."],
+["Una línea amarilla continua junto al bordillo significa prohibido estacionar y detenerse a cualquier hora.","La línea amarilla continua prohíbe estacionar y detenerse; la discontinua solo prohíbe estacionar."],
+["Debes reducir la velocidad siempre que gires en una intersección, aunque el semáforo esté en verde.","Cada giro a izquierda o derecha en una intersección exige reducir antes la velocidad."],
+["Al girar a la derecha en una intersección siempre debes detenerte por completo primero.","Debes reducir la velocidad, pero no hace falta una parada total si no hay vehículos ni peatones a los que ceder el paso."],
+["Aun con el semáforo en verde, no debes entrar en una intersección si podrías quedarte detenido dentro y bloquear el tráfico cruzado.","Entra solo si puedes despejar la intersección; bloquear el cruce está prohibido."],
+["Si un vehículo delante se ha detenido en un paso de peatones, puedes adelantarlo despacio cuando no se ve a nadie.","Debes detenerte detrás de él; nunca adelantes a un vehículo detenido en un paso de peatones o antes de él."],
+["Antes de cruzar una acera para entrar en una instalación junto a la vía, como una gasolinera, debes detenerte aunque no haya peatones.","Debes detenerte antes de cruzar la acera, haya o no alguien caminando por ella."],
+["Señaliza unos 30 metros antes de un giro, pero unos 3 segundos antes de un cambio de carril.","Los tiempos difieren: 30 m antes para un giro, 3 segundos antes para cambiar de carril."],
+["En una vía general sin señal, tanto las motos grandes como las normales pueden ir a 60 km/h, mientras que el límite del ciclomotor es 30.","Las motos comparten el límite de 60 km/h con los coches; los ciclomotores están limitados a 30."],
+["En una vía con dos carriles en el mismo sentido, circula por el carril izquierdo y deja el derecho para adelantar.","Mantente en el primer carril (izquierdo); el derecho se reserva para adelantar, girar a la derecha o cambiar de sentido."],
+["Está prohibido adelantar dentro de los 30 metros previos a un paso a nivel.","No se permite adelantar en la aproximación de 30 m a un paso a nivel."],
+["Al conducir debes llevar tanto tu certificado de seguro obligatorio como el certificado de inspección del vehículo.","Debes llevar AMBOS documentos — no uno u otro — y deben ser los originales."],
+["Al estacionar un coche automático cuesta abajo, debes dejarlo en 'P'.","Usa 'P' (aparcar); 'R' no es la posición correcta para estacionar en pendiente."],
+["Los conductores noveles deben llevar la marca de principiante delante y detrás durante un año, incluso al conducir un camión de tamaño normal.","La norma del distintivo de un año cubre los vehículos ordinarios, que incluyen los camiones de tamaño normal."],
+["Conducir durante una suspensión del permiso cuenta como conducir sin permiso.","La suspensión sigue impidiéndote conducir; hacerlo se trata como conducción sin licencia."]
+,["Esta señal prohíbe seguir recto en el cruce.","Un anillo rojo sobre una flecha de giro a la derecha con barra prohíbe girar a la derecha, no seguir recto."],
+["Donde está esta señal, no debes adelantar invadiendo el carril contrario.","Esta señal de 'prohibido adelantar' impide el adelantamiento que exige invadir el carril contrario."],
+["Esta señal indica que no pueden pasar los vehículos cuyo peso total supere la cifra mostrada.","Un anillo rojo alrededor de un peso en toneladas fija el peso total máximo permitido del vehículo."],
+["Esta señal indica que no pueden pasar los vehículos más altos que la altura mostrada, incluida su carga.","La señal de altura máxima se aplica al vehículo junto con lo que transporte."],
+["Esta señal azul indica que los coches pueden usar la vía pero deben ceder a los peatones.","Un peatón en un círculo azul marca una vía solo para peatones; los coches normales no pueden circular por ahí."],
+["Donde está esta señal, como en una curva sin visibilidad, debes tocar el claxon.","Esta señal azul de 'tocar claxon' obliga a usar la bocina en el punto marcado, como una curva cerrada sin visibilidad."],
+["Esta señal azul marca una vía reservada solo para bicicletas.","Una bicicleta en un círculo azul designa una vía solo para bicicletas; otros vehículos no pueden usarla."],
+["Donde esta señal exige un giro a la derecha en dos pasos, un ciclomotor debe girar en dos etapas, como un cruce peatonal.","La señal de giro en dos pasos hace que los ciclomotores crucen recto primero y luego giren, en vez de girar a la derecha de una vez desde el centro."],
+["Una zona de seguridad señalizada es un área de no detención; no debes detenerte ni estacionar en ella.","Las zonas de seguridad protegen a los peatones que esperan, por eso detenerse y estacionar en ellas está prohibido."],
+["Este rombo amarillo advierte que hay un paso de peatones adelante, así que prepárate para reducir o detenerte.","Las señales de advertencia en rombo y los rombos pintados en la vía indican un paso de peatones próximo donde pueden cruzar peatones."],
+["Una luz roja intermitente equivale a una señal de ceda el paso, así que puedes pasar despacio sin detenerte.","Una luz roja intermitente significa alto: debes detenerte por completo y avanzar solo cuando sea seguro."],
+["Una luz amarilla intermitente significa que puedes avanzar con precaución, atento al resto del tráfico.","Una luz amarilla intermitente permite continuar con cuidado; no exige detenerse, pero debes mantenerte alerta."],
+["Una flecha verde permite a los vehículos avanzar en la dirección de la flecha aunque la luz principal esté en rojo.","Cuando se enciende una flecha verde, puedes avanzar en su dirección a pesar de la luz roja redonda."],
+["Cuando el semáforo se pone en amarillo, debes acelerar para cruzar el cruce antes de que se ponga rojo.","El amarillo significa detenerse si puedes hacerlo con seguridad; no debes acelerar para ganarle al rojo."],
+["Cuando el pavimento está mojado, debes reducir la velocidad porque la distancia de frenado aumenta.","El pavimento mojado reduce el agarre y alarga la distancia de frenado, por lo que es más seguro ir más despacio."],
+["El límite de velocidad indicado es una velocidad objetivo que debes intentar mantener en todo momento.","Un límite de velocidad es un máximo, no un objetivo; a menudo debes circular más despacio cuando las condiciones lo exigen."],
+["La distancia total de detención es la suma de la distancia recorrida durante el tiempo de reacción y la distancia de frenado.","La distancia de detención combina la distancia libre durante tu tiempo de reacción más la distancia real de frenado."],
+["En un cruce sin señales ni semáforos, debes ceder el paso al tráfico que viene de una vía más ancha.","Cuando las vías son por lo demás iguales, el vehículo de la vía más estrecha cede al de la vía claramente más ancha."],
+["Cuando dos vehículos llegan a la vez a un cruce sin control, el que tiene otro vehículo a su derecha debe ceder.","En igualdad de condiciones, cedes el paso al vehículo que se acerca por tu derecha en un cruce sin control."],
+["Un vehículo que gira a la derecha en un cruce tiene prioridad sobre uno que viene de frente y sigue recto.","Los vehículos que vienen de frente y siguen recto o giran a la izquierda tienen prioridad; el que gira a la derecha debe esperarlos."],
+["Debes detenerte y dejar cruzar a los peatones cuando ya están sobre el paso o claramente a punto de pisarlo.","Los peatones sobre el paso o que entran en él tienen prioridad, y debes detenerte por ellos."],
+["Debes reducir la velocidad o detenerte al pasar junto a un niño que camina solo o una persona con bastón blanco.","Se exige protección adicional para niños solos y personas con discapacidad visual con bastón blanco o perro guía; reduce o detente."],
+["Si no se ven peatones, puedes cruzar un paso de peatones sin reducir la velocidad.","Siempre debes estar listo para detenerte cerca de un paso, porque un peatón puede aparecer de repente; no mantengas la velocidad máxima."],
+["Cuando el vehículo delante de ti se ha detenido en un paso de peatones, no debes adelantarlo.","Adelantar a un vehículo detenido en un paso o justo antes está prohibido, ya que el peatón al que cede puede quedar oculto."],
+["No debes adelantar a otro vehículo justo antes de un paso de peatones ni sobre él.","Adelantar está prohibido en un paso de peatones y justo antes, donde un peatón que cruza podría quedar oculto por el vehículo delante."],
+["Siempre es seguro adelantar por el lado izquierdo del vehículo de delante.","Por norma se adelanta por la derecha; pasar por la izquierda solo se permite en situaciones concretas, como cuando el vehículo de delante gira a la derecha."],
+["No debes estacionar a menos de 5 metros de un cruce o una esquina.","Está prohibido estacionar a menos de 5 m de un cruce, su esquina o una curva para mantener la visibilidad despejada."],
+["No debes estacionar a menos de 5 metros de un hidrante o de una toma de agua contra incendios.","Los espacios junto a hidrantes y tomas de agua contra incendios deben quedar libres, por eso se prohíbe estacionar a menos de 5 m."],
+["Debes detenerte antes de un paso a nivel y comprobar que es seguro, aunque no se vea ningún tren.","Un paso a nivel exige detenerse y mirar en ambos sentidos antes de cruzar."],
+["Si la barrera del paso a nivel se está levantando, puedes empezar a cruzar antes de que se abra del todo.","Debes esperar hasta que la barrera esté completamente arriba y haya cesado la señal antes de entrar al paso."],
+["El titular de un permiso de aprendizaje solo debe conducir bajo la supervisión de un instructor cualificado, según las normas.","Practicar la conducción con permiso de aprendizaje debe cumplir los requisitos de supervisión y señalización fijados para aprendices."],
+["Debes llevar tu permiso de conducir contigo siempre que conduzcas.","Conducir sin el permiso encima es una infracción; debes llevarlo mientras manejas el vehículo."],
+["El conductor es responsable de que todos los pasajeros, incluidos los de los asientos traseros, lleven el cinturón.","El cinturón es obligatorio para todos los ocupantes donde esté instalado, y el conductor debe asegurarse de que se lo abrochen."],
+["Es aceptable usar el móvil en la mano mientras conduces siempre que vayas despacio.","Usar un teléfono en la mano con el vehículo en marcha está prohibido sin importar la velocidad."],
+["Está prohibido conducir tras haber bebido cualquier cantidad de alcohol.","Conducir bajo los efectos del alcohol está totalmente prohibido; incluso una pequeña cantidad lo hace ilegal."],
+["Antes de iniciar la marcha debes revisar neumáticos, frenos, luces y niveles de líquidos.","Una inspección previa de neumáticos, frenos, luces y líquidos ayuda a detectar fallos antes de que causen una avería o accidente."],
+["Cargar de modo que sobresalga mucho del vehículo está bien siempre que conduzcas con cuidado.","La carga debe respetar los límites legales de longitud y peso; la que sobresale más de lo permitido no está autorizada."],
+["Los peatones, las bicicletas y los ciclomotores no están permitidos en una autopista.","Las autopistas son solo para vehículos a motor; peatones, bicicletas y ciclomotores tienen prohibida la entrada."],
+["Está permitido detenerse en los carriles principales de una autopista para un breve descanso.","Detenerse o estacionar en los carriles de circulación de la autopista está prohibido salvo emergencia; usa un área de servicio o descanso."],
+["Cuando te cruzas con un vehículo de frente de noche, debes pasar de luces largas a cortas.","Cambiar a luces cortas al cruzarte con tráfico evita deslumbrar al otro conductor."],
+["En un terremoto mientras conduces, debes reducir la velocidad, arrimarte a la izquierda y detenerte sin bloquear la vía.","Durante un terremoto fuerte, reduce, detente a la izquierda y deja la llave para que puedan pasar los vehículos de emergencia."]
+,["La diferencia de batalla —las ruedas traseras pasan por dentro de las delanteras— ocurre siempre que giras, sin importar la velocidad.","La diferencia de rueda interior ocurre cada vez que giras a izquierda o derecha, incluso muy despacio, así que vigila las ruedas traseras cerca de obstáculos."],
+["Debes empezar a señalizar un giro 3 segundos antes de girar.","Para un giro a izquierda o derecha señalizas unos 30 metros antes; la regla de 3 segundos es para cambiar de carril, no para girar."],
+["Debes dejar de señalizar justo después de completar un giro, y no señalizar cuando ninguna maniobra lo requiera.","Cancela el intermitente al terminar el giro; dejarlo puesto o señalizar sin motivo confunde a los demás conductores."],
+["Cuando un agente levanta ambos brazos en vertical en un cruce, equivale a un rojo para el tráfico que da a su frente o su espalda.","La señal de brazos verticales del agente funciona como ámbar y luego rojo para el tráfico que se acerca por delante o por detrás de su cuerpo."],
+["Si la señal manual de un agente contradice el semáforo, debes obedecer al agente.","Las señales manuales de un agente prevalecen sobre los semáforos, así que sigue al agente aunque la luz diga lo contrario."],
+["La distancia de detención de un coche normal a 60 km/h en seco es de unos 30 metros.","A 60 km/h la distancia total de detención se acerca más a unos 44 metros, no 30; combina la distancia de reacción y la de frenado."],
+["La distancia de reacción es la que recorre el vehículo desde que el conductor percibe el peligro hasta que los frenos empiezan a actuar.","La distancia de reacción es el tramo libre antes de que frene; aumenta con la velocidad y con un conductor de reacción más lenta."],
+["La distancia de detención aumenta cuando el conductor está cansado, la vía está mojada o el vehículo va muy cargado.","El cansancio, el firme mojado y la carga pesada alargan la distancia necesaria para detenerse, así que deja más espacio en esas condiciones."],
+["En una vía sin límite de velocidad señalizado puedes circular a cualquier velocidad mientras te sientas seguro.","Aun sin límite señalizado debes respetar la velocidad legal de tu tipo de vehículo; no puedes elegir cualquier velocidad."],
+["La velocidad legal máxima de un camión grande en una vía general es de 50 km/h.","En una vía general la velocidad legal máxima de un camión grande es de 60 km/h, igual que para coches y motocicletas."],
+["Una luz verde significa que siempre debes avanzar, haga lo que haga el tráfico de delante.","El verde significa que puedes avanzar, no que debas; si el paso está bloqueado, espera para no quedarte atrapado en el cruce."],
+["En cuanto el verde pasa a ámbar debes frenar con fuerza y detenerte, aunque ya estés dentro del cruce.","Si ya has entrado o no puedes detenerte con seguridad, debes despejar el cruce con prontitud en vez de frenar bruscamente dentro."],
+["Al acercarte a un cruce sin control donde la vía que cruza es la preferente, debes detenerte por completo.","Al acercarte a una vía preferente debes reducir y no obstruir su tráfico, pero no siempre hace falta detenerse del todo salvo que lo indique una señal."],
+["Un vehículo que gira a la derecha desde una vía de sentido único debe arrimarse al borde derecho, reducir y girar por dentro del centro del cruce.","Desde una calle de sentido único, el vehículo que gira a la derecha se mantiene a la derecha y pasa por dentro del punto central del cruce."],
+["Al pasar junto a un niño que camina por la vía, toca el claxon para avisarle y sigue a la misma velocidad.","Cerca de peatones debes reducir o detenerte para que pasen con seguridad; no debes usar el claxon para apremiarlos."],
+["En un cruce sin paso de peatones marcado nunca tienes que ceder a los peatones que cruzan.","Aun sin paso marcado no debes obstruir a los peatones que cruzan; cédeles el paso."],
+["Esta señal circular con flecha de giro a la derecha y barra significa que no puedes cruzar la vía a la derecha para entrar a un local junto a ella.","Es una señal de 'prohibido cruzar a la derecha'; impide cruzar hacia un local lindante, pero aún puedes hacer un giro a la derecha normal en el cruce."],
+["Donde está esta señal, los vehículos a motor no deben circular por debajo de la velocidad mínima indicada.","Un círculo azul con un número subrayado es una señal de velocidad mínima; circular más despacio sin motivo no está permitido."],
+["Esta señal, un anillo rojo con barra diagonal, indica que la vía está cerrada a todos los vehículos.","Es la señal de 'cerrado a todos los vehículos'; ningún vehículo puede entrar, aunque es distinta de 'cerrado a vehículos y peatones'."],
+["La señal de 'Vía cerrada' cierra la vía solo a los vehículos, así que los peatones aún pueden pasar.","La señal de 'Vía cerrada' (通行止め) cierra la vía tanto a vehículos como a peatones."],
+["Este rombo amarillo obliga a todo vehículo a detenerse por completo.","Es una advertencia de que pueden aparecer niños de repente, así que reduce y prepárate para parar, pero por sí sola no exige una parada total."],
+["Donde la marca vial indica una zona de no detención, solo está prohibido estacionar.","Una zona de no detención prohíbe tanto detenerse como estacionar; ni siquiera puedes pararte ahí por tráfico o congestión."],
+["El titular de un permiso de aprendizaje solo puede usar la vía pública para prácticas o para el examen de conducir.","Conducir con permiso de aprendizaje se limita a fines de práctica y examen permitidos, con la supervisión y señalización requeridas."],
+["Conducir con el permiso suspendido cuenta como conducir sin permiso.","Una suspensión sigue impidiéndote conducir, así que hacerlo durante el periodo de suspensión se trata como conducir sin permiso."],
+["Una vez que has tenido el permiso ordinario más de un año, aún debes llevar el distintivo de novel al conducir un camión de tamaño normal.","La regla del distintivo de novel de un año se aplica a los vehículos ordinarios, que incluyen los camiones normales, pero termina tras ese primer año."],
+["Cuando estás cansado o agotado no debes conducir, aunque pienses ir despacio.","El cansancio embota los reflejos y el juicio, así que conducir agotado es inseguro por muy despacio que vayas."],
+["Es aceptable usar un casco de seguridad de construcción al conducir un ciclomotor.","Los ciclomotores requieren un casco de conducción adecuado que cumpla la norma de seguridad; un casco de obra no está permitido."],
+["Puedes hacer una maniobra brusca y repentina siempre que mires antes los espejos.","Los movimientos bruscos y repentinos que obligan a frenar o desviarse a los de atrás están prohibidos; maniobra de forma suave y previsible."],
+["No debes adelantar cuando el vehículo de atrás ya está intentando adelantarte.","Si un vehículo que te sigue ha empezado a rebasarte, iniciar tu propio adelantamiento a la vez está prohibido y es peligroso."],
+["Está prohibido adelantar en una curva, cerca de la cima de una cuesta o en una bajada pronunciada.","La visibilidad limitada en curvas, cimas y descensos pronunciados hace que adelantar ahí sea inseguro y no esté permitido."],
+["Al seguir a otro vehículo por un paso a nivel, puedes reducir y pasar rodando si parece despejado.","Cada vehículo debe detenerse en el paso y comprobar la seguridad; no puedes simplemente seguir al de delante para cruzar."],
+["Puedes llevar una fotocopia del certificado de inspección del vehículo en el coche en lugar del original.","El certificado de inspección que se lleva en el coche debe ser el documento original, no una copia."],
+["Con un permiso de motocicleta ordinaria también puedes conducir un ciclomotor (equipo ligero especial).","Tener un permiso de motocicleta ordinaria cubre también la conducción de un ciclomotor."],
+["Los rombos pintados en la vía indican que hay un cruce justo adelante.","Las marcas en rombo advierten de un paso de peatones próximo, así que prepárate para reducir o parar por quienes crucen."]
+],
+ zh:[
+["信号灯变黄时，你应该加速在变红前通过路口。","黄灯表示如果能安全停下就应停车。只有在停车会有危险时才继续——绝不要加速。"],
+["闪烁的红灯表示你必须停车，确认安全后才能通行。","闪烁红灯按停车标志处理：完全停下，观察，再通行。"],
+["闪烁的黄灯表示你必须完全停车。","闪烁黄灯表示谨慎通行——可以不停车继续，但要保持警觉。"],
+["信号灯变绿时你可以起步，但仍须让行人和仍在路口内的车辆先行。","绿灯给予通行许可，但不优先于已合法进入路口的人或车。"],
+["指挥交通的警察的手势优先于交通信号灯。","当警察指挥交通时，即使信号灯不同，也要服从其手势。"],
+["此标志表示你必须完全停车。","标有「止まれ」的红色倒三角要求在通行前完全停车。"],
+["此标志表示禁止车辆进入。","带白色横杠的红色圆形表示禁止车辆进入。"],
+["此标志允许停车最多五分钟。","这是禁止停车标志——禁止停车。"],
+["此标志同时禁止停车和临时停车。","带红环和叉号的蓝色圆形表示禁止停车和禁止临时停车。"],
+["此标志规定最高速度为40公里/小时。","带红环和数字的白色圆形表示最高限速。"],
+["此标志表示单行道；你只能朝箭头方向行驶。","带白色箭头的蓝色矩形表示单行道交通。"],
+["此标志警告这里没有人行横道。","恰恰相反——它标示人行横道；注意过马路的行人。"],
+["此标志禁止超车。","显示一辆车超越另一辆并带红环的圆形表示禁止超车。"],
+["此标志表示你可以在该区域保持原速。","徐行 / SLOW 表示你必须大幅减速，以便在需要时立即停车。"],
+["这个黄色菱形警告前方有人行横道。","黄色菱形标志为警告标志；此标志警告前方有人行横道。"],
+["如果你在路口内时有紧急车辆驶近，你应立即在原地停车。","先驶出路口，靠左停下，再停车让其通过。"],
+["在无信号灯的路口，窄路上的车辆必须让行于明显较宽道路上的车辆。","在没有信号灯或标志时，明显较宽道路上的车辆享有优先权。"],
+["只要不妨碍交通，你可以在距路口5米内停车。","在距路口或其转角5米内禁止停车和临时停车。"],
+["在等宽道路且无信号灯的路口，你必须让行于从你左侧驶来的车辆。","日本在等宽且无管制的路口实行左方优先（左方優先）。"],
+["当行人正在人行横道上通过时，你必须在横道前停车让其通过。","横道上的行人始终享有优先权——停车让行。"],
+["如果有人在路边使用白手杖或导盲犬，你可以正常通过而无需减速。","你必须减速或停车以确保其安全；他们可能有视力障碍。"],
+["即使会溅到人行道上的行人，你也可以以正常速度驶过水洼。","你必须减速以免将泥水溅到行人身上——这样做属于违法。"],
+["在无信号灯的人行横道上，你必须为等待过马路的行人停车。","在无信号灯的横道上，你必须停车让等待的行人通过。"],
+["在没有限速标志的普通道路上，标准轿车的默认限速为60公里/小时。","在没有标志的地方，普通道路上普通轿车的法定限速为60公里/小时。"],
+["当速度加倍时，刹车距离大约加倍。","刹车距离随速度的平方增长——速度加倍时刹车距离约为四倍。"],
+["在湿滑或结冰的路面上，相同速度下的停车距离比干燥路面更长。","附着力下降会延长刹车距离，因此在恶劣条件下要留出更大间距。"],
+["总停车距离是空走（反应）距离加上刹车距离。","它由你反应时间内行驶的距离与刹车过程中的距离相加而成。"],
+["重载车辆下坡时所需的刹车距离比空载在平地时更长。","更大的重量和下坡都会增加停车所需的距离。"],
+["允许在隧道前或隧道内超越其他车辆。","在隧道及其他视线不良处禁止超车。"],
+["你不得超越一辆正在超越另一辆车的车辆。","由于碰撞风险高，禁止二次超车（连续超车）。"],
+["如果没有行人，可以在人行横道上超车。","在人行横道上及其紧前方禁止超车，无论是否有行人。"],
+["原则上，你应从另一辆车的左侧超越它。","通常应从右侧超车；从左侧超越一般不被允许。"],
+["只要你留在车内，就可以把车停在消防栓前。","在消防栓附近禁止停车和临时停车。"],
+["在距车库或停车场入口3米内禁止停车。","你不得堵塞此类入口；禁止区域约延伸3米。"],
+["根据交通法，「停车」和「临时停车」的含义完全相同。","临时停车是短暂停留；停车则较久或指你无法立即驶离的情形。"],
+["在距消防栓5米内禁止停车。","消防栓周围设有5米禁停区以保持通道畅通。"],
+["在铁路道口，即使栏木开启且视线良好，你也必须停车并确认安全。","你必须始终在铁路道口前停车并确认安全后通行。"],
+["如果你的车在铁路道口熄火，你应首先尝试重新启动发动机。","先让所有人下车并按下道口的紧急按钮——人比车重要。"],
+["在日本，饮用任何量的酒后驾车都是违法的。","日本采取严格标准——酒后驾车被禁止。"],
+["法律上只有驾驶员必须系安全带；乘客可免。","包括后排乘客在内的所有乘员都必须系安全带。"],
+["你可以在任何地方随意鸣笛以提醒其他驾驶员。","只在标志要求处，或为避免危险的紧急情况下才可鸣笛。"],
+["驾驶时手持使用手机是被禁止的。","驾驶时手持手机或盯着屏幕属于违法。"],
+["如果你感到困倦，应开着车窗一直开到目的地。","疲劳驾驶很危险——应停车休息而不是硬撑。"],
+["幼儿必须用合适的儿童安全座椅固定。","六岁以下儿童必须使用合适的儿童座椅。"],
+["在日本，车辆靠道路左侧行驶。","日本靠左行驶；除在允许处超车外，应保持靠左。"],
+["自行车被归类为轻型车辆，原则上必须在道路左侧行驶。","自行车属于轻车辆（軽車両），一般靠左行驶。"],
+["在普通道路上，摩托车骑手可以选择是否戴头盔。","摩托车和轻便摩托车骑手必须戴头盔。"],
+["持普通驾照第一年的驾驶员必须张贴新手（若叶）标志。","新驾驶员须张贴绿黄相间的新手标志一年。"],
+["在张贴老年驾驶员标志的车辆周围，你应格外小心。","老年驾驶员标志表示驾驶者年长；请给他们更多空间。"],
+["高速公路上禁止行人和自行车通行。","高速公路仅供机动车使用——禁止行人、自行车和轻便摩托车。"],
+["高速公路上普通轿车的最低速度通常为50公里/小时。","行驶过慢很危险；普通轿车通常的最低速度为50公里/小时。"],
+["只要你想休息，就可以停在高速公路的路肩上。","路肩停车仅限紧急情况——休息请使用服务区。"],
+["在大多数高速公路上，普通轿车的最高速度为100公里/小时。","100公里/小时是常见上限，但部分路段标示可达120。"],
+["夜间会车时你应将远光灯调暗。","切换到近光灯以免使对向驾驶员眩目。"],
+["即使在白天，通过隧道时你也应打开前灯。","隧道内黑暗——前灯有助于看清和被看见。"],
+["在浓雾中你应使用远光灯以获得最大能见度。","远光灯会被雾反射而降低能见度——应使用近光灯或雾灯。"]
+,
+["此标志表示禁止所有车辆通行。","带斜杠的红色圆环表示该路段禁止一切车辆通行。"],
+["此标志仅禁止车辆通行；行人仍可通过。","「通行止め」（道路封闭）对车辆和行人一律禁止通行。"],
+["此标志禁止掉头。","带红色斜杠的掉头箭头表示此处禁止掉头。"],
+["此标志表示最低速度；你不得低于所示数字行驶。","带下划线数字的蓝色圆形表示最低速度，而非最高速度。"],
+["此标志要求你鸣笛。","在设有此标志处，如视线不良的弯道，你必须鸣笛。"],
+["此警告标志表示你必须始终完全停车。","它警告儿童可能突然出现，应小心并随时准备减速或停车——但它本身并不要求完全停车。"],
+["此黄色菱形警告前方路面可能湿滑。","黄色菱形为警告标志；此标志警告前方路面湿滑。"],
+["此黄色菱形警告前方有路口。","十字形状表示前方即将有交叉路口。"],
+["在设有此标志处，你在让行行人和横向车辆后，即使红灯也可左转。","蓝色「允许左转」标志允许在安全时红灯左转。"],
+["路面上的菱形标记警告前方有人行横道。","路面上的白色菱形表示前方有横道——请做好停车准备。"],
+["沿路缘的黄色实线表示任何时间均禁止停车和临时停车。","黄色实线禁止停车和临时停车；黄色虚线仅禁止停车。"],
+["在路口转弯时你必须减速，即使是绿灯也一样。","在路口每次左转或右转前都必须先减速。"],
+["在路口右转时你必须始终先完全停车。","你必须减速，但如果没有需要让行的来车或行人，则不必完全停车。"],
+["即使是绿灯，如果可能停在路口内并阻挡横向车辆，你也不得驶入路口。","只有在能驶出路口时才进入；阻挡横向道路是被禁止的。"],
+["如果前车在人行横道处停下，看不到有人时你可以慢速超过它。","你必须停在它后面——绝不要超越在横道处或横道前停下的车辆。"],
+["在穿过人行道进入加油站等路边设施前，即使没有行人，你也必须停车。","无论是否有人在走，你都必须在穿过人行道前停车。"],
+["转弯前约30米打信号，而变道前约3秒打信号。","时间不同：转弯提前30米，变道提前3秒。"],
+["在无标志的普通道路上，大型和普通摩托车都可行驶60公里/小时，而轻便摩托车的限速为30。","摩托车与汽车共享60公里/小时的普通道路限速；轻便摩托车限于30。"],
+["在同方向有两条车道的道路上，应在左车道行驶，把右车道留给超车。","保持在第一（左）车道；右车道留作超车、右转或掉头之用。"],
+["在铁路道口前30米以内禁止超车。","在驶向铁路道口的30米范围内不允许超车。"],
+["驾驶时你必须同时携带强制责任保险证和车辆检验证。","你必须同时携带这两份证件——不是其中之一——且必须是原件。"],
+["在下坡停放自动挡汽车时，应挂在「P」挡。","使用「P」（驻车）挡；在坡道停车时「R」挡并不正确。"],
+["新手驾驶员必须在车辆前后张贴新手标志一年，即使驾驶普通尺寸卡车也是如此。","一年期新手标志规定适用于普通车辆，其中包括普通尺寸卡车。"],
+["在驾照停用期间驾车等同于无证驾驶。","停用期间仍禁止驾车；这样做被视为无照驾驶。"]
+,["此标志禁止在路口直行。","红圈加斜杠覆盖右转箭头表示禁止右转，并非禁止直行。"],
+["在设有此标志处，你不得越入对向车道超车。","此“禁止超车”标志禁止需要驶入对向车道的超车行为。"],
+["此标志表示总重量超过所示数字的车辆不得通行。","以吨为单位的重量外加红圈，表示允许的车辆最大总重量。"],
+["此标志表示连同装载物高于所示高度的车辆不得通行。","最大高度标志适用于车辆及其装载物的总高度。"],
+["这个蓝色标志表示汽车可以使用该道路，但须让行人优先。","蓝色圆形上的行人图案表示行人专用道，普通汽车根本不得进入。"],
+["在设有此标志处，例如视线不良的弯道，你必须鸣笛。","这个蓝色“鸣笛”标志要求你在标示地点（如急转视线不良弯道）鸣喇叭。"],
+["这个蓝色标志表示自行车专用道。","蓝色圆形上的自行车图案指定为自行车专用道，其他车辆不得使用。"],
+["在此标志要求两段式右转处，轻便摩托车须像行人过街一样分两步右转。","两段式转弯标志要求轻便摩托车先直行通过再转向，而不是从中央一次性右转。"],
+["标示的安全岛是禁止停车区域，你不得在其中停车或泊车。","安全岛用于保护候车行人，因此在其中停车和泊车都被禁止。"],
+["这个黄色菱形警告前方有人行横道，应做好减速或停车准备。","菱形警告标志和路面菱形标记都提示前方有人行横道，行人可能通过。"],
+["闪烁的红灯等同于让行标志，因此你可以缓慢通过而无需停车。","闪烁的红灯表示停车：你必须完全停下，确认安全后方可通行。"],
+["闪烁的黄灯表示你可以谨慎通行，注意其他车辆。","闪烁的黄灯允许你小心继续行驶，不要求停车，但必须保持警觉。"],
+["绿色箭头信号允许车辆按箭头方向行驶，即使主灯为红色。","当绿色箭头亮起时，无论圆形红灯如何，你都可以按箭头方向行驶。"],
+["信号灯变黄时，你应加速在变红前通过路口。","黄灯表示如能安全停车就应停车，不应为抢在红灯前通过而加速。"],
+["路面湿滑时，你应减速，因为刹车距离会变长。","湿路降低轮胎抓地力并延长停车距离，因此降低车速更安全。"],
+["所标示的限速是你应始终努力保持的目标速度。","限速是最高速度而非目标速度；在条件需要时你往往必须更慢行驶。"],
+["总停车距离是反应时间内行驶的距离与刹车距离之和。","停车距离由反应时间内的滑行距离加上实际刹车距离组成。"],
+["在没有信号灯或标志的路口，你必须让行来自更宽道路的车辆。","当道路其他条件相同时，较窄道路上的车辆应让行明显更宽道路上的车辆。"],
+["当两车同时到达无管制路口时，右侧有来车的一方应让行。","其他条件相同时，在无管制路口你应让行从右侧驶来的车辆。"],
+["在路口右转的车辆比对向直行车辆有优先权。","对向直行或左转的车辆有优先权；右转车辆必须等待它们先行。"],
+["当行人已在人行横道上或明显即将踏上时，你必须停车让其通过。","正在或即将进入人行横道的行人享有先行权，你必须为其停车。"],
+["经过独自行走的儿童或使用白手杖的人时，你必须减速或停车。","对独行儿童以及使用白手杖或导盲犬的视障人士需额外保护；应减速或停车。"],
+["如果看不到行人，你可以不减速通过人行横道。","在人行横道附近你必须始终做好停车准备，因为行人可能突然出现，不应保持全速。"],
+["当你前方车辆在人行横道处停车时，你不得超越它。","禁止超越停在人行横道处或其前方的车辆，因为它所让行的行人可能被遮挡。"],
+["你不得在人行横道前方或横道上超越其他车辆。","在人行横道及其紧前方禁止超车，因为横穿的行人可能被前车遮挡。"],
+["从前车左侧超车总是安全的。","原则上应从右侧超车；只有在特定情况下（如前车正在右转）才允许从左侧超越。"],
+["你不得在距路口或转角5米以内停车。","为保持视线通畅，禁止在距路口、其转角或道路弯道5米以内停车。"],
+["你不得在距消防栓或消防取水口5米以内停车。","消防栓和消防取水口附近须保持畅通，因此禁止在5米以内停车。"],
+["即使看不到火车，你也必须在铁路道口前停车并确认安全。","通过铁路道口前必须停车并向两侧查看，确认安全后再通过。"],
+["如果道口栏杆正在升起，你可以在其完全打开前开始通过。","进入道口前必须等到栏杆完全升起且警报停止。"],
+["持学习许可者必须按规定仅在合格教练监督下驾驶。","持学习许可练习驾驶须遵守为学员设定的监督和标识要求。"],
+["每次驾车时你都必须随身携带驾驶证。","不带驾驶证驾车属于违法；操作车辆时必须随身携带驾驶证。"],
+["驾驶人有责任确保每位乘客（包括后排）都系好安全带。","凡配有安全带的座位，所有乘员都必须系带，驾驶人须确保乘客系好。"],
+["只要慢速行驶，开车时手持手机是可以接受的。","车辆行驶中手持手机属违法，无论车速快慢。"],
+["饮用任何量的酒精后驾车都是被禁止的。","酒后驾驶被彻底禁止；即使少量饮酒也使驾车成为违法行为。"],
+["出发前你应检查轮胎、刹车、灯光和液位。","出发前检查轮胎、刹车、灯光和各类液体，有助于在故障导致抛锚或事故前发现问题。"],
+["只要小心驾驶，装载使货物大幅伸出车外也没关系。","装载须在法定长度和重量限制内；超出允许范围伸出的货物不被允许。"],
+["高速公路上不允许行人、自行车和轻便摩托车通行。","高速公路仅供机动车通行，禁止行人、自行车和轻便摩托车进入。"],
+["在高速公路主车道上停车短暂休息是允许的。","除紧急情况外，禁止在高速公路行车道上停车或泊车；休息请使用服务区或停车区。"],
+["夜间与对向车辆相遇时，你应将远光灯切换为近光灯。","会车时切换近光灯可避免使对方驾驶人眩目。"],
+["驾车遇地震时，你应减速、靠左停车，并避免堵塞道路。","强震时应减速、靠左停车，并留下钥匙，以便应急车辆通行。"]
+,["内轮差——后轮比前轮更靠内侧行驶——在转弯时总会发生，与速度无关。","每次左转或右转都会产生内轮差，即使极低速也是如此，因此在障碍物附近要留意后轮。"],
+["转弯应在转弯前3秒开始打信号。","左转或右转应在约30米前打信号；3秒规则适用于变更车道，而非转弯。"],
+["完成转弯后应立即取消信号，且在不需要任何动作时不应打信号。","转弯完成后立即取消转向灯；保持开启或无故打信号会让其他驾驶人困惑。"],
+["当警察在路口竖直举起双臂时，对面向其正面或背面的车流而言等同于红灯。","警察竖臂手势对从其身体正面或背面驶来的车流，作用如同先黄后红的信号灯。"],
+["如果警察的手势与信号灯相冲突，你必须服从警察。","警察的手势优先于信号灯，因此即使灯光相反也要听从警察指挥。"],
+["普通汽车在干燥路面以60公里/小时行驶时，停车距离约为30米。","在60公里/小时时，总停车距离更接近约44米而非30米；它由反应距离和刹车距离组成。"],
+["反应距离是车辆从驾驶人发现危险到刹车开始起作用之间行驶的距离。","反应距离是刹车生效前的滑行部分；它随车速增加，也随驾驶人反应变慢而增大。"],
+["当驾驶人疲劳、路面潮湿或车辆载重大时，停车距离会变长。","疲劳、湿路面和重载都会延长停车所需距离，因此在这些情况下应留出更多空间。"],
+["在没有标示限速的道路上，只要你觉得安全就可以任意速度行驶。","即使没有标示限速，你也必须遵守你车型的法定速度，不能随意选择速度。"],
+["大型卡车在普通道路上的法定最高速度为50公里/小时。","在普通道路上，大型卡车的法定最高速度为60公里/小时，与汽车和摩托车相同。"],
+["绿灯表示无论前方车流如何，你都必须前进。","绿灯表示你可以通行，而非必须通行；若前方受阻，应等待以免被困在路口中。"],
+["绿灯一变黄你就必须急刹停车，即使你已在路口内。","如果你已进入路口或无法安全停车，应迅速驶离路口，而不是在路口内急停。"],
+["当你接近无管制路口且横向道路为优先道路时，你必须完全停车。","接近优先道路时你必须减速且不得妨碍其车流，但除非有标志要求，并不总是需要完全停车。"],
+["从单行道右转的车辆应靠近右边缘、减速，并在路口中心内侧转弯。","从单行道右转时，车辆靠右侧行驶，并从交叉口中心点内侧通过。"],
+["经过在路上行走的儿童时，鸣笛提醒他并保持原速前进。","在行人附近你必须减速或停车让其安全通过，不应用喇叭催促行人。"],
+["在没有标线人行横道的路口，你永远不需要给横穿的行人让行。","即使没有标线人行横道，你也不得妨碍横穿的行人，应给其让行。"],
+["这个带右转箭头和横杠的圆形标志表示你不得向右横穿道路驶入路边场所。","这是“禁止向右横穿”标志；它禁止横穿进入路边场所，但你仍可在路口正常右转。"],
+["在设有此标志处，机动车不得低于所示的最低速度行驶。","蓝色圆形加下划线数字为最低限速标志；无正当理由低于该速度行驶是不允许的。"],
+["这个标志是红圈加斜杠，表示道路禁止所有车辆通行。","这是“禁止所有车辆通行”标志；任何车辆都不得进入，但它不同于“禁止车辆和行人通行”。"],
+["“道路封闭”标志仅对车辆封闭道路，因此行人仍可通行。","“道路封闭”（通行止め）标志对车辆和行人一律封闭道路。"],
+["这个黄色菱形要求每辆车都完全停车。","它警告儿童可能突然出现，应减速并做好停车准备，但其本身并不要求完全停车。"],
+["在路面标记显示禁止停车区处，仅禁止泊车。","禁止停车区禁止临时停车和泊车；即使因交通或拥堵也不得在此停留。"],
+["持学习许可者只能将公共道路用于练习驾驶或驾驶考试。","持学习许可驾驶仅限于允许的练习和考试用途，并需具备规定的监督和标识。"],
+["在驾驶证被吊销停用期间驾车等同于无证驾驶。","停用期间仍禁止你驾驶，因此在停用期内驾车被视为无证驾驶。"],
+["持普通驾照超过一年后，驾驶普通尺寸卡车时仍须张贴新手标志。","一年期新手标志规则适用于包括普通卡车在内的普通车辆，但在第一年之后即结束。"],
+["当你疲倦或精疲力竭时不得驾车，即使你打算慢速行驶。","疲劳会迟钝反应和判断，因此疲惫驾驶无论多慢都不安全。"],
+["骑轻便摩托车时佩戴工地安全帽是可以接受的。","轻便摩托车需佩戴符合安全标准的专用骑行头盔，工地安全帽不被允许。"],
+["只要先看后视镜，你就可以做突然急剧的动作。","迫使后方驾驶人急刹或闪避的突然急动作是被禁止的；应平顺且可预测地操作。"],
+["当后方车辆已在尝试超越你时，你不得超车。","如果后随车辆已开始超越你，此时再开始自己的超车既被禁止又危险。"],
+["在弯道、坡顶附近或陡下坡处禁止超车。","弯道、坡顶和陡降处视线有限，使得在此超车不安全且不被允许。"],
+["跟随另一辆车通过铁路道口时，若看起来畅通你可以减速缓行通过。","每辆车都必须在道口停车并检查安全，你不能仅跟随前车通过。"],
+["你可以在车内放车辆检验证的复印件而非正本。","车内携带的车辆检验证必须是正本，而非复印件。"],
+["持普通摩托车驾照也可以驾驶轻便摩托车（特殊轻型装备）。","持有普通摩托车驾照同样涵盖驾驶轻便摩托车。"],
+["路面上画的菱形标记表示前方就是交叉路口。","菱形路面标记警告前方有人行横道，应为横穿者做好减速或停车准备。"]
+]
+};
+/* ===== state ===== */
+let DATA={history:[],mistakes:[],settings:{dark:false,timer:false,exam:false,lang:'en'}};
+function persist(){try{localStorage.setItem('jlp_v3',JSON.stringify(DATA));}catch(e){}}
+(function(){try{let r=localStorage.getItem('jlp_v3');if(!r)r=localStorage.getItem('jlp_v2');if(r){const p=JSON.parse(r);DATA.history=p.history||[];DATA.mistakes=p.mistakes||[];DATA.settings=Object.assign(DATA.settings,p.settings||{});}}catch(e){}})();
+
+const $=s=>document.querySelector(s);
+const ALLS=['home','study','testSetup','test','results','stats','settings'];
+const PRIMARY=['home','stats','settings'];
+let nav=['home'];
+let L=DATA.settings.lang||'en';
+const u=k=>UI[L][k];
+const langDef=()=>LANGS.find(x=>x.id===L);
+const qText=i=>T[L][i][0], qExp=i=>T[L][i][1], catName=c=>CATS[L][c]||c;
+
+function applyLang(){
+  const d=langDef();
+  document.documentElement.lang=L;
+  const app=document.querySelector('.app');
+  app.setAttribute('dir',d.dir);app.setAttribute('lang-script',d.script);
+  $('#hSub').textContent=u('sub');
+  $('#heroPill').textContent=u('pill');$('#heroH').textContent=u('heroH');$('#heroP').textContent=u('heroP');
+  $('#langBarTxt').textContent=d.native;
+  $('#setupH').textContent=u('setupH');$('#setupP').textContent=u('setupP');
+  $('#btnTrue').textContent=u('btnTrue');$('#btnFalse').textContent=u('btnFalse');
+  $('#lblQ').textContent=u('q');$('#lblScore').textContent=u('score');
+  $('#navHome').textContent=u('navHome');$('#navStats').textContent=u('navStats');$('#navSet').textContent=u('navSet');
+  $('#setLang').textContent=u('setLang');$('#setPrefs').textContent=u('setPrefs');
+  $('#setDarkT').textContent=u('darkT');$('#setDarkS').textContent=u('darkS');
+  $('#setTimerT').textContent=u('timerT');$('#setTimerS').textContent=u('timerS');
+  $('#setExamT').textContent=u('examT');$('#setExamS').textContent=u('examS');
+  $('#setData').textContent=u('setData');$('#setResetT').textContent=u('resetT');$('#setResetS').textContent=u('resetS');
+  $('#resetBtn').textContent=u('reset');$('#retryBtn').textContent=u('tryAnother');
+  $('#footNote').textContent=u('foot');
+  $('#setupMenu').innerHTML=`<button class="btn ghost" data-len="10">${u('short')}</button><button class="btn ghost" data-len="25">${u('standard')}</button><button class="btn sun" data-len="50">${u('full')}</button>`;
+  $('#setupMenu').querySelectorAll('[data-len]').forEach(b=>b.onclick=()=>startTest(+b.dataset.len));
+  $('#studyToMock').textContent=u('takeMock');
+}
+function applyTheme(){document.documentElement.setAttribute('data-theme',DATA.settings.dark?'dark':'');}
+
+function render(id){
+  ALLS.forEach(s=>$('#'+s).classList.remove('on'));
+  $('#'+id).classList.add('on');
+  const prim=PRIMARY.includes(id);
+  $('#nav').style.display=prim?'flex':'none';
+  $('#backBtn').style.display=prim?'none':'block';
+  document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('act',b.dataset.tab===id));
+  if(id!=='test')stopTimer();
+  if(id==='home')buildHome();
+  if(id==='study')buildStudy();
+  if(id==='stats')buildStats();
+  if(id==='settings')buildSettings();
+  $('main').scrollTop=0;
+}
+function go(id){nav.push(id);render(id);}
+function tab(id){nav=[id];render(id);}
+function back(){
+  const cur=nav[nav.length-1];
+  if(cur==='test'&&test.answered!==undefined&&test.list.length&&test.i<test.list.length&&(test.detail.length>0)){
+    if(!confirm(u('exitConfirm')))return;
+  }
+  nav.pop();render(nav[nav.length-1]||'home');if(nav.length===0)nav=['home'];
+}
+$('#backBtn').onclick=back;
+document.querySelectorAll('.navbtn').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
+$('#langBar').onclick=()=>tab('settings');
+
+/* ===== stats ===== */
+function computeStats(){
+  const h=DATA.history,taken=h.length;
+  const passes=h.filter(x=>x.pass).length;
+  const avg=taken?Math.round(h.reduce((s,x)=>s+x.pct,0)/taken):0;
+  const best=taken?Math.max(...h.map(x=>x.pct)):0;
+  const passRate=taken?Math.round(passes/taken*100):0;
+  const cat={};
+  h.forEach(x=>{for(const c in (x.perCat||{})){cat[c]=cat[c]||{c:0,t:0};cat[c].c+=x.perCat[c].correct;cat[c].t+=x.perCat[c].total;}});
+  return {taken,passes,avg,best,passRate,cat};
+}
+
+/* ===== home ===== */
+function buildHome(){
+  const s=computeStats();
+  if(s.taken){
+    $('#homeStats').innerHTML=`<div class="stat"><b>${s.taken}</b><span>${u('tests')}</span></div><div class="stat"><b>${s.best}%</b><span>${u('best')}</span></div><div class="stat"><b>${s.passRate}%</b><span>${u('passRate')}</span></div>`;
+  }else{
+    $('#homeStats').innerHTML=`<div class="emptyhint">📈 ${u('statsEmptyHome')}</div>`;
+  }
+  let menu=`<button class="tile" data-go="testSetup"><div class="ic blue">📝</div><div><h3>${u('mockT')}</h3><small>${u('mockS')}</small></div><div class="arrow">›</div></button>
+   <button class="tile" data-go="study"><div class="ic yellow">📖</div><div><h3>${u('readAllT')}</h3><small>${u('readAllS')}</small></div><div class="arrow">›</div></button>
+   <button class="tile" data-go="quick"><div class="ic green">⚡</div><div><h3>${u('quickT')}</h3><small>${u('quickS')}</small></div><div class="arrow">›</div></button>`;
+  const weak=weakCats(s);
+  if(s.taken>=1&&weak.length)menu+=`<button class="tile" data-go="focus"><div class="ic blue">🎯</div><div><h3>${u('focusT')}</h3><small>${u('focusS')}</small></div><div class="arrow">›</div></button>`;
+  if(DATA.mistakes.length)menu+=`<button class="tile" data-go="mistakes"><div class="ic red">🔁</div><div><h3>${u('mistakesT')} (${DATA.mistakes.length})</h3><small>${u('mistakesS')}</small></div><div class="arrow">›</div></button>`;
+  $('#homeMenu').innerHTML=menu;
+  $('#homeMenu').querySelectorAll('.tile').forEach(t=>t.onclick=()=>{
+    const d=t.dataset.go;
+    if(d==='quick')startTest(10);
+    else if(d==='focus')startWeighted(20);
+    else if(d==='mistakes')startCustom(shuffle(DATA.mistakes.filter(i=>i<QUESTIONS.length)).slice(0,Math.min(30,DATA.mistakes.length)));
+    else go(d);
+  });
+}
+function weakCats(s){return Object.keys(s.cat).filter(c=>s.cat[c].t>=2&&(s.cat[c].c/s.cat[c].t)<0.85);}
+
+/* ===== read / study ===== */
+let activeCat='All', showAns=true;
+const categories=()=>['All',...[...new Set(QUESTIONS.map(q=>q.cat))]];
+function buildStudy(){
+  const ctl=$('#studyControls');
+  ctl.innerHTML=`<div class="readtoggle ${showAns?'on':''}" id="ansToggle"><span>${u('showAns')}</span><span class="sw"><i></i></span></div>`;
+  $('#ansToggle').onclick=()=>{showAns=!showAns;buildStudy();};
+  const cw=$('#cats');cw.innerHTML='';
+  categories().forEach(c=>{const b=document.createElement('button');b.className='chip'+(c===activeCat?' sel':'');b.textContent=catName(c);b.onclick=()=>{activeCat=c;buildStudy();};cw.appendChild(b);});
+  const list=$('#studyList');list.innerHTML='';
+  QUESTIONS.forEach((q,i)=>{if(activeCat!=='All'&&q.cat!==activeCat)return;
+    const d=document.createElement('div');d.className='qcard'+(showAns?' open':'');
+    const img=q.img?`<div class="qimg">${SIGNS[q.img]}</div>`:'';
+    d.innerHTML=`<div class="cat">${catName(q.cat)}</div>${img}<p>${qText(i)}</p><div class="reveal"><span class="ans-tag ${q.a?'t':'f'}">${u('answer')} ${q.a?u('answerTrue'):u('answerFalse')}</span><div class="ex">${qExp(i)}</div></div>`;
+    d.onclick=()=>d.classList.toggle('open');list.appendChild(d);
+  });
+}
+$('#studyToMock').onclick=()=>{nav=['home'];go('testSetup');};
+
+/* ===== test ===== */
+let test={list:[],i:0,score:0,answered:false,wrong:[],detail:[]};
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];}return a;};
+function startTest(n){startCustom(shuffle(QUESTIONS.map((q,i)=>i)).slice(0,Math.min(n,QUESTIONS.length)));}
+function startWeighted(n){
+  const s=computeStats();
+  const scored=QUESTIONS.map((q,i)=>{const c=s.cat[q.cat];const acc=c&&c.t?c.c/c.t:0.5;return {i,w:(1-acc)+0.15+Math.random()*0.3};});
+  scored.sort((a,b)=>b.w-a.w);
+  startCustom(scored.slice(0,Math.min(n,QUESTIONS.length)).map(x=>x.i));
+}
+function startCustom(idxList){
+  if(!idxList.length)idxList=shuffle(QUESTIONS.map((q,i)=>i)).slice(0,10);
+  test={list:[...idxList],i:0,score:0,answered:false,wrong:[],detail:[]};
+  go('test');renderQ();startTimer(test.list.length*36);
+}
+function renderQ(){
+  const i=test.list[test.i],q=QUESTIONS[i];
+  $('#tCat').textContent=catName(q.cat);
+  const img=$('#tImg');if(q.img){img.innerHTML=SIGNS[q.img];img.style.display='block';}else{img.innerHTML='';img.style.display='none';}
+  $('#tQ').textContent=qText(i);$('#qNow').textContent=test.i+1;$('#qTot').textContent=test.list.length;$('#qScore').textContent=test.score;
+  $('#qScoreWrap').style.display=DATA.settings.exam?'none':'inline';
+  $('#bar').style.width=(test.i/test.list.length*100)+'%';
+  $('#fb').className='feedback';$('#tfBtns').style.display='grid';$('#nextBtn').style.display='none';
+  document.querySelectorAll('#tfBtns button').forEach(b=>b.classList.remove('dim','picked'));test.answered=false;
+}
+function answer(chose){
+  if(test.answered)return;test.answered=true;
+  const i=test.list[test.i],q=QUESTIONS[i],correct=chose===q.a;
+  test.detail.push({idx:i,cat:q.cat,correct,chose});
+  if(correct){test.score++;const mi=DATA.mistakes.indexOf(i);if(mi>-1)DATA.mistakes.splice(mi,1);}
+  else{test.wrong.push(i);if(!DATA.mistakes.includes(i))DATA.mistakes.push(i);}
+  persist();
+  $('#qScore').textContent=test.score;
+  if(DATA.settings.exam){
+    document.querySelectorAll('#tfBtns button').forEach(x=>{if((x.dataset.v==='true')===chose)x.classList.add('picked');});
+    setTimeout(()=>{$('#tfBtns').style.display='none';$('#nextBtn').style.display='block';},180);
+  }else{
+    document.querySelectorAll('#tfBtns button').forEach(x=>{if((x.dataset.v==='true')!==q.a)x.classList.add('dim');});
+    const fb=$('#fb');fb.className='feedback show '+(correct?'right':'wrong');
+    $('#fbH').textContent=correct?u('correct'):u('wrong');
+    $('#fbP').textContent=(correct?'':u('answer')+' '+(q.a?u('answerTrue'):u('answerFalse'))+'. ')+qExp(i);
+    setTimeout(()=>{$('#tfBtns').style.display='none';$('#nextBtn').style.display='block';},250);
+  }
+  $('#nextBtn').textContent=test.i+1<test.list.length?u('next'):u('seeResults');
+}
+document.querySelectorAll('#tfBtns button').forEach(b=>b.onclick=()=>answer(b.dataset.v==='true'));
+$('#nextBtn').onclick=()=>{if(test.i+1<test.list.length){test.i++;renderQ();}else finishTest();};
+
+/* ===== timer ===== */
+let timerInt=null,timeLeft=0;
+function startTimer(sec){stopTimer();if(!DATA.settings.timer){$('#timer').style.display='none';return;}timeLeft=sec;$('#timer').style.display='inline';upTimer();timerInt=setInterval(()=>{timeLeft--;upTimer();if(timeLeft<=0)timeUp();},1000);}
+function upTimer(){const m=Math.floor(timeLeft/60),s=timeLeft%60;$('#timer').textContent='⏱ '+m+':'+String(s).padStart(2,'0');$('#timer').style.color=timeLeft<60?'var(--stop)':'';}
+function stopTimer(){if(timerInt)clearInterval(timerInt);timerInt=null;}
+function timeUp(){stopTimer();for(let k=test.detail.length;k<test.list.length;k++){const i=test.list[k];test.detail.push({idx:i,cat:QUESTIONS[i].cat,correct:false});test.wrong.push(i);if(!DATA.mistakes.includes(i))DATA.mistakes.push(i);}persist();finishTest();}
+
+/* ===== finish ===== */
+function finishTest(){
+  stopTimer();
+  const total=test.list.length,pct=Math.round(test.score/total*100),pass=pct>=90;
+  const perCat={};
+  test.detail.forEach(d=>{perCat[d.cat]=perCat[d.cat]||{correct:0,total:0};perCat[d.cat].total++;if(d.correct)perCat[d.cat].correct++;});
+  DATA.history.unshift({date:new Date().toISOString(),total,score:test.score,pct,pass,perCat});
+  if(DATA.history.length>100)DATA.history.length=100;persist();
+  showResults(pct,pass,total);
+}
+function showResults(pct,pass,total){
+  go('results');
+  $('#rPct').textContent=pct+'%';$('#rFrac').textContent=test.score+' / '+total;
+  const ring=$('#ring');ring.setAttribute('stroke',pass?'var(--go)':'var(--stop)');ring.style.strokeDashoffset=440;setTimeout(()=>ring.style.strokeDashoffset=440-(440*pct/100),60);
+  const v=$('#verdict');v.textContent=pass?u('pass'):u('keepStudy');v.className='verdict '+(pass?'pass':'fail');
+  $('#verdictSub').textContent=pass?u('passSub'):`${u('failSub')} ${Math.max(0,Math.ceil(total*0.9)-test.score)} ${u('moreNeeded')}`;
+  $('#missBtn').style.display=test.wrong.length?'block':'none';$('#missBtn').textContent=u('practiceMiss')+' ('+test.wrong.length+')';
+  const rt=$('#reviewTitle'),rl=$('#reviewList');rl.innerHTML='';
+  if(test.wrong.length){rt.textContent=u('reviewMiss')+' ('+test.wrong.length+')';
+    test.wrong.forEach(i=>{const q=QUESTIONS[i];const d=document.createElement('div');d.className='qcard';const img=q.img?`<div class="qimg">${SIGNS[q.img]}</div>`:'';d.innerHTML=`<div class="cat">${catName(q.cat)}</div>${img}<p>${qText(i)}</p><div class="reveal"><span class="ans-tag ${q.a?'t':'f'}">${u('answer')} ${q.a?u('answerTrue'):u('answerFalse')}</span><div class="ex">${qExp(i)}</div></div>`;d.onclick=()=>d.classList.toggle('open');rl.appendChild(d);});
+  }else rt.textContent=u('perfectRun');
+}
+$('#retryBtn').onclick=()=>{nav=['home'];go('testSetup');};
+$('#missBtn').onclick=()=>startCustom(test.wrong);
+
+/* ===== stats screen ===== */
+function fmtDate(iso){const d=new Date(iso);return d.toLocaleDateString(L==='en'?undefined:L,{month:'short',day:'numeric'})+' · '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});}
+function barColor(p){return p>=80?'var(--go)':p>=60?'var(--sun)':'var(--stop)';}
+function buildStats(){
+  const s=computeStats(),b=$('#statsBody');
+  if(!s.taken){b.innerHTML=`<div class="empty"><span class="em">📊</span>${u('noTests')}</div>`;return;}
+  let html=`<div class="sect-title">${u('overview')}</div><div class="bigstats">
+    <div class="bigstat"><b style="color:var(--road)">${s.taken}</b><span>${u('testsTaken')}</span></div>
+    <div class="bigstat"><b style="color:var(--go)">${s.passRate}%</b><span>${u('passRate')}</span></div>
+    <div class="bigstat"><b>${s.avg}%</b><span>${u('avgScore')}</span></div>
+    <div class="bigstat"><b style="color:var(--sun)">${s.best}%</b><span>${u('bestScore')}</span></div></div>`;
+  const cats=Object.keys(s.cat).sort((a,b)=>(s.cat[a].c/s.cat[a].t)-(s.cat[b].c/s.cat[b].t));
+  if(cats.length){html+=`<div class="sect-title">${u('byTopic')}</div>`;
+    cats.forEach(c=>{const p=Math.round(s.cat[c].c/s.cat[c].t*100);html+=`<div class="catbar"><div class="row"><span>${catName(c)}</span><b>${p}%</b></div><div class="track2"><i style="width:${p}%;background:${barColor(p)}"></i></div></div>`;});}
+  html+=`<div class="sect-title">${u('recent')}</div>`;
+  DATA.history.slice(0,12).forEach(x=>{html+=`<div class="hrow"><div class="d"><b>${x.total}Q ${u('mock')}</b><span>${fmtDate(x.date)}</span></div><span class="sc" style="color:${x.pass?'var(--go)':'var(--stop)'}">${x.score}/${x.total}</span><span class="tag ${x.pass?'p':'f'}">${x.pass?u('pass').split(' ')[0]:u('keepStudy').split(' ')[0]}</span></div>`;});
+  b.innerHTML=html;
+}
+
+/* ===== settings ===== */
+function buildSettings(){
+  const g=$('#langGrid');g.innerHTML='';
+  LANGS.forEach(l=>{const d=document.createElement('div');d.className='langopt'+(l.id===L?' sel':'');d.innerHTML=`<span class="fl">${l.fl}</span><div><b>${l.native}</b><span>${l.name}</span></div>`;d.onclick=()=>{L=l.id;DATA.settings.lang=L;persist();applyLang();buildSettings();};g.appendChild(d);});
+  $('#swDark').classList.toggle('on',DATA.settings.dark);
+  $('#swTimer').classList.toggle('on',DATA.settings.timer);
+  $('#swExam').classList.toggle('on',DATA.settings.exam);
+}
+$('#swDark').onclick=()=>{DATA.settings.dark=!DATA.settings.dark;persist();applyTheme();buildSettings();};
+$('#swTimer').onclick=()=>{DATA.settings.timer=!DATA.settings.timer;persist();buildSettings();};
+$('#swExam').onclick=()=>{DATA.settings.exam=!DATA.settings.exam;persist();buildSettings();};
+$('#resetBtn').onclick=()=>{if(confirm(u('confirmReset'))){DATA.history=[];DATA.mistakes=[];persist();buildSettings();alert(u('cleared'));}};
+
+applyTheme();applyLang();buildHome();
+</script>
+</body>
+</html>
