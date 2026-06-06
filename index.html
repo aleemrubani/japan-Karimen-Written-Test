@@ -82,6 +82,11 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;
 .hero h2{margin:0 0 4px;font-size:20px}
 .hero p{margin:0;opacity:.85;font-size:13px}
 .hero .row{display:flex;gap:14px;margin-top:16px}
+.ready{margin-top:14px}
+.ready-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;margin-bottom:6px;opacity:.92}
+.ready-top b{font-size:13px;font-variant-numeric:tabular-nums}
+.ready-bar{height:8px;border-radius:5px;background:rgba(255,255,255,.18);overflow:hidden}
+.ready-bar i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--amber),#ffd98a);transition:width .7s}
 .stat{flex:1;background:rgba(255,255,255,.10);border-radius:14px;padding:12px;text-align:center}
 .stat b{display:block;font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
 .stat span{font-size:11px;opacity:.8}
@@ -265,6 +270,45 @@ html[data-theme="dark"] .bottomnav button.on{color:var(--amber)}
 .translating{font-size:12px;color:var(--amber-dk);display:inline-flex;gap:6px;align-items:center}
 .spin{width:12px;height:12px;border:2px solid var(--amber);border-top-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
+
+/* ---- streak pill in top bar ---- */
+#streakPill{width:auto;padding:0 12px;height:36px;font-weight:800;font-size:14px;gap:4px;
+  display:inline-flex;align-items:center;justify-content:center;border-radius:11px;
+  background:rgba(244,160,18,.22);color:#ffd98a}
+
+/* ---- settings: option rows ---- */
+.card.pad0{padding:6px}
+.opt-row{display:flex;align-items:center;gap:13px;width:100%;padding:13px 10px;border-radius:13px;
+  background:transparent;text-align:start;transition:.12s}
+.opt-row:not(.no-press):active{background:var(--card-2)}
+.opt-row + .opt-row{border-top:1px solid var(--line)}
+.oic{width:40px;height:40px;border-radius:12px;background:var(--card-2);display:grid;place-items:center;
+  font-size:19px;flex:none}
+.ol{flex:1;min-width:0}
+.ol b{display:block;font-size:15px;font-weight:700}
+.ol span{font-size:12px;color:var(--muted);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.opt-row .chev{color:var(--muted);font-size:14px;font-weight:700;flex:none}
+[dir="rtl"] .opt-row .chev{transform:scaleX(-1)}
+
+/* ---- contact popup ---- */
+.contact-opt{display:flex;align-items:center;gap:14px;width:100%;padding:13px;border-radius:14px;
+  border:1px solid var(--line);background:var(--card-2);margin-bottom:10px;text-align:start;transition:.12s}
+.contact-opt:active{transform:scale(.99)}
+.cic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:#fff;font-size:22px;
+  font-weight:800;flex:none;box-shadow:0 4px 10px rgba(0,0,0,.18)}
+.cnm{flex:1}
+.cnm b{display:block;font-size:15px}
+.cnm span{font-size:12px;color:var(--muted)}
+
+/* ---- signature ---- */
+.sig{text-align:center;font-size:15px;font-weight:800;color:var(--muted);letter-spacing:.3px;margin:26px 0 4px}
+.sig .heart{color:var(--red);font-size:16px}
+
+/* ---- spacing cleanup ---- */
+.sect-title{margin:16px 4px 8px}
+.card{margin-bottom:12px}
+.screen{padding:16px 16px 112px}
+.seg{margin:2px 0 14px}
 </style>
 </head>
 <body>
@@ -1126,7 +1170,7 @@ const I18N = {
     appTitle:"Japan Driving Test", karimen:"Karimen", honmen:"Written Test",
     home:"Home", study:"Study", tests:"Tests", stats:"Stats",
     heroHi:"Ready to drive?", heroSub:"Master the Japan written test",
-    seen:"Seen", accuracy:"Accuracy", streak:"Streak",
+    seen:"Seen", accuracy:"Accuracy", streak:"Streak", readiness:"Exam readiness",
     quickActions:"Quick Actions", mock:"Mock Test", mockSub:"10 / 25 / 50 questions",
     quick:"Quick Test", quickSub:"10 random questions", weak:"Focus Weak Areas",
     weakSub:"Your toughest topics", missed:"Practice Missed", missedSub:"Review your mistakes",
@@ -1143,6 +1187,7 @@ const I18N = {
     backHome:"Back to Home", allCats:"All", showAnswers:"Answers", showExp:"Explanations",
     noMissed:"No mistakes yet \u2014 great job!", noWeak:"Not enough data yet. Take a few tests first.",
     settings:"Settings", language:"Language", darkMode:"Dark Mode", darkSub:"Easier on the eyes at night",
+    contact:"Contact Developer", contactSub:"Questions, feedback, or just say hi", madeBy:"Made with \u2661 By AL33M.",
     examMode:"Exam Mode", examSub:"Hide feedback until the end", autoTr:"Auto-Translate Questions",
     autoTrSub:"Translate question text on the fly", premium:"Go Premium", premiumSub:"Remove ads + unlimited tests",
     adPlaceholder:"Ad space (AdMob banner)", translating:"Translating\u2026",
@@ -1155,7 +1200,7 @@ const I18N = {
     appTitle:"\u062c\u0627\u067e\u0627\u0646 \u0688\u0631\u0627\u0626\u06cc\u0648\u0646\u06af \u0679\u06cc\u0633\u0679", karimen:"\u06a9\u0627\u0631\u06cc\u0645\u0646", honmen:"\u062a\u062d\u0631\u06cc\u0631\u06cc \u0679\u06cc\u0633\u0679",
     home:"\u06c1\u0648\u0645", study:"\u0645\u0637\u0627\u0644\u0639\u06c1", tests:"\u0679\u06cc\u0633\u0679", stats:"\u0627\u0639\u062f\u0627\u062f \u0648 \u0634\u0645\u0627\u0631",
     heroHi:"\u0688\u0631\u0627\u0626\u06cc\u0648 \u06a9\u06d2 \u0644\u06cc\u06d2 \u062a\u06cc\u0627\u0631\u061f", heroSub:"\u062c\u0627\u067e\u0627\u0646 \u06a9\u06d2 \u062a\u062d\u0631\u06cc\u0631\u06cc \u0679\u06cc\u0633\u0679 \u0645\u06cc\u06ba \u0645\u06c1\u0627\u0631\u062a \u062d\u0627\u0635\u0644 \u06a9\u0631\u06cc\u06ba",
-    seen:"\u062f\u06cc\u06a9\u06be\u06d2", accuracy:"\u062f\u0631\u0633\u062a\u06af\u06cc", streak:"\u062a\u0633\u0644\u0633\u0644",
+    seen:"\u062f\u06cc\u06a9\u06be\u06d2", accuracy:"\u062f\u0631\u0633\u062a\u06af\u06cc", streak:"\u062a\u0633\u0644\u0633\u0644", readiness:"\u0627\u0645\u062a\u062d\u0627\u0646 \u06a9\u06cc \u062a\u06cc\u0627\u0631\u06cc",
     quickActions:"\u0641\u0648\u0631\u06cc \u0627\u0642\u062f\u0627\u0645\u0627\u062a", mock:"\u0645\u0627\u06a9 \u0679\u06cc\u0633\u0679", mockSub:"10 / 25 / 50 \u0633\u0648\u0627\u0644\u0627\u062a",
     quick:"\u0641\u0648\u0631\u06cc \u0679\u06cc\u0633\u0679", quickSub:"10 \u0628\u06d2 \u062a\u0631\u062a\u06cc\u0628 \u0633\u0648\u0627\u0644\u0627\u062a", weak:"\u06a9\u0645\u0632\u0648\u0631 \u0645\u0648\u0636\u0648\u0639\u0627\u062a",
     weakSub:"\u0622\u067e \u06a9\u06d2 \u0645\u0634\u06a9\u0644 \u062a\u0631\u06cc\u0646 \u0645\u0648\u0636\u0648\u0639\u0627\u062a", missed:"\u063a\u0644\u0637\u06cc\u0648\u06ba \u06a9\u06cc \u0645\u0634\u0642", missedSub:"\u0627\u067e\u0646\u06cc \u063a\u0644\u0637\u06cc\u0627\u06ba \u062f\u06cc\u06a9\u06be\u06cc\u06ba",
@@ -1172,6 +1217,7 @@ const I18N = {
     backHome:"\u06c1\u0648\u0645 \u067e\u0631 \u0648\u0627\u067e\u0633", allCats:"\u0633\u0628", showAnswers:"\u062c\u0648\u0627\u0628\u0627\u062a", showExp:"\u0648\u0636\u0627\u062d\u062a\u06cc\u06ba",
     noMissed:"\u0627\u0628\u06be\u06cc \u06a9\u0648\u0626\u06cc \u063a\u0644\u0637\u06cc \u0646\u06c1\u06cc\u06ba \u2014 \u0628\u06c1\u062a \u062e\u0648\u0628!", noWeak:"\u0627\u0628\u06be\u06cc \u06a9\u0627\u0641\u06cc \u0688\u06cc\u0679\u0627 \u0646\u06c1\u06cc\u06ba\u06d4 \u067e\u06c1\u0644\u06d2 \u0686\u0646\u062f \u0679\u06cc\u0633\u0679 \u062f\u06cc\u06ba\u06d4",
     settings:"\u062a\u0631\u062a\u06cc\u0628\u0627\u062a", language:"\u0632\u0628\u0627\u0646", darkMode:"\u0688\u0627\u0631\u06a9 \u0645\u0648\u0688", darkSub:"\u0631\u0627\u062a \u06a9\u0648 \u0622\u0646\u06a9\u06be\u0648\u06ba \u06a9\u06d2 \u0644\u06cc\u06d2 \u0628\u06c1\u062a\u0631",
+    contact:"\u0688\u0648\u06cc\u0644\u067e\u0631 \u0633\u06d2 \u0631\u0627\u0628\u0637\u06c1", contactSub:"\u0633\u0648\u0627\u0644\u0627\u062a\u060c \u062a\u062c\u0627\u0648\u06cc\u0632 \u06cc\u0627 \u0633\u0644\u0627\u0645 \u06a9\u06c1\u06cc\u06ba", madeBy:"Made with \u2661 By AL33M.",
     examMode:"\u0627\u0645\u062a\u062d\u0627\u0646\u06cc \u0645\u0648\u0688", examSub:"\u0622\u062e\u0631 \u062a\u06a9 \u0641\u06cc\u0688 \u0628\u06cc\u06a9 \u0686\u06be\u067e\u0627\u0626\u06cc\u06ba", autoTr:"\u0633\u0648\u0627\u0644\u0627\u062a \u06a9\u0627 \u062e\u0648\u062f\u06a9\u0627\u0631 \u062a\u0631\u062c\u0645\u06c1",
     autoTrSub:"\u0633\u0648\u0627\u0644 \u06a9\u0627 \u0645\u062a\u0646 \u0641\u0648\u0631\u06cc \u062a\u0631\u062c\u0645\u06c1 \u06a9\u0631\u06cc\u06ba", premium:"\u067e\u0631\u06cc\u0645\u06cc\u0645 \u062d\u0627\u0635\u0644 \u06a9\u0631\u06cc\u06ba", premiumSub:"\u0627\u0634\u062a\u06c1\u0627\u0631\u0627\u062a \u06c1\u0679\u0627\u0626\u06cc\u06ba + \u0644\u0627\u0645\u062d\u062f\u0648\u062f \u0679\u06cc\u0633\u0679",
     adPlaceholder:"\u0627\u0634\u062a\u06c1\u0627\u0631 \u06a9\u06cc \u062c\u06af\u06c1 (AdMob \u0628\u06cc\u0646\u0631)", translating:"\u062a\u0631\u062c\u0645\u06c1 \u06c1\u0648 \u0631\u06c1\u0627 \u06c1\u06d2\u2026",
@@ -1184,7 +1230,7 @@ const I18N = {
     appTitle:"\u091c\u093e\u092a\u093e\u0928 \u0921\u094d\u0930\u093e\u0907\u0935\u093f\u0902\u0917 \u091f\u0947\u0938\u094d\u091f", karimen:"\u0915\u093e\u0930\u093f\u092e\u0947\u0928", honmen:"\u0932\u093f\u0916\u093f\u0924 \u092a\u0930\u0940\u0915\u094d\u0937\u093e",
     home:"\u0939\u094b\u092e", study:"\u0905\u0927\u094d\u092f\u092f\u0928", tests:"\u091f\u0947\u0938\u094d\u091f", stats:"\u0906\u0901\u0915\u0921\u093c\u0947",
     heroHi:"\u0921\u094d\u0930\u093e\u0907\u0935 \u0915\u0947 \u0932\u093f\u090f \u0924\u0948\u092f\u093e\u0930?", heroSub:"\u091c\u093e\u092a\u093e\u0928 \u0915\u0940 \u0932\u093f\u0916\u093f\u0924 \u092a\u0930\u0940\u0915\u094d\u0937\u093e \u092e\u0947\u0902 \u092e\u0939\u093e\u0930\u0924 \u092a\u093e\u090f\u0902",
-    seen:"\u0926\u0947\u0916\u0947", accuracy:"\u0938\u091f\u0940\u0915\u0924\u093e", streak:"\u0932\u0917\u093e\u0924\u093e\u0930",
+    seen:"\u0926\u0947\u0916\u0947", accuracy:"\u0938\u091f\u0940\u0915\u0924\u093e", streak:"\u0932\u0917\u093e\u0924\u093e\u0930", readiness:"\u092a\u0930\u0940\u0915\u094d\u0937\u093e \u0924\u0948\u092f\u093e\u0930\u0940",
     quickActions:"\u0924\u094d\u0935\u0930\u093f\u0924 \u0915\u094d\u0930\u093f\u092f\u093e\u090f\u0901", mock:"\u092e\u0949\u0915 \u091f\u0947\u0938\u094d\u091f", mockSub:"10 / 25 / 50 \u092a\u094d\u0930\u0936\u094d\u0928",
     quick:"\u0915\u094d\u0935\u093f\u0915 \u091f\u0947\u0938\u094d\u091f", quickSub:"10 \u092f\u093e\u0926\u0943\u091a\u094d\u091b\u093f\u0915 \u092a\u094d\u0930\u0936\u094d\u0928", weak:"\u0915\u092e\u091c\u093c\u094b\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930",
     weakSub:"\u0906\u092a\u0915\u0947 \u0915\u0920\u093f\u0928 \u0935\u093f\u0937\u092f", missed:"\u0917\u0932\u0924\u093f\u092f\u094b\u0902 \u0915\u093e \u0905\u092d\u094d\u092f\u093e\u0938", missedSub:"\u0905\u092a\u0928\u0940 \u0917\u0932\u0924\u093f\u092f\u093e\u0901 \u0926\u0947\u0916\u0947\u0902",
@@ -1201,6 +1247,7 @@ const I18N = {
     backHome:"\u0939\u094b\u092e \u092a\u0930 \u0935\u093e\u092a\u0938", allCats:"\u0938\u092d\u0940", showAnswers:"\u0909\u0924\u094d\u0924\u0930", showExp:"\u0935\u094d\u092f\u093e\u0916\u094d\u092f\u093e\u090f\u0901",
     noMissed:"\u0905\u092d\u0940 \u0915\u094b\u0908 \u0917\u0932\u0924\u0940 \u0928\u0939\u0940\u0902 \u2014 \u092c\u0922\u093c\u093f\u092f\u093e!", noWeak:"\u0905\u092d\u0940 \u092a\u0930\u094d\u092f\u093e\u092a\u094d\u0924 \u0921\u0947\u091f\u093e \u0928\u0939\u0940\u0902\u0964 \u092a\u0939\u0932\u0947 \u0915\u0941\u091b \u091f\u0947\u0938\u094d\u091f \u0926\u0947\u0902\u0964",
     settings:"\u0938\u0947\u091f\u093f\u0902\u0917\u094d\u0938", language:"\u092d\u093e\u0937\u093e", darkMode:"\u0921\u093e\u0930\u094d\u0915 \u092e\u094b\u0921", darkSub:"\u0930\u093e\u0924 \u092e\u0947\u0902 \u0906\u0901\u0916\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u0906\u0938\u093e\u0928",
+    contact:"\u0921\u0947\u0935\u0932\u092a\u0930 \u0938\u0947 \u0938\u0902\u092a\u0930\u094d\u0915", contactSub:"\u0938\u0935\u093e\u0932, \u0938\u0941\u091d\u093e\u0935 \u092f\u093e \u0928\u092e\u0938\u094d\u0924\u0947 \u0915\u0939\u0947\u0902", madeBy:"Made with \u2661 By AL33M.",
     examMode:"\u092a\u0930\u0940\u0915\u094d\u0937\u093e \u092e\u094b\u0921", examSub:"\u0905\u0902\u0924 \u0924\u0915 \u092b\u093c\u0940\u0921\u092c\u0948\u0915 \u091b\u093f\u092a\u093e\u090f\u0901", autoTr:"\u092a\u094d\u0930\u0936\u094d\u0928\u094b\u0902 \u0915\u093e \u0938\u094d\u0935\u0924\u0903 \u0905\u0928\u0941\u0935\u093e\u0926",
     autoTrSub:"\u092a\u094d\u0930\u0936\u094d\u0928 \u092a\u093e\u0920 \u0915\u093e \u0924\u0941\u0930\u0902\u0924 \u0905\u0928\u0941\u0935\u093e\u0926", premium:"\u092a\u094d\u0930\u0940\u092e\u093f\u092f\u092e \u0932\u0947\u0902", premiumSub:"\u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928 \u0939\u091f\u093e\u090f\u0901 + \u0905\u0938\u0940\u092e\u093f\u0924 \u091f\u0947\u0938\u094d\u091f",
     adPlaceholder:"\u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928 \u0938\u094d\u0925\u093e\u0928 (AdMob \u092c\u0948\u0928\u0930)", translating:"\u0905\u0928\u0941\u0935\u093e\u0926 \u0939\u094b \u0930\u0939\u093e \u0939\u0948\u2026",
@@ -1213,7 +1260,7 @@ const I18N = {
     appTitle:"\u65e5\u672c\u9a7e\u7167\u8003\u8bd5", karimen:"\u4e34\u65f6\u9a7e\u7167", honmen:"\u6b63\u5f0f\u7b14\u8bd5",
     home:"\u4e3b\u9875", study:"\u5b66\u4e60", tests:"\u6d4b\u9a8c", stats:"\u7edf\u8ba1",
     heroHi:"\u51c6\u5907\u597d\u5f00\u8f66\u4e86\u5417\uff1f", heroSub:"\u638c\u63e1\u65e5\u672c\u9a7e\u7167\u7b14\u8bd5",
-    seen:"\u5df2\u7b54", accuracy:"\u6b63\u786e\u7387", streak:"\u8fde\u7eed",
+    seen:"\u5df2\u7b54", accuracy:"\u6b63\u786e\u7387", streak:"\u8fde\u7eed", readiness:"\u8003\u8bd5\u51c6\u5907\u5ea6",
     quickActions:"\u5feb\u6377\u64cd\u4f5c", mock:"\u6a21\u62df\u8003\u8bd5", mockSub:"10 / 25 / 50 \u9898",
     quick:"\u5feb\u901f\u6d4b\u9a8c", quickSub:"10 \u9053\u968f\u673a\u9898", weak:"\u8584\u5f31\u73af\u8282",
     weakSub:"\u4f60\u6700\u96be\u7684\u4e3b\u9898", missed:"\u9519\u9898\u7ec3\u4e60", missedSub:"\u590d\u4e60\u4f60\u7684\u9519\u8bef",
@@ -1230,6 +1277,7 @@ const I18N = {
     backHome:"\u8fd4\u56de\u4e3b\u9875", allCats:"\u5168\u90e8", showAnswers:"\u7b54\u6848", showExp:"\u89e3\u6790",
     noMissed:"\u6682\u65e0\u9519\u9898 \u2014 \u592a\u68d2\u4e86\uff01", noWeak:"\u6570\u636e\u4e0d\u8db3\uff0c\u8bf7\u5148\u5b8c\u6210\u51e0\u6b21\u6d4b\u9a8c\u3002",
     settings:"\u8bbe\u7f6e", language:"\u8bed\u8a00", darkMode:"\u6df1\u8272\u6a21\u5f0f", darkSub:"\u591c\u95f4\u62a4\u773c",
+    contact:"\u8054\u7cfb\u5f00\u53d1\u8005", contactSub:"\u95ee\u9898\u3001\u53cd\u9988\u6216\u6253\u4e2a\u62db\u547c", madeBy:"Made with \u2661 By AL33M.",
     examMode:"\u8003\u8bd5\u6a21\u5f0f", examSub:"\u7b54\u5b8c\u540e\u518d\u663e\u793a\u53cd\u9988", autoTr:"\u81ea\u52a8\u7ffb\u8bd1\u9898\u76ee",
     autoTrSub:"\u5373\u65f6\u7ffb\u8bd1\u9898\u76ee\u6587\u5b57", premium:"\u5347\u7ea7\u4f1a\u5458", premiumSub:"\u53bb\u9664\u5e7f\u544a + \u65e0\u9650\u6d4b\u9a8c",
     adPlaceholder:"\u5e7f\u544a\u4f4d\uff08AdMob \u6a2a\u5e45\uff09", translating:"\u7ffb\u8bd1\u4e2d\u2026",
@@ -1335,15 +1383,14 @@ function renderChrome(){
     tb.innerHTML =
       '<div class="brand"><span class="logo">\ud83d\ude97</span><span>'+esc(T().appTitle)+'</span></div>'+
       '<div class="sp"></div>'+
-      '<button class="iconbtn" id="langBtn">\ud83c\udf10</button>'+
-      '<button class="iconbtn" id="setBtn">\u2699\ufe0f</button>';
-    $("langBtn").onclick=openLang; $("setBtn").onclick=openSettings;
+      '<button class="iconbtn" id="streakPill" title="streak">\ud83d\udd25 '+(DB.streak||0)+'</button>';
   }
 
   // bottom nav (hidden during active quiz)
   var nav=$("nav");
   if(view.screen==="quiz"){ nav.innerHTML=""; return; }
-  var items=[["home","\ud83c\udfe0",T().home],["study","\ud83d\udcd6",T().study],["tests","\ud83d\udcdd",T().tests],["stats","\ud83d\udcca",T().stats]];
+  var items=[["home","\ud83c\udfe0",T().home],["study","\ud83d\udcd6",T().study],["tests","\ud83d\udcdd",T().tests],
+             ["stats","\ud83d\udcca",T().stats],["settings","\u2699\ufe0f",T().settings]];
   var ad = !DB.settings.premium ? '<div class="adbar">'+esc(T().adPlaceholder)+'</div>' : '';
   nav.innerHTML = ad + '<div class="bottomnav">'+items.map(function(it){
     var on=(view.screen===it[0])?"on":"";
@@ -1396,12 +1443,16 @@ function screenHome(){
       '<button class="'+(view.type==="karimen"?"on":"")+'" data-t="karimen">'+esc(T().karimen)+'</button>'+
       '<button class="'+(view.type==="honmen"?"on":"")+'" data-t="honmen">'+esc(T().honmen)+'</button></div>';
 
+  var ready = st.total? Math.round(st.acc*(st.seen/st.total)) : 0;
   h+='<div class="card hero"><h2>'+esc(T().heroHi)+'</h2><p>'+esc(T().heroSub)+'</p>'+
      '<div class="row">'+
        '<div class="stat"><b>'+st.seen+'</b><span>'+esc(T().seen)+'</span></div>'+
        '<div class="stat"><b>'+st.acc+'%</b><span>'+esc(T().accuracy)+'</span></div>'+
        '<div class="stat"><b>'+(DB.streak||0)+'</b><span>'+esc(T().streak)+'</span></div>'+
-     '</div></div>';
+     '</div>'+
+     '<div class="ready"><div class="ready-top"><span>'+esc(T().readiness)+'</span><b>'+ready+'%</b></div>'+
+       '<div class="ready-bar"><i style="width:'+ready+'%"></i></div></div>'+
+     '</div>';
 
   h+='<div class="sect-title">'+esc(T().quickActions)+'</div>';
   h+='<div class="grid">'+
@@ -1857,24 +1908,72 @@ function openLang(){
   });
 }
 
-function openSettings(){
+function screenSettings(){
   var s=DB.settings;
-  var html='<div class="grip"></div><h3>'+esc(T().settings)+'</h3>'+
-    '<button class="lang-opt" id="sLang"><span class="fl">\ud83c\udf10</span><span class="nm">'+esc(T().language)+'</span>'+
-       '<span class="ck" style="color:var(--muted)">'+I18N[s.lang].flag+' \u203a</span></button>'+
-    srow(T().darkMode,T().darkSub,"sDark",s.dark)+
-    srow(T().examMode,T().examSub,"sExam",s.exam)+
-    srow(T().autoTr,T().autoTrSub,"sTr",s.autoTr)+
-    '<div class="card premium" style="margin-top:14px"><span class="ti">\u2b50</span><div style="flex:1">'+
-      '<b>'+esc(T().premium)+'</b><div style="font-size:12px;opacity:.85">'+esc(T().premiumSub)+'</div></div>'+
-      '<button class="go" id="sPrem">'+esc(s.premium?"\u2713":T().premium)+'</button></div>'+
-    '<div class="note">v1.0 \u00b7 340 questions \u00b7 Offline ready</div>';
+  var h='<div class="sect-title">'+esc(T().settings)+'</div>';
+  h+='<div class="card pad0">'+
+     '<button class="opt-row" id="sLang"><span class="oic">\ud83c\udf10</span>'+
+       '<div class="ol"><b>'+esc(T().language)+'</b><span>'+esc(I18N[s.lang].name)+'</span></div>'+
+       '<span class="chev">'+I18N[s.lang].flag+' \u203a</span></button>'+
+     optToggle("\ud83c\udf19",T().darkMode,T().darkSub,"sDark",s.dark)+
+     optToggle("\ud83d\udcdd",T().examMode,T().examSub,"sExam",s.exam)+
+     optToggle("\ud83c\udf0d",T().autoTr,T().autoTrSub,"sTr",s.autoTr)+
+     '</div>';
+
+  if(!s.premium){
+    h+='<div class="card premium"><span class="ti">\u2b50</span><div style="flex:1">'+
+       '<b>'+esc(T().premium)+'</b><div style="font-size:12px;opacity:.85">'+esc(T().premiumSub)+'</div></div>'+
+       '<button class="go" id="sPrem">'+esc(T().premium)+'</button></div>';
+  } else {
+    h+='<div class="card" style="display:flex;align-items:center;gap:12px"><span class="oic" style="background:rgba(31,158,107,.15)">\u2b50</span>'+
+       '<div style="flex:1"><b style="color:var(--green)">Premium active</b><div style="font-size:12px;color:var(--muted)">Ads removed \u00b7 thank you!</div></div>'+
+       '<button class="opt-row" id="sPrem" style="width:auto;padding:6px 10px;font-size:12px;color:var(--muted)">undo</button></div>';
+  }
+
+  h+='<div class="card pad0" style="margin-top:14px">'+
+     '<button class="opt-row" id="sContact"><span class="oic">\ud83d\udcac</span>'+
+       '<div class="ol"><b>'+esc(T().contact)+'</b><span>'+esc(T().contactSub)+'</span></div>'+
+       '<span class="chev">\u203a</span></button></div>';
+
+  h+='<div class="sig">'+esc(T().madeBy).replace("\u2661",'<span class="heart">\u2661</span>')+'</div>';
+  h+='<div class="note">v1.0 \u00b7 340 questions \u00b7 Offline ready</div>';
+
+  var sc=$("screen"); sc.innerHTML=h;
+  $("sLang").onclick=openLang;
+  $("sContact").onclick=openContact;
+  bindSwitch(sc,"sDark","dark");
+  bindSwitch(sc,"sExam","exam");
+  bindSwitch(sc,"sTr","autoTr");
+  if($("sPrem")) $("sPrem").onclick=goPremium;
+}
+function optToggle(icon,title,sub,id,on){
+  return '<div class="opt-row no-press"><span class="oic">'+icon+'</span>'+
+    '<div class="ol"><b>'+esc(title)+'</b><span>'+esc(sub)+'</span></div>'+
+    '<button class="switch '+(on?"on":"")+'" id="'+id+'"><i></i></button></div>';
+}
+
+function openContact(){
+  var opts=[
+    {id:"fb",   name:"Facebook",  handle:"@aleemrubani", url:"https://fb.com/aleemrubani",        bg:"#1877f2", glyph:"f",  font:'Georgia,serif'},
+    {id:"ig",   name:"Instagram", handle:"@aleemrubani", url:"https://instagram.com/aleemrubani", bg:"linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)", glyph:"\ud83d\udcf7", font:"inherit"},
+    {id:"mail", name:"Email",     handle:"aleem@mail.com", url:"mailto:aleem@mail.com",           bg:"#1f9e6b", glyph:"\u2709", font:"inherit"}
+  ];
+  var html='<div class="grip"></div><h3>'+esc(T().contact)+'</h3>';
+  opts.forEach(function(o){
+    html+='<button class="contact-opt" data-url="'+o.url+'">'+
+      '<span class="cic" style="background:'+o.bg+';font-family:'+o.font+'">'+o.glyph+'</span>'+
+      '<span class="cnm"><b>'+o.name+'</b><span>'+o.handle+'</span></span>'+
+      '<span class="chev">\u203a</span></button>';
+  });
   openSheet(html, function(sheet){
-    sheet.querySelector("#sLang").onclick=function(){ closeSheet(); openLang(); };
-    bindSwitch(sheet,"sDark","dark");
-    bindSwitch(sheet,"sExam","exam");
-    bindSwitch(sheet,"sTr","autoTr");
-    sheet.querySelector("#sPrem").onclick=function(){ goPremium(); };
+    Array.prototype.forEach.call(sheet.querySelectorAll("[data-url]"),function(b){
+      b.onclick=function(){
+        var u=b.getAttribute("data-url");
+        if(u.indexOf("mailto:")===0){ window.location.href=u; }
+        else{ try{ window.open(u,"_blank","noopener"); }catch(e){ window.location.href=u; } }
+        closeSheet();
+      };
+    });
   });
 }
 function srow(title,sub,id,on){
@@ -1921,6 +2020,7 @@ function render(){
     case "study": screenStudy(); break;
     case "tests": screenTests(); break;
     case "stats": screenStats(); break;
+    case "settings": screenSettings(); break;
     case "setup": screenSetup(); break;
     case "quiz": screenQuiz(); break;
     case "results": screenResults(); break;
