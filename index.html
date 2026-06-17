@@ -394,11 +394,19 @@ html[data-theme="dark"] .bottomnav button.on{color:var(--amber)}
 @media (prefers-reduced-motion:reduce){.ovl,.pwsheet,.adcard{animation:none}}
 </style>
 
-<!-- ===== GOOGLE ADSENSE: paste your real publisher ID below and uncomment to enable on the web =====
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-====== Then set AD_CONFIG.enabled=true and fill client/slot in the script below. ====== -->
+<style id="webStyles">
+/* clean desktop polish: center the app as a panel, no ads */
+@media (min-width:1180px){
+  body{background:
+    radial-gradient(1100px 700px at 50% -10%, rgba(244,160,18,.10), transparent 60%),
+    radial-gradient(900px 700px at 50% 120%, rgba(19,49,92,.12), transparent 55%), var(--bg);}
+  #app{box-shadow:0 0 0 1px var(--line), 0 36px 90px rgba(11,37,69,.20); min-height:100vh}
+  .bottomnav{box-shadow:0 0 0 1px var(--line), 0 -10px 30px rgba(11,37,69,.12)}
+}
+</style>
 </head>
 <body>
+
 <div id="app">
   <div id="topbar"></div>
   <div id="screen" class="screen"></div>
@@ -1791,7 +1799,11 @@ var REDEEM_CODES = {
 };
 
 /* --- Ad config: fill these + uncomment the AdSense <script> in <head>, then set enabled:true --- */
-var AD_CONFIG = { enabled:false, client:"ca-pub-XXXXXXXXXXXXXXXX", slot:"XXXXXXXXXX", seconds:10 };
+/* ============================================================================
+   WEBSITE MODE. No premium, no limits, no ads. Set WEB_MODE=false to restore
+   the app build (premium + limits).
+   ========================================================================== */
+var WEB_MODE = true;
 
 /* --- Free-tier limits --- */
 var LIMIT_MOCKS = 3;       /* free mock tests before paywall */
@@ -1824,7 +1836,7 @@ function redeemCode(code){
   grantPremium(spec); return true;
 }
 function fmtDate(ms){ try{ var d=new Date(ms); return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);}catch(e){return"";} }
-function limitReached(){ return !isPremium() && (DB.usage.mocks>=LIMIT_MOCKS || DB.usage.secs>=LIMIT_SECS); }
+function limitReached(){ if(WEB_MODE) return false; return !isPremium() && (DB.usage.mocks>=LIMIT_MOCKS || DB.usage.secs>=LIMIT_SECS); }
 
 var _pwOpen=false, _pendPaywall=false;
 
@@ -1836,41 +1848,6 @@ setInterval(function(){
   if(DB.usage.secs % 30 === 0) saveState();
   if(limitReached() && !_pwOpen && view.screen!=="quiz"){ showPaywall(); }
 }, 5000);
-
-/* ============================================================================
-   AD OVERLAY (shown on every app open for free users; ~10s)
-   ========================================================================== */
-function showOpenAd(done){
-  if(isPremium()){ if(done) done(); return; }
-  var secs = (AD_CONFIG.seconds||10);
-  var ovl=el('<div class="ovl dark"><div class="adcard">'+
-      '<div class="adtag">'+esc(T().adLabel)+'</div>'+
-      '<div class="adbox" id="adBox"><div class="ph"><span class="big">\ud83d\udcf1</span><span>'+esc(T().adLabel)+'</span></div></div>'+
-      '<div class="adfoot"><span class="adcount" id="adCount"></span>'+
-        '<button class="adcont" id="adCont">'+esc(T().adContinue)+'</button></div>'+
-    '</div></div>');
-  document.body.appendChild(ovl);
-  // try to render a real AdSense unit if configured
-  if(AD_CONFIG.enabled && AD_CONFIG.client.indexOf("XXXX")<0){
-    try{
-      var box=ovl.querySelector("#adBox"); box.innerHTML="";
-      var ins=document.createElement("ins"); ins.className="adsbygoogle";
-      ins.style.display="block"; ins.style.width="100%"; ins.style.height="250px";
-      ins.setAttribute("data-ad-client",AD_CONFIG.client);
-      ins.setAttribute("data-ad-slot",AD_CONFIG.slot);
-      box.appendChild(ins);
-      (window.adsbygoogle=window.adsbygoogle||[]).push({});
-    }catch(e){}
-  }
-  var n=secs, cEl=ovl.querySelector("#adCount"), btn=ovl.querySelector("#adCont");
-  cEl.textContent=T().adContinueIn+" "+n+"s";
-  var iv=setInterval(function(){
-    n--;
-    if(n<=0){ clearInterval(iv); cEl.textContent=""; btn.classList.add("ready"); }
-    else cEl.textContent=T().adContinueIn+" "+n+"s";
-  },1000);
-  btn.onclick=function(){ clearInterval(iv); ovl.remove(); if(done) done(); };
-}
 
 /* ============================================================================
    PAYWALL (after free limit; also reachable from Settings -> Go Premium)
@@ -1908,8 +1885,6 @@ function showPaywall(){
   ovl.addEventListener("click",function(e){ if(e.target===ovl) close(); });
 }
 function gateStart(){ if(limitReached()){ showPaywall(); return false; } return true; }
-
-
 
 /* ---------- shorthand ---------- */
 var QBANK = window.QBANK;
@@ -1998,7 +1973,7 @@ function renderChrome(){
   if(view.screen==="quiz"){ nav.innerHTML=""; return; }
   var items=[["home","\ud83c\udfe0",T().home],["study","\ud83d\udcd6",T().study],["tests","\ud83d\udcdd",T().tests],
              ["stats","\ud83d\udcca",T().stats],["settings","\u2699\ufe0f",T().settings]];
-  var ad = !isPremium() ? '<div class="adbar">'+esc(T().adPlaceholder)+'</div>' : '';
+  var ad = (!isPremium() && !WEB_MODE) ? '<div class="adbar">'+esc(T().adPlaceholder)+'</div>' : '';
   nav.innerHTML = ad + '<div class="bottomnav">'+items.map(function(it){
     var on=(view.screen===it[0])?"on":"";
     return '<button class="'+on+'" data-s="'+it[0]+'"><span class="ic">'+it[1]+'</span>'+esc(it[2])+'</button>';
@@ -2091,7 +2066,7 @@ function screenHome(){
     h+='</div>';
   }
 
-  if(!isPremium()){
+  if(!isPremium() && !WEB_MODE){
     h+='<div class="card premium"><span class="ti">\u2b50</span><div style="flex:1">'+
        '<b>'+esc(T().premium)+'</b><div style="font-size:12px;opacity:.85">'+esc(T().premiumSub)+'</div></div>'+
        '<button class="go" id="goPrem">'+esc(T().premium)+'</button></div>';
@@ -2548,6 +2523,7 @@ function screenSettings(){
      optToggle("\ud83c\udf0d",T().autoTr,T().autoTrSub,"sTr",s.autoTr)+
      '</div>';
 
+  if(!WEB_MODE){
   var pm=premiumState();
   if(!pm.active){
     h+='<div class="card premium"><span class="ti">\u2b50</span><div style="flex:1">'+
@@ -2562,6 +2538,8 @@ function screenSettings(){
        '<div style="flex:1"><b style="color:var(--amber-dk)">'+esc(T().premiumActive)+'</b>'+
        '<div style="font-size:12px;color:var(--muted)">'+sub+'</div></div>'+
        '<span class="pmbadge">'+(pm.lifetime?esc(T().premiumLifetime):"PRO")+'</span></div>';
+  }
+
   }
 
   h+='<div class="card pad0" style="margin-top:14px">'+
@@ -2671,7 +2649,6 @@ if("serviceWorker" in navigator && location.protocol.indexOf("http")===0){
 
 /* ---------- boot ---------- */
 render();
-showOpenAd(function(){ if(limitReached()) showPaywall(); });
 
 })();
 
