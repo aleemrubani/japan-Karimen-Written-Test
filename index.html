@@ -7,6 +7,11 @@
 <meta name="description" content="Japan Driving License - Learner Permit and Final Exam practice. Multilingual practice tests (English, Urdu, Hindi, Chinese).">
 <title>Japan Driving License</title>
 <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Japan%20Driving%20License%22%2C%22short_name%22%3A%22JP%20License%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230b2545%22%2C%22theme_color%22%3A%22%230b2545%22%7D">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1278207037217080"
+     crossorigin="anonymous"></script>
+
 <style>
 /* ============================== DESIGN TOKENS ============================== */
 :root{
@@ -65,7 +70,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;
 .iconbtn{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
   background:rgba(255,255,255,.12);color:#fff;font-size:18px;transition:.15s}
 .iconbtn:active{transform:scale(.92)}
-.back{font-size:15px;font-weight:700;display:flex;align-items:center;gap:6px;color:#fff}
+.back{font-size:14px;font-weight:800;display:inline-flex;align-items:center;gap:7px;color:#fff;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.55);padding:9px 16px 9px 13px;border-radius:999px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18);transition:background .15s,transform .1s,box-shadow .15s;white-space:nowrap}.back .bka{font-size:18px;line-height:1;margin-top:-1px}.back:hover{background:rgba(255,255,255,.30);box-shadow:0 4px 14px rgba(0,0,0,.25)}.back:active{transform:scale(.95)}
 
 /* segmented type switch */
 .seg{display:flex;background:var(--card);border-radius:14px;padding:5px;box-shadow:var(--shadow);
@@ -236,6 +241,7 @@ html[data-theme="dark"] .bottomnav button.on{color:var(--amber)}
 /* ad placeholder + premium */
 .adbar{max-width:520px;margin:0 auto;height:54px;display:flex;align-items:center;justify-content:center;
   font-size:11px;color:var(--muted);background:var(--card-2);border-top:1px dashed var(--line)}
+.adsbygoogle { background: var(--card-2); border-radius: 12px; min-height: 90px; }
 .premium{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#2b1d05,#1a1206);color:#ffe6b0;
   border:1px solid rgba(244,160,18,.4)}
 .premium .ti{background:rgba(244,160,18,.2);color:var(--amber)}
@@ -403,6 +409,26 @@ html[data-theme="dark"] .bottomnav button.on{color:var(--amber)}
   #app{box-shadow:0 0 0 1px var(--line), 0 36px 90px rgba(11,37,69,.20); min-height:100vh}
   .bottomnav{box-shadow:0 0 0 1px var(--line), 0 -10px 30px rgba(11,37,69,.12)}
 }
+</style>
+<style id="improveStyles">
+*{-webkit-tap-highlight-color:transparent}
+button{touch-action:manipulation}
+.policy{font-size:13px;line-height:1.6}
+.policy p{margin:0 0 9px;color:var(--muted)}
+.policy h4{margin:14px 0 4px;font-size:13px;color:var(--amber-dk)}
+.policy a{color:var(--navy);word-break:break-word}
+.cbx{position:fixed;inset:0;z-index:1300;background:rgba(8,16,28,.55);display:flex;align-items:center;justify-content:center;padding:24px;animation:cbxIn .2s ease both}
+@keyframes cbxIn{from{opacity:0}to{opacity:1}}
+.cbox{width:100%;max-width:330px;background:var(--card);border-radius:18px;padding:22px 20px;text-align:center;box-shadow:var(--shadow-lg);animation:cboxUp .25s cubic-bezier(.2,.8,.3,1) both}
+@keyframes cboxUp{from{transform:translateY(12px) scale(.97);opacity:0}to{transform:none;opacity:1}}
+.cbi{font-size:34px;margin-bottom:8px}
+.cbt{font-size:15px;font-weight:600;color:var(--text);line-height:1.5;margin-bottom:18px}
+.cbtns{display:flex;gap:10px}
+.cbtns button{flex:1;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;font-family:var(--font);transition:transform .1s,filter .12s}
+.cbtns button:active{transform:scale(.96)}
+.cno{background:var(--card-2);color:var(--text);border:1.5px solid var(--line)!important}
+.cyes{background:linear-gradient(135deg,#ff6b5e,#e23b2e);color:#fff}
+.cyes:hover{filter:brightness(1.05)}
 </style>
 </head>
 <body>
@@ -1625,6 +1651,7 @@ const I18N = {
     adPlaceholder:"Ad space (AdMob banner)", translating:"Translating\u2026",
     exitConfirm:"Exit this test? Your progress will be lost.", yes:"Yes", no:"No",
     subTitle:"Unlock Unlimited Access", subSub:"You've reached the free limit. Go premium for unlimited tests, no ads, and no time limit.", perkUnlimited:"Unlimited mock tests", perkAds:"No ads, ever", perkTime:"No time limit", subscribe:"Subscribe", haveCode:"Have a code?", redeemTitle:"Redeem Code", redeemPh:"Enter your code", redeemBtn:"Redeem", redeemOk:"Code accepted \u2014 premium unlocked!", redeemBad:"Invalid or expired code.", notNow:"Not now", premiumActive:"Premium active", premiumLifetime:"Lifetime", premiumUntilPfx:"Active until", lockedMsg:"Free limit reached. Go premium to keep practicing.", adLabel:"Advertisement", adContinueIn:"Continue in", adContinue:"Continue",
+    privacy:"Privacy Policy", privacySub:"Data, cookies & ads", exitTest:"Exit",
     cats:{general:"General Rules",signs:"Signs",overtaking:"Overtaking",safety:"Safety",
       signals:"Signals",intersections:"Intersections",vehicle:"Vehicle",pedestrians:"Pedestrians",
       license:"License Rules",railroad:"Railroad",speed:"Speed Limits",parking:"Parking"}
@@ -1656,6 +1683,7 @@ const I18N = {
     adPlaceholder:"\u0627\u0634\u062a\u06c1\u0627\u0631 \u06a9\u06cc \u062c\u06af\u06c1 (AdMob \u0628\u06cc\u0646\u0631)", translating:"\u062a\u0631\u062c\u0645\u06c1 \u06c1\u0648 \u0631\u06c1\u0627 \u06c1\u06d2\u2026",
     exitConfirm:"\u06cc\u06c1 \u0679\u06cc\u0633\u0679 \u0686\u06be\u0648\u0691\u06cc\u06ba\u061f \u0622\u067e \u06a9\u06cc \u067e\u06cc\u0634 \u0631\u0641\u062a \u0636\u0627\u0626\u0639 \u06c1\u0648 \u062c\u0627\u0626\u06d2 \u06af\u06cc\u06d4", yes:"\u06c1\u0627\u06ba", no:"\u0646\u06c1\u06cc\u06ba",
     subTitle:"\u0644\u0627\u0645\u062d\u062f\u0648\u062f \u0631\u0633\u0627\u0626\u06cc \u06a9\u06be\u0648\u0644\u06cc\u06ba", subSub:"\u0622\u067e \u0645\u0641\u062a \u062d\u062f \u062a\u06a9 \u067e\u06c1\u0646\u0686 \u06af\u0626\u06d2 \u06c1\u06cc\u06ba\u06d4 \u0644\u0627\u0645\u062d\u062f\u0648\u062f \u0679\u06cc\u0633\u0679\u060c \u0628\u063a\u06cc\u0631 \u0627\u0634\u062a\u06c1\u0627\u0631 \u0627\u0648\u0631 \u0628\u063a\u06cc\u0631 \u0648\u0642\u062a \u06a9\u06cc \u062d\u062f \u06a9\u06d2 \u0644\u06cc\u06d2 \u067e\u0631\u06cc\u0645\u06cc\u0645 \u062d\u0627\u0635\u0644 \u06a9\u0631\u06cc\u06ba\u06d4", perkUnlimited:"\u0644\u0627\u0645\u062d\u062f\u0648\u062f \u0645\u0627\u06a9 \u0679\u06cc\u0633\u0679", perkAds:"\u06a9\u0648\u0626\u06cc \u0627\u0634\u062a\u06c1\u0627\u0631 \u0646\u06c1\u06cc\u06ba", perkTime:"\u0648\u0642\u062a \u06a9\u06cc \u06a9\u0648\u0626\u06cc \u062d\u062f \u0646\u06c1\u06cc\u06ba", subscribe:"\u0633\u0628\u0633\u06a9\u0631\u0627\u0626\u0628 \u06a9\u0631\u06cc\u06ba", haveCode:"\u06a9\u0648\u0688 \u06c1\u06d2\u061f", redeemTitle:"\u06a9\u0648\u0688 \u0631\u06cc\u0688\u06cc\u0645 \u06a9\u0631\u06cc\u06ba", redeemPh:"\u0627\u067e\u0646\u0627 \u06a9\u0648\u0688 \u062f\u0631\u062c \u06a9\u0631\u06cc\u06ba", redeemBtn:"\u0631\u06cc\u0688\u06cc\u0645", redeemOk:"\u06a9\u0648\u0688 \u0642\u0628\u0648\u0644 \u2014 \u067e\u0631\u06cc\u0645\u06cc\u0645 \u06a9\u06be\u0644 \u06af\u06cc\u0627!", redeemBad:"\u063a\u0644\u0637 \u06cc\u0627 \u0645\u06cc\u0639\u0627\u062f \u062e\u062a\u0645 \u0634\u062f\u06c1 \u06a9\u0648\u0688\u06d4", notNow:"\u0627\u0628\u06be\u06cc \u0646\u06c1\u06cc\u06ba", premiumActive:"\u067e\u0631\u06cc\u0645\u06cc\u0645 \u0641\u0639\u0627\u0644", premiumLifetime:"\u062a\u0627\u062d\u06cc\u0627\u062a", premiumUntilPfx:"\u0627\u0633 \u062a\u0627\u0631\u06cc\u062e \u062a\u06a9 \u0641\u0639\u0627\u0644", lockedMsg:"\u0645\u0641\u062a \u062d\u062f \u062e\u062a\u0645\u06d4 \u0645\u0634\u0642 \u062c\u0627\u0631\u06cc \u0631\u06a9\u06be\u0646\u06d2 \u06a9\u06d2 \u0644\u06cc\u06d2 \u067e\u0631\u06cc\u0645\u06cc\u0645 \u0644\u06cc\u06ba\u06d4", adLabel:"\u0627\u0634\u062a\u06c1\u0627\u0631", adContinueIn:"\u062c\u0627\u0631\u06cc \u0631\u06a9\u06be\u06cc\u06ba", adContinue:"\u062c\u0627\u0631\u06cc \u0631\u06a9\u06be\u06cc\u06ba",
+    privacy:"\u067e\u0631\u0627\u0626\u06cc\u0648\u06cc\u0633\u06cc \u067e\u0627\u0644\u06cc\u0633\u06cc", privacySub:"\u0688\u06cc\u0679\u0627\u060c \u06a9\u0648\u06a9\u0632 \u0627\u0648\u0631 \u0627\u0634\u062a\u06c1\u0627\u0631", exitTest:"\u0628\u0627\u06c1\u0631",
     cats:{general:"\u0639\u0645\u0648\u0645\u06cc \u0642\u0648\u0627\u0639\u062f",signs:"\u0646\u0634\u0627\u0646\u0627\u062a",overtaking:"\u0627\u0648\u0648\u0631 \u0679\u06cc\u06a9\u0646\u06af",safety:"\u062d\u0641\u0627\u0638\u062a",
       signals:"\u0633\u06af\u0646\u0644\u0632",intersections:"\u0686\u0648\u0631\u0627\u06c1\u06d2",vehicle:"\u06af\u0627\u0691\u06cc",pedestrians:"\u067e\u06cc\u062f\u0644 \u0686\u0644\u0646\u06d2 \u0648\u0627\u0644\u06d2",
       license:"\u0644\u0627\u0626\u0633\u0646\u0633 \u0642\u0648\u0627\u0639\u062f",railroad:"\u0631\u06cc\u0644\u0648\u06d2 \u06a9\u0631\u0627\u0633\u0646\u06af",speed:"\u0631\u0641\u062a\u0627\u0631 \u06a9\u06cc \u062d\u062f",parking:"\u067e\u0627\u0631\u06a9\u0646\u06af"}
@@ -1687,6 +1715,7 @@ const I18N = {
     adPlaceholder:"\u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928 \u0938\u094d\u0925\u093e\u0928 (AdMob \u092c\u0948\u0928\u0930)", translating:"\u0905\u0928\u0941\u0935\u093e\u0926 \u0939\u094b \u0930\u0939\u093e \u0939\u0948\u2026",
     exitConfirm:"\u092f\u0939 \u091f\u0947\u0938\u094d\u091f \u091b\u094b\u0921\u093c\u0947\u0902? \u0906\u092a\u0915\u0940 \u092a\u094d\u0930\u0917\u0924\u093f \u0916\u094b \u091c\u093e\u090f\u0917\u0940\u0964", yes:"\u0939\u093e\u0901", no:"\u0928\u0939\u0940\u0902",
     subTitle:"\u0905\u0938\u0940\u092e\u093f\u0924 \u090f\u0915\u094d\u0938\u0947\u0938 \u0905\u0928\u0932\u0949\u0915 \u0915\u0930\u0947\u0902", subSub:"\u0906\u092a \u092e\u0941\u092b\u094d\u0924 \u0938\u0940\u092e\u093e \u0924\u0915 \u092a\u0939\u0941\u0901\u091a \u0917\u090f \u0939\u0948\u0902\u0964 \u0905\u0938\u0940\u092e\u093f\u0924 \u091f\u0947\u0938\u094d\u091f, \u092c\u093f\u0928\u093e \u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928 \u0914\u0930 \u092c\u093f\u0928\u093e \u0938\u092e\u092f \u0938\u0940\u092e\u093e \u0915\u0947 \u0932\u093f\u090f \u092a\u094d\u0930\u0940\u092e\u093f\u092f\u092e \u0932\u0947\u0902\u0964", perkUnlimited:"\u0905\u0938\u0940\u092e\u093f\u0924 \u092e\u0949\u0915 \u091f\u0947\u0938\u094d\u091f", perkAds:"\u0915\u094b\u0908 \u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928 \u0928\u0939\u0940\u0902", perkTime:"\u0915\u094b\u0908 \u0938\u092e\u092f \u0938\u0940\u092e\u093e \u0928\u0939\u0940\u0902", subscribe:"\u0938\u092c\u094d\u0938\u0915\u094d\u0930\u093e\u0907\u092c \u0915\u0930\u0947\u0902", haveCode:"\u0915\u094b\u0921 \u0939\u0948?", redeemTitle:"\u0915\u094b\u0921 \u0930\u093f\u0921\u0940\u092e \u0915\u0930\u0947\u0902", redeemPh:"\u0905\u092a\u0928\u093e \u0915\u094b\u0921 \u0926\u0930\u094d\u091c \u0915\u0930\u0947\u0902", redeemBtn:"\u0930\u093f\u0921\u0940\u092e", redeemOk:"\u0915\u094b\u0921 \u0938\u094d\u0935\u0940\u0915\u0943\u0924 \u2014 \u092a\u094d\u0930\u0940\u092e\u093f\u092f\u092e \u0905\u0928\u0932\u0949\u0915!", redeemBad:"\u0905\u092e\u093e\u0928\u094d\u092f \u092f\u093e \u0938\u092e\u093e\u092a\u094d\u0924 \u0915\u094b\u0921\u0964", notNow:"\u0905\u092d\u0940 \u0928\u0939\u0940\u0902", premiumActive:"\u092a\u094d\u0930\u0940\u092e\u093f\u092f\u092e \u0938\u0915\u094d\u0930\u093f\u092f", premiumLifetime:"\u0906\u091c\u0940\u0935\u0928", premiumUntilPfx:"\u0907\u0938 \u0924\u093f\u0925\u093f \u0924\u0915 \u0938\u0915\u094d\u0930\u093f\u092f", lockedMsg:"\u092e\u0941\u092b\u094d\u0924 \u0938\u0940\u092e\u093e \u0938\u092e\u093e\u092a\u094d\u0924\u0964 \u0905\u092d\u094d\u092f\u093e\u0938 \u091c\u093e\u0930\u0940 \u0930\u0916\u0928\u0947 \u0939\u0947\u0924\u0941 \u092a\u094d\u0930\u0940\u092e\u093f\u092f\u092e \u0932\u0947\u0902\u0964", adLabel:"\u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928", adContinueIn:"\u091c\u093e\u0930\u0940 \u0930\u0916\u0947\u0902", adContinue:"\u091c\u093e\u0930\u0940 \u0930\u0916\u0947\u0902",
+    privacy:"\u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e \u0928\u0940\u0924\u093f", privacySub:"\u0921\u0947\u091f\u093e, \u0915\u0941\u0915\u0940\u091c\u093c \u0914\u0930 \u0935\u093f\u091c\u094d\u091e\u093e\u092a\u0928", exitTest:"\u092c\u093e\u0939\u0930",
     cats:{general:"\u0938\u093e\u092e\u093e\u0928\u094d\u092f \u0928\u093f\u092f\u092e",signs:"\u0938\u0902\u0915\u0947\u0924",overtaking:"\u0913\u0935\u0930\u091f\u0947\u0915\u093f\u0902\u0917",safety:"\u0938\u0941\u0930\u0915\u094d\u0937\u093e",
       signals:"\u0938\u093f\u0917\u094d\u0928\u0932",intersections:"\u091a\u094c\u0930\u093e\u0939\u0947",vehicle:"\u0935\u093e\u0939\u0928",pedestrians:"\u092a\u0948\u0926\u0932 \u092f\u093e\u0924\u094d\u0930\u0940",
       license:"\u0932\u093e\u0907\u0938\u0947\u0902\u0938 \u0928\u093f\u092f\u092e",railroad:"\u0930\u0947\u0932\u0935\u0947 \u0915\u094d\u0930\u0949\u0938\u093f\u0902\u0917",speed:"\u0917\u0924\u093f \u0938\u0940\u092e\u093e",parking:"\u092a\u093e\u0930\u094d\u0915\u093f\u0902\u0917"}
@@ -1718,11 +1747,13 @@ const I18N = {
     adPlaceholder:"\u5e7f\u544a\u4f4d\uff08AdMob \u6a2a\u5e45\uff09", translating:"\u7ffb\u8bd1\u4e2d\u2026",
     exitConfirm:"\u9000\u51fa\u672c\u6b21\u6d4b\u9a8c\uff1f\u8fdb\u5ea6\u5c06\u4e22\u5931\u3002", yes:"\u662f", no:"\u5426",
     subTitle:"\u89e3\u9501\u65e0\u9650\u4f7f\u7528", subSub:"\u60a8\u5df2\u8fbe\u5230\u514d\u8d39\u4e0a\u9650\u3002\u5347\u7ea7\u9ad8\u7ea7\u7248\uff0c\u4eab\u53d7\u65e0\u9650\u6d4b\u8bd5\u3001\u65e0\u5e7f\u544a\u3001\u65e0\u65f6\u95f4\u9650\u5236\u3002", perkUnlimited:"\u65e0\u9650\u6a21\u62df\u6d4b\u8bd5", perkAds:"\u6c38\u65e0\u5e7f\u544a", perkTime:"\u65e0\u65f6\u95f4\u9650\u5236", subscribe:"\u8ba2\u9605", haveCode:"\u6709\u5151\u6362\u7801\uff1f", redeemTitle:"\u5151\u6362\u7801", redeemPh:"\u8f93\u5165\u5151\u6362\u7801", redeemBtn:"\u5151\u6362", redeemOk:"\u5151\u6362\u6210\u529f \u2014 \u5df2\u89e3\u9501\u9ad8\u7ea7\u7248\uff01", redeemBad:"\u65e0\u6548\u6216\u5df2\u8fc7\u671f\u7684\u5151\u6362\u7801\u3002", notNow:"\u4ee5\u540e\u518d\u8bf4", premiumActive:"\u9ad8\u7ea7\u7248\u5df2\u6fc0\u6d3b", premiumLifetime:"\u6c38\u4e45", premiumUntilPfx:"\u6709\u6548\u671f\u81f3", lockedMsg:"\u5df2\u8fbe\u514d\u8d39\u4e0a\u9650\u3002\u5347\u7ea7\u9ad8\u7ea7\u7248\u4ee5\u7ee7\u7eed\u7ec3\u4e60\u3002", adLabel:"\u5e7f\u544a", adContinueIn:"\u7ee7\u7eed\u5012\u8ba1\u65f6", adContinue:"\u7ee7\u7eed",
+    privacy:"\u9690\u79c1\u653f\u7b56", privacySub:"\u6570\u636e\u3001Cookie \u4e0e\u5e7f\u544a", exitTest:"\u9000\u51fa",
     cats:{general:"\u4e00\u822c\u89c4\u5219",signs:"\u6807\u5fd7",overtaking:"\u8d85\u8f66",safety:"\u5b89\u5168",
       signals:"\u4fe1\u53f7",intersections:"\u8def\u53e3",vehicle:"\u8f66\u8f86",pedestrians:"\u884c\u4eba",
       license:"\u9a7e\u7167\u89c4\u5219",railroad:"\u94c1\u9053\u53e3",speed:"\u9650\u901f",parking:"\u505c\u8f66"}
   },
   ja:{ name:"\u65e5\u672c\u8a9e", flag:"\ud83c\uddef\ud83c\uddf5", dir:"ltr", appTitle:"\u65e5\u672c\u904b\u8ee2\u514d\u8a31", karimen:"\u4eee\u514d\u8a31", honmen:"\u672c\u8a66\u9a13", home:"\u30db\u30fc\u30e0", study:"\u5b66\u7fd2", tests:"\u30c6\u30b9\u30c8", stats:"\u7d71\u8a08", heroHi:"\u904b\u8ee2\u306e\u6e96\u5099\u306f\u3044\u3044\uff1f", heroSub:"\u65e5\u672c\u306e\u7b46\u8a18\u8a66\u9a13\u3092\u30de\u30b9\u30bf\u30fc", seen:"\u56de\u7b54\u6e08\u307f", accuracy:"\u6b63\u7b54\u7387", streak:"\u9023\u7d9a", readiness:"\u8a66\u9a13\u6e96\u5099\u5ea6", quickActions:"\u30af\u30a4\u30c3\u30af", mock:"\u6a21\u64ec\u8a66\u9a13", mockSub:"10 / 25 / 50 \u554f", quick:"\u30af\u30a4\u30c3\u30af\u30c6\u30b9\u30c8", quickSub:"\u30e9\u30f3\u30c0\u30e010\u554f", weak:"\u5f31\u70b9\u514b\u670d", weakSub:"\u82e6\u624b\u306a\u5206\u91ce", missed:"\u9593\u9055\u3044\u5fa9\u7fd2", missedSub:"\u30df\u30b9\u3092\u898b\u76f4\u3059", bySet:"\u30bb\u30c3\u30c8\u5225", readAll:"\u5168\u554f\u984c\u3092\u8aad\u3080", readAllSub:"\u89e3\u7b54\u3068\u89e3\u8aac\u4ed8\u304d", mastery:"\u5206\u91ce\u5225\u7fd2\u719f\u5ea6", continue:"\u7d9a\u3051\u308b", noData:"\u30c6\u30b9\u30c8\u3092\u53d7\u3051\u3066\u9032\u6357\u3092\u78ba\u8a8d", chooseLen:"\u554f\u984c\u6570\u3092\u9078\u629e", q10:"10\u554f", q25:"25\u554f", q50:"50\u554f", fullSet:"\u30d5\u30eb\u30bb\u30c3\u30c8", startTest:"\u30c6\u30b9\u30c8\u958b\u59cb", question:"\u554f\u984c", of:"/", true_:"\u6b63\u3057\u3044", false_:"\u8aa4\u308a", correct:"\u6b63\u89e3\uff01", incorrect:"\u4e0d\u6b63\u89e3", yourAns:"\u3042\u306a\u305f\u306e\u89e3\u7b54", answer:"\u89e3\u7b54", explanation:"\u89e3\u8aac", next:"\u6b21\u3078", finish:"\u7d42\u4e86", seeResults:"\u7d50\u679c\u3092\u898b\u308b", figure:"\u56f3", results:"\u7d50\u679c", score:"\u30b9\u30b3\u30a2", passed:"\u5408\u683c \ud83c\udf89", failed:"\u7df4\u7fd2\u3092\u7d9a\u3051\u3088\u3046", correctN:"\u6b63\u89e3", wrongN:"\u4e0d\u6b63\u89e3", timeN:"\u6642\u9593", passMark:"\u5408\u683c\u70b9", reviewMissed:"\u9593\u9055\u3044\u3092\u5fa9\u7fd2", reviewAll:"\u5168\u90e8\u5fa9\u7fd2", retry:"\u518d\u6311\u6226", retryWrong:"\u9593\u9055\u3044\u306e\u307f\u518d\u6311\u6226", backHome:"\u30db\u30fc\u30e0\u306b\u623b\u308b", allCats:"\u3059\u3079\u3066", showAnswers:"\u89e3\u7b54", showExp:"\u89e3\u8aac", noMissed:"\u9593\u9055\u3044\u306f\u3042\u308a\u307e\u305b\u3093 \u2014 \u7d20\u6674\u3089\u3057\u3044\uff01", noWeak:"\u30c7\u30fc\u30bf\u304c\u4e0d\u8db3\u3057\u3066\u3044\u307e\u3059\u3002\u307e\u305a\u30c6\u30b9\u30c8\u3092\u53d7\u3051\u3066\u304f\u3060\u3055\u3044\u3002", settings:"\u8a2d\u5b9a", language:"\u8a00\u8a9e", darkMode:"\u30c0\u30fc\u30af\u30e2\u30fc\u30c9", darkSub:"\u591c\u9593\u306b\u76ee\u306b\u512a\u3057\u3044", contact:"\u958b\u767a\u8005\u306b\u9023\u7d61", contactSub:"\u8cea\u554f\u30fb\u3054\u610f\u898b\u306a\u3069", madeBy:"Made with \u2661 By AL33M.", examMode:"\u8a66\u9a13\u30e2\u30fc\u30c9", examSub:"\u6700\u5f8c\u307e\u3067\u89e3\u8aac\u3092\u975e\u8868\u793a", autoTr:"\u554f\u984c\u3092\u81ea\u52d5\u7ffb\u8a33", autoTrSub:"\u554f\u984c\u6587\u3092\u305d\u306e\u5834\u3067\u7ffb\u8a33", premium:"\u30d7\u30ec\u30df\u30a2\u30e0", premiumSub:"\u5e7f\u544a\u306a\u3057\uff0b\u7121\u5236\u9650\u30c6\u30b9\u30c8", adPlaceholder:"\u5e7f\u544a\u30b9\u30da\u30fc\u30b9", translating:"\u7ffb\u8a33\u4e2d\u2026", exitConfirm:"\u30c6\u30b9\u30c8\u3092\u7d42\u4e86\u3057\u307e\u3059\u304b\uff1f\u9032\u6357\u306f\u5931\u308f\u308c\u307e\u3059\u3002", yes:"\u306f\u3044", no:"\u3044\u3044\u3048", subTitle:"\u7121\u5236\u9650\u30a2\u30af\u30bb\u30b9\u3092\u89e3\u9664", subSub:"\u7121\u6599\u5236\u9650\u306b\u9054\u3057\u307e\u3057\u305f\u3002\u30d7\u30ec\u30df\u30a2\u30e0\u3067\u7121\u5236\u9650\u30c6\u30b9\u30c8\u30fb\u5e7f\u544a\u306a\u3057\u30fb\u6642\u9593\u5236\u9650\u306a\u3057\u3002", perkUnlimited:"\u7121\u5236\u9650\u306e\u6a21\u64ec\u8a66\u9a13", perkAds:"\u5e7f\u544a\u306a\u3057", perkTime:"\u6642\u9593\u5236\u9650\u306a\u3057", subscribe:"\u8cfc\u8aad\u3059\u308b", haveCode:"\u30b3\u30fc\u30c9\u3092\u304a\u6301\u3061\u3067\u3059\u304b\uff1f", redeemTitle:"\u30b3\u30fc\u30c9\u3092\u5f15\u304d\u63db\u3048\u308b", redeemPh:"\u30b3\u30fc\u30c9\u3092\u5165\u529b", redeemBtn:"\u5f15\u304d\u63db\u3048\u308b", redeemOk:"\u30b3\u30fc\u30c9\u304c\u627f\u8a8d\u3055\u308c\u307e\u3057\u305f \u2014 \u30d7\u30ec\u30df\u30a2\u30e0\u89e3\u9664\uff01", redeemBad:"\u7121\u52b9\u307e\u305f\u306f\u671f\u9650\u5207\u308c\u306e\u30b3\u30fc\u30c9\u3067\u3059\u3002", notNow:"\u5f8c\u3067", premiumActive:"\u30d7\u30ec\u30df\u30a2\u30e0\u6709\u52b9", premiumLifetime:"\u6c38\u4e45", premiumUntilPfx:"\u6709\u52b9\u671f\u9650", lockedMsg:"\u7121\u6599\u5236\u9650\u306b\u9054\u3057\u307e\u3057\u305f\u3002\u7d9a\u3051\u308b\u306b\u306f\u30d7\u30ec\u30df\u30a2\u30e0\u3078\u3002", adLabel:"\u5e7f\u544a", adContinueIn:"\u7d9a\u884c\u307e\u3067", adContinue:"\u7d9a\u884c",
+    privacy:"\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc", privacySub:"\u30c7\u30fc\u30bf\u30fb\u30af\u30c3\u30ad\u30fc\u30fb\u5e7f\u544a", exitTest:"\u9000\u51fa",
     cats:{general:"\u4e00\u822c\u30eb\u30fc\u30eb", signs:"\u6a19\u8b58", overtaking:"\u8ffd\u3044\u8d8a\u3057", safety:"\u5b89\u5168", signals:"\u4fe1\u53f7", intersections:"\u4ea4\u5dee\u70b9", vehicle:"\u8eca\u4e21", pedestrians:"\u6b69\u884c\u8005", license:"\u514d\u8a31\u30eb\u30fc\u30eb", railroad:"\u8e0f\u5207", speed:"\u901f\u5ea6\u5236\u9650", parking:"\u99d0\u8eca"}
   }
 };
@@ -1958,9 +1989,9 @@ function renderChrome(){
   var tb = $("topbar");
   if(inQuiz && view.screen!=="results"){
     tb.innerHTML =
-      '<button class="back" id="bk">\u2039 '+esc(T().tests)+'</button><div class="sp"></div>'+
+      '<button class="back" id="bk"><span class="bka">\u2190</span>'+esc(T().exitTest||T().tests)+'</button><div class="sp"></div>'+
       '<div class="brand"><span>'+esc(view.type==="karimen"?T().karimen:T().honmen)+'</span></div>';
-    $("bk").onclick=function(){ if(view.screen==="quiz"){ if(confirm(T().exitConfirm)) go("tests"); } else go("tests"); };
+    $("bk").onclick=function(){ if(view.screen==="quiz"){ confirmExit(function(){ go("tests"); }); } else go("tests"); };
   } else {
     tb.innerHTML =
       '<div class="brand"><span class="logo">\ud83d\ude97</span><span>'+esc(T().appTitle)+'</span></div>'+
@@ -2056,6 +2087,14 @@ function screenHome(){
       tile("d","\ud83d\udd01",T().missed,T().missedSub,'missed')+
      '</div>';
 
+  /* AdSense - Home Screen */
+  if(!isPremium()){
+    h += '<div class="card" style="padding:12px 12px 8px;margin-bottom:14px">'+
+         '<div style="font-size:10px;color:var(--muted);margin-bottom:6px;text-align:center">Advertisement</div>'+
+         '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1278207037217080" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>'+
+         '</div>';
+  }
+
   if(mastery.length){
     h+='<div class="sect-title">'+esc(T().mastery)+'</div><div class="card">';
     mastery.forEach(function(m){
@@ -2078,6 +2117,9 @@ function screenHome(){
     b.onclick=function(){ startMode(b.getAttribute("data-act")); };
   });
   if($("goPrem")) $("goPrem").onclick=goPremium;
+
+  // Initialize AdSense ads
+  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
 }
 function tile(cls,icon,title,sub,act){
   return '<button class="tile" data-act="'+act+'"><span class="ti '+cls+'">'+icon+'</span>'+
@@ -2353,6 +2395,14 @@ function screenResults(){
       '<div class="b"><b>'+fmtTime(Q.elapsed)+'</b><span>'+esc(T().timeN)+'</span></div>'+
     '</div></div>';
 
+  /* AdSense - Results Screen */
+  if(!isPremium()){
+    h += '<div class="card" style="padding:12px 12px 8px;margin:14px 0">'+
+         '<div style="font-size:10px;color:var(--muted);margin-bottom:6px;text-align:center">Advertisement</div>'+
+         '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1278207037217080" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>'+
+         '</div>';
+  }
+
   h+='<div class="grid">'+
      '<button class="tile" id="retryAll"><span class="ti b">\ud83d\udd01</span><h3>'+esc(T().retry)+'</h3></button>'+
      (wrong.length?'<button class="tile" id="retryWrong"><span class="ti d">\ud83c\udfaf</span><h3>'+esc(T().retryWrong)+'</h3></button>':
@@ -2370,6 +2420,10 @@ function screenResults(){
   var sc=$("screen"); sc.innerHTML=h;
   // animate ring
   setTimeout(function(){ var arc=$("ringArc"); if(arc){ arc.style.transition="stroke-dashoffset 1s ease"; arc.style.strokeDashoffset=off; } },60);
+
+  // Initialize AdSense ads
+  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+
   if($("retryAll")) $("retryAll").onclick=function(){ launchQuiz(Q.qs.slice(), Q.set, Q.mode, Q.set._objs); };
   if($("retryWrong")) $("retryWrong").onclick=function(){
     var wq=wrong.map(function(a){return a.q;});
@@ -2547,12 +2601,14 @@ function screenSettings(){
        '<div class="ol"><b>'+esc(T().contact)+'</b><span>'+esc(T().contactSub)+'</span></div>'+
        '<span class="chev">\u203a</span></button></div>';
 
+  h+='<div class="card pad0"><button class="opt-row" id="sPrivacy"><span class="oic">\ud83d\udd12</span>'+'<div class="ol"><b>'+esc(T().privacy)+'</b><span>'+esc(T().privacySub)+'</span></div>'+'<span class="chev">\u203a</span></button></div>';
   h+='<div class="sig">'+esc(T().madeBy).replace("\u2661",'<span class="heart">\u2661</span>')+'</div>';
-  h+='<div class="note">v1.1 \u00b7 610 questions \u00b7 5 languages \u00b7 Offline</div>';
+  h+='<div class="note">v1.2 (web) \u00b7 610 questions \u00b7 5 languages \u00b7 Offline</div>';
 
   var sc=$("screen"); sc.innerHTML=h;
   $("sLang").onclick=openLang;
   $("sContact").onclick=openContact;
+  if($("sPrivacy")) $("sPrivacy").onclick=openPrivacy;
   bindSwitch(sc,"sDark","dark");
   bindSwitch(sc,"sExam","exam");
   bindSwitch(sc,"sTr","autoTr");
@@ -2588,6 +2644,35 @@ function openContact(){
       };
     });
   });
+}
+function openPrivacy(){
+  var html='<div class="grip"></div><h3>'+esc(T().privacy)+'</h3><div class="policy">'+
+    '<p style="opacity:.65;margin-bottom:10px">Last updated: June 24, 2026</p>'+
+    '<p>This Privacy Policy explains how Japan Driving License ("we", "us") handles information when you use japandrivinglicense.com and this practice-test app.</p>'+
+    '<h4>Information we collect</h4>'+
+    '<p>We do not ask you to sign in or give personal details. Your settings, language and quiz progress are stored only in your browser or device (local storage) and are not sent to us. Our hosting and tools may automatically log standard technical data such as IP address, browser type, device and pages visited.</p>'+
+    '<h4>Cookies and advertising</h4>'+
+    '<p>We use Google advertising (AdSense on the web and AdMob in the app). Google and its partners use cookies or a device advertising ID to serve and measure ads based on your prior activity. You can opt out of personalized ads at Google Ads Settings (google.com/settings/ads) and aboutads.info, or reset your advertising ID in your device settings. Learn more at policies.google.com/technologies/partners.</p>'+
+    '<h4>Consent (EEA, UK, Switzerland)</h4>'+
+    '<p>If you are in these regions, we and Google ask for your consent for personalized advertising, which you can change at any time.</p>'+
+    '<h4>Children</h4><p>This app is for a general audience and is not directed at children under 13. We do not knowingly collect data from children.</p>'+
+    '<h4>Your choices</h4><p>You can remove your saved progress at any time by clearing the app or browser data for this site.</p>'+
+    '<h4>Changes</h4><p>We may update this policy; updates appear here with a new date.</p>'+
+    '<h4>Contact</h4><p>Questions? Email <a href="mailto:iossupport@japandrivinglicense.com">iossupport@japandrivinglicense.com</a></p>'+
+    '</div>';
+  openSheet(html);
+}
+function confirmExit(onYes){
+  var ov=el('<div class="cbx" id="cbx"><div class="cbox">'+
+    '<div class="cbi">\u26a0\ufe0f</div>'+
+    '<div class="cbt">'+esc(T().exitConfirm)+'</div>'+
+    '<div class="cbtns"><button class="cno" id="cNo">'+esc(T().no)+'</button>'+
+    '<button class="cyes" id="cYes">'+esc(T().yes)+'</button></div></div></div>');
+  document.body.appendChild(ov);
+  function close(){ var o=$("cbx"); if(o) o.remove(); }
+  $("cNo").onclick=close;
+  $("cYes").onclick=function(){ close(); if(onYes) onYes(); };
+  ov.addEventListener("click",function(e){ if(e.target===ov) close(); });
 }
 function srow(title,sub,id,on){
   return '<div class="srow"><div class="lbl"><b>'+esc(title)+'</b><span>'+esc(sub)+'</span></div>'+
